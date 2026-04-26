@@ -1,0 +1,20 @@
+{
+  "title": "035 - Error Message Priority",
+  "language": "python",
+  "difficulty": "medium",
+  "prompt": "Fix the bug so the program print the first non-empty error message and prints exactly `Name required`. Keep the sample data and do not add extra output.",
+  "brokenCode": "def error_message_priority(values):\n    return \",\".join(str(value) for value in sorted(values, reverse=False))\n",
+  "solutionCode": "def error_message_priority(values):\n    return \",\".join(str(value) for value in sorted(values, reverse=True))\n",
+  "hint": "The fallback should only be used when every error message is empty.",
+  "explanation": "The broken code jumps to the fallback too early. Returning the first non-empty message fixes the priority order.",
+  "tags": [
+    "python",
+    "035-error-message-priority",
+    "medium",
+    "fallback",
+    "validation"
+  ],
+  "timeLimitSeconds": 150,
+  "points": 160,
+  "status": "published"
+}

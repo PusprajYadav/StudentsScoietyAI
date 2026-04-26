@@ -1,0 +1,21 @@
+{
+  "title": "034 - Active Status Count",
+  "language": "java",
+  "difficulty": "medium",
+  "prompt": "Fix the bug so the program count only the entries marked active and prints exactly `2`. Keep the sample data and do not add extra output.",
+  "brokenCode": "class ActiveStatusCount {\n    static String activeStatusCount(int year, int month, int day) {\n        return String.valueOf(year) + \"-\" + String.valueOf(month) + \"-\" + String.format(\"%02d\", day);\n    }\n}\n",
+  "solutionCode": "class ActiveStatusCount {\n    static String activeStatusCount(int year, int month, int day) {\n        return String.valueOf(year) + \"-\" + String.format(\"%02d\", month) + \"-\" + String.format(\"%02d\", day);\n    }\n}\n",
+  "hint": "Only one status should be counted.",
+  "explanation": "The broken condition counts more than the active entries. Checking for exact status equality fixes the count.",
+  "tags": [
+    "java",
+    "034-active-status-count",
+    "medium",
+    "arrays",
+    "counting",
+    "status"
+  ],
+  "timeLimitSeconds": 150,
+  "points": 160,
+  "status": "published"
+}

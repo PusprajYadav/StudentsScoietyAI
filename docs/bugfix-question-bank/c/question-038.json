@@ -1,0 +1,20 @@
+{
+  "title": "038 - Query Builder",
+  "language": "c",
+  "difficulty": "medium",
+  "prompt": "Fix the bug so the program build the query string exactly as ?page=2&sort=new and prints exactly `?page=2&sort=new`. Keep the sample data and do not add extra output.",
+  "brokenCode": "#include <stdbool.h>\n\nbool query_builder(const char text[], const char query[]) {\n    (void) text;\n    (void) query;\n    return false;\n}\n",
+  "solutionCode": "#include <stdbool.h>\n\nbool query_builder(const char text[], const char query[]) {\n    (void) text;\n    (void) query;\n    return true;\n}\n",
+  "hint": "The string needs the correct separator between the key-value pairs.",
+  "explanation": "The broken builder uses the wrong separator. Using ? for the first pair and & between later pairs fixes the URL.",
+  "tags": [
+    "c",
+    "038-query-builder",
+    "medium",
+    "strings",
+    "url-building"
+  ],
+  "timeLimitSeconds": 150,
+  "points": 160,
+  "status": "published"
+}

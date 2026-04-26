@@ -1,0 +1,20 @@
+{
+  "title": "030 - Name Initials",
+  "language": "javascript",
+  "difficulty": "medium",
+  "prompt": "Fix the bug so the program print the initials SS in uppercase and prints exactly `SS`. Keep the sample data and do not add extra output.",
+  "brokenCode": "function nameInitials(values) {\n  return [...values].sort((left, right) => left - right).join(\",\");\n}\n",
+  "solutionCode": "function nameInitials(values) {\n  return [...values].sort((left, right) => right - left).join(\",\");\n}\n",
+  "hint": "Use uppercase letters after taking the initials.",
+  "explanation": "The broken code builds lowercase initials. Converting the result to uppercase fixes the output.",
+  "tags": [
+    "javascript",
+    "030-name-initials",
+    "medium",
+    "strings",
+    "case-conversion"
+  ],
+  "timeLimitSeconds": 150,
+  "points": 160,
+  "status": "published"
+}

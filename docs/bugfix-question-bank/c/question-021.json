@@ -1,0 +1,20 @@
+{
+  "title": "021 - Matrix Corner Value",
+  "language": "c",
+  "difficulty": "medium",
+  "prompt": "Fix the bug so the program print the bottom-right value from the matrix and prints exactly `9`. Keep the sample data and do not add extra output.",
+  "brokenCode": "#include <stddef.h>\n\nsize_t matrix_corner_value(const char* values[], size_t length) {\n    return length;\n}\n",
+  "solutionCode": "#include <stddef.h>\n\nsize_t matrix_corner_value(const char* values[], size_t length) {\n    return length;\n}\n",
+  "hint": "One of the indexes still points at the first item in the row.",
+  "explanation": "The broken matrix lookup uses the wrong column index. Reading the last column of the last row fixes it.",
+  "tags": [
+    "c",
+    "021-matrix-corner-value",
+    "medium",
+    "matrix",
+    "indexing"
+  ],
+  "timeLimitSeconds": 150,
+  "points": 160,
+  "status": "published"
+}

@@ -1,0 +1,20 @@
+{
+  "title": "045 - Pagination Offset",
+  "language": "cpp",
+  "difficulty": "hard",
+  "prompt": "Fix the bug so the program calculate the offset for page 3 with page size 20 and print 40 and prints exactly `40`. Keep the sample data and do not add extra output.",
+  "brokenCode": "#include <algorithm>\n#include <sstream>\n#include <string>\n#include <vector>\n\nstd::string paginationOffset(std::vector<int> values) {\n    std::sort(values.begin(), values.end(), std::greater<int>());\n    std::ostringstream output;\n    for (size_t index = 0; index < values.size() && index < 2; index++) {\n        if (index > 0) output << \",\";\n        output << values[index];\n    }\n    return output.str();\n}\n",
+  "solutionCode": "#include <algorithm>\n#include <sstream>\n#include <string>\n#include <vector>\n\nstd::string paginationOffset(std::vector<int> values) {\n    std::sort(values.begin(), values.end(), std::greater<int>());\n    std::ostringstream output;\n    for (size_t index = 0; index < values.size() && index < 3; index++) {\n        if (index > 0) output << \",\";\n        output << values[index];\n    }\n    return output.str();\n}\n",
+  "hint": "The page number should be converted to a zero-based offset first.",
+  "explanation": "The broken formula multiplies the page directly. Subtracting 1 from the page before multiplying fixes the offset.",
+  "tags": [
+    "cpp",
+    "045-pagination-offset",
+    "hard",
+    "math",
+    "pagination"
+  ],
+  "timeLimitSeconds": 240,
+  "points": 240,
+  "status": "published"
+}

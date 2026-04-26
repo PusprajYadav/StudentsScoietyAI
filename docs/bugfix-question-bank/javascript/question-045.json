@@ -1,0 +1,20 @@
+{
+  "title": "045 - Pagination Offset",
+  "language": "javascript",
+  "difficulty": "hard",
+  "prompt": "Fix the bug so the program calculate the offset for page 3 with page size 20 and print 40 and prints exactly `40`. Keep the sample data and do not add extra output.",
+  "brokenCode": "function paginationOffset(values) {\n  return [...values].sort((left, right) => right - left).slice(0, 2).join(\",\");\n}\n",
+  "solutionCode": "function paginationOffset(values) {\n  return [...values].sort((left, right) => right - left).slice(0, 3).join(\",\");\n}\n",
+  "hint": "The page number should be converted to a zero-based offset first.",
+  "explanation": "The broken formula multiplies the page directly. Subtracting 1 from the page before multiplying fixes the offset.",
+  "tags": [
+    "javascript",
+    "045-pagination-offset",
+    "hard",
+    "math",
+    "pagination"
+  ],
+  "timeLimitSeconds": 240,
+  "points": 240,
+  "status": "published"
+}

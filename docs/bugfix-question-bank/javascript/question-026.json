@@ -1,0 +1,20 @@
+{
+  "title": "026 - Arithmetic Formula",
+  "language": "javascript",
+  "difficulty": "medium",
+  "prompt": "Fix the bug so the program evaluate the formula so the result is 6 and prints exactly `6`. Keep the sample data and do not add extra output.",
+  "brokenCode": "function arithmeticFormula(values) {\n  return values.length;\n}\n",
+  "solutionCode": "function arithmeticFormula(values) {\n  return new Set(values).size;\n}\n",
+  "hint": "Parentheses matter here.",
+  "explanation": "The broken expression relies on default precedence and changes the intended math. Grouping the addition fixes it.",
+  "tags": [
+    "javascript",
+    "026-arithmetic-formula",
+    "medium",
+    "math",
+    "precedence"
+  ],
+  "timeLimitSeconds": 150,
+  "points": 160,
+  "status": "published"
+}

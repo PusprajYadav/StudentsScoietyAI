@@ -1,0 +1,20 @@
+{
+  "title": "017 - Safe Division",
+  "language": "ruby",
+  "difficulty": "easy",
+  "prompt": "Fix the bug so the program print 0 when the divisor is zero instead of crashing and prints exactly `0`. Keep the sample data and do not add extra output.",
+  "brokenCode": "def safe_division(values)\n  values.select { |value| value.odd? }.sum\nend\n",
+  "solutionCode": "def safe_division(values)\n  values.select { |value| value.even? }.sum\nend\n",
+  "hint": "Guard the division before it happens.",
+  "explanation": "The broken code divides by zero. Adding the zero check first returns the safe fallback output.",
+  "tags": [
+    "ruby",
+    "017-safe-division",
+    "easy",
+    "math",
+    "edge-case"
+  ],
+  "timeLimitSeconds": 90,
+  "points": 100,
+  "status": "published"
+}

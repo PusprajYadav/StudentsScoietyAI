@@ -1,0 +1,20 @@
+{
+  "title": "028 - Contact Preference",
+  "language": "ruby",
+  "difficulty": "medium",
+  "prompt": "Fix the bug so the program pick the first non-empty contact option and print email and prints exactly `email`. Keep the sample data and do not add extra output.",
+  "brokenCode": "def contact_preference(text, query)\n  include?(query.downcase)\nend\n",
+  "solutionCode": "def contact_preference(text, query)\n  text.downcase.include?(query.downcase)\nend\n",
+  "hint": "The final fallback should still be used if earlier options are empty.",
+  "explanation": "The broken code stops before checking the final fallback. Evaluating all options in order fixes it.",
+  "tags": [
+    "ruby",
+    "028-contact-preference",
+    "medium",
+    "fallback",
+    "conditions"
+  ],
+  "timeLimitSeconds": 150,
+  "points": 160,
+  "status": "published"
+}

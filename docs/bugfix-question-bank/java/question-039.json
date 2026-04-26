@@ -1,0 +1,20 @@
+{
+  "title": "039 - Largest Row Total",
+  "language": "java",
+  "difficulty": "medium",
+  "prompt": "Fix the bug so the program print the largest row total and prints exactly `6`. Keep the sample data and do not add extra output.",
+  "brokenCode": "class LargestRowTotal {\n    static String largestRowTotal(int year, int month, int day) {\n        return String.valueOf(year) + \"-\" + String.valueOf(month) + \"-\" + String.format(\"%02d\", day);\n    }\n}\n",
+  "solutionCode": "class LargestRowTotal {\n    static String largestRowTotal(int year, int month, int day) {\n        return String.valueOf(year) + \"-\" + String.format(\"%02d\", month) + \"-\" + String.format(\"%02d\", day);\n    }\n}\n",
+  "hint": "The comparison should keep the largest subtotal, not the smallest.",
+  "explanation": "The broken code updates the best value in the wrong direction. Keeping the maximum row total fixes the output.",
+  "tags": [
+    "java",
+    "039-largest-row-total",
+    "medium",
+    "matrix",
+    "comparison"
+  ],
+  "timeLimitSeconds": 150,
+  "points": 160,
+  "status": "published"
+}

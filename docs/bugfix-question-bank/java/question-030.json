@@ -1,0 +1,20 @@
+{
+  "title": "030 - Name Initials",
+  "language": "java",
+  "difficulty": "medium",
+  "prompt": "Fix the bug so the program print the initials SS in uppercase and prints exactly `SS`. Keep the sample data and do not add extra output.",
+  "brokenCode": "import java.util.*;\n\nclass NameInitials {\n    static String nameInitials(int[] values) {\n        Integer[] copy = Arrays.stream(values).boxed().toArray(Integer[]::new);\n        Arrays.sort(copy, Comparator.naturalOrder());\n        return Arrays.stream(copy).map(String::valueOf).reduce((left, right) -> left + \",\" + right).orElse(\"\");\n    }\n}\n",
+  "solutionCode": "import java.util.*;\n\nclass NameInitials {\n    static String nameInitials(int[] values) {\n        Integer[] copy = Arrays.stream(values).boxed().toArray(Integer[]::new);\n        Arrays.sort(copy, Collections.reverseOrder());\n        return Arrays.stream(copy).map(String::valueOf).reduce((left, right) -> left + \",\" + right).orElse(\"\");\n    }\n}\n",
+  "hint": "Use uppercase letters after taking the initials.",
+  "explanation": "The broken code builds lowercase initials. Converting the result to uppercase fixes the output.",
+  "tags": [
+    "java",
+    "030-name-initials",
+    "medium",
+    "strings",
+    "case-conversion"
+  ],
+  "timeLimitSeconds": 150,
+  "points": 160,
+  "status": "published"
+}

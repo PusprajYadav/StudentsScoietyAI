@@ -1,0 +1,21 @@
+{
+  "title": "001 - Count Positive Numbers",
+  "language": "javascript",
+  "difficulty": "easy",
+  "prompt": "Fix the bug so the program count how many values in the sample list are greater than zero and prints exactly `3`. Keep the sample data and do not add extra output.",
+  "brokenCode": "function countPositiveNumbers(values) {\n  return values.filter((value) => value >= 0).length;\n}\n",
+  "solutionCode": "function countPositiveNumbers(values) {\n  return values.filter((value) => value > 0).length;\n}\n",
+  "hint": "Zero should not be counted as a positive number.",
+  "explanation": "The broken code includes zero in the count. Using a strict greater-than check makes the sample output 3.",
+  "tags": [
+    "javascript",
+    "001-count-positive-numbers",
+    "easy",
+    "arrays",
+    "counting",
+    "conditions"
+  ],
+  "timeLimitSeconds": 90,
+  "points": 100,
+  "status": "published"
+}

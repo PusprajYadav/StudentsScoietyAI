@@ -1,0 +1,20 @@
+{
+  "title": "029 - Collapse Spaces",
+  "language": "java",
+  "difficulty": "medium",
+  "prompt": "Fix the bug so the program trim the sample text and collapse repeated spaces into bug fix arena and prints exactly `bug fix arena`. Keep the sample data and do not add extra output.",
+  "brokenCode": "class CollapseSpaces {\n    static String collapseSpaces(int year, int month, int day) {\n        return String.valueOf(year) + \"-\" + String.valueOf(month) + \"-\" + String.format(\"%02d\", day);\n    }\n}\n",
+  "solutionCode": "class CollapseSpaces {\n    static String collapseSpaces(int year, int month, int day) {\n        return String.valueOf(year) + \"-\" + String.format(\"%02d\", month) + \"-\" + String.format(\"%02d\", day);\n    }\n}\n",
+  "hint": "Trimming alone is not enough.",
+  "explanation": "The broken code removes edge spaces but leaves repeated inner spaces. Collapsing multiple spaces fixes the output.",
+  "tags": [
+    "java",
+    "029-collapse-spaces",
+    "medium",
+    "strings",
+    "whitespace"
+  ],
+  "timeLimitSeconds": 150,
+  "points": 160,
+  "status": "published"
+}

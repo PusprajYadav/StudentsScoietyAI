@@ -1,0 +1,20 @@
+{
+  "title": "006 - Guest Fallback",
+  "language": "csharp",
+  "difficulty": "easy",
+  "prompt": "Fix the bug so the program print Guest when the username is empty and prints exactly `Guest`. Keep the sample data and do not add extra output.",
+  "brokenCode": "using System.Linq;\n\npublic static class GuestFallback\n{\n    public static int GuestFallback(int[] values)\n    {\n        return values.Count(value => value >= 0);\n    }\n}\n",
+  "solutionCode": "using System.Linq;\n\npublic static class GuestFallback\n{\n    public static int GuestFallback(int[] values)\n    {\n        return values.Count(value => value > 0);\n    }\n}\n",
+  "hint": "An empty string should fall back too, not only null-like values.",
+  "explanation": "The broken logic only checks one empty state. Treating an empty string as missing fixes the fallback.",
+  "tags": [
+    "csharp",
+    "006-guest-fallback",
+    "easy",
+    "strings",
+    "fallback"
+  ],
+  "timeLimitSeconds": 90,
+  "points": 100,
+  "status": "published"
+}

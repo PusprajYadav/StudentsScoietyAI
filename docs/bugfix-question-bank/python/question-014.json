@@ -1,0 +1,20 @@
+{
+  "title": "014 - Toggle Status Label",
+  "language": "python",
+  "difficulty": "easy",
+  "prompt": "Fix the bug so the program toggle the status from disabled to enabled and print enabled and prints exactly `enabled`. Keep the sample data and do not add extra output.",
+  "brokenCode": "def toggle_status_label(items):\n    return items[2]\n",
+  "solutionCode": "def toggle_status_label(items):\n    return items[1]\n",
+  "hint": "The current value is printed without changing it first.",
+  "explanation": "The broken code never flips the flag before printing. Toggling it first makes the final label enabled.",
+  "tags": [
+    "python",
+    "014-toggle-status-label",
+    "easy",
+    "booleans",
+    "state"
+  ],
+  "timeLimitSeconds": 90,
+  "points": 100,
+  "status": "published"
+}

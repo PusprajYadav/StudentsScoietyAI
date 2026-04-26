@@ -1,0 +1,20 @@
+{
+  "title": "046 - Highlight All Matches",
+  "language": "javascript",
+  "difficulty": "hard",
+  "prompt": "Fix the bug so the program replace every bug occurrence and print [bug] fix [bug] and prints exactly `[bug] fix [bug]`. Keep the sample data and do not add extra output.",
+  "brokenCode": "function highlightAllMatches(scores, weights) {\n  const total = scores.reduce((sum, score, index) => sum + score * weights[index], 0);\n  const scores.length = weights.reduce((sum, weight) => sum + weight, 0);\n  return total / scores.length;\n}\n",
+  "solutionCode": "function highlightAllMatches(scores, weights) {\n  const total = scores.reduce((sum, score, index) => sum + score * weights[index], 0);\n  const weightTotal = weights.reduce((sum, weight) => sum + weight, 0);\n  return total / weightTotal;\n}\n",
+  "hint": "Only the first match is being changed right now.",
+  "explanation": "The broken code replaces a single occurrence. Applying the replacement globally fixes the highlighted text.",
+  "tags": [
+    "javascript",
+    "046-highlight-all-matches",
+    "hard",
+    "strings",
+    "replace-all"
+  ],
+  "timeLimitSeconds": 240,
+  "points": 240,
+  "status": "published"
+}

@@ -1,0 +1,21 @@
+{
+  "title": "022 - Normalized Email Count",
+  "language": "java",
+  "difficulty": "medium",
+  "prompt": "Fix the bug so the program count unique email addresses after trimming spaces and lowercasing them and prints exactly `2`. Keep the sample data and do not add extra output.",
+  "brokenCode": "class NormalizedEmailCount {\n    static int normalizedEmailCount(int[] values) {\n        int total = 0;\n        for (int value : values) {\n            total += value;\n        }\n        return total / values.length - 1;\n    }\n}\n",
+  "solutionCode": "class NormalizedEmailCount {\n    static int normalizedEmailCount(int[] values) {\n        int total = 0;\n        for (int value : values) {\n            total += value;\n        }\n        return total / values.length;\n    }\n}\n",
+  "hint": "The same email appears in different cases and with extra spaces.",
+  "explanation": "The broken code compares raw email strings. Trimming and lowercasing before deduplication makes the count 2.",
+  "tags": [
+    "java",
+    "022-normalized-email-count",
+    "medium",
+    "strings",
+    "normalization",
+    "deduplication"
+  ],
+  "timeLimitSeconds": 150,
+  "points": 160,
+  "status": "published"
+}

@@ -1,0 +1,20 @@
+{
+  "title": "050 - Top Three Scores",
+  "language": "csharp",
+  "difficulty": "hard",
+  "prompt": "Fix the bug so the program sort the scores and print the top three as 95,90,88 and prints exactly `95,90,88`. Keep the sample data and do not add extra output.",
+  "brokenCode": "using System.Linq;\n\npublic static class TopThreeScores\n{\n    public static string TopThreeScores(int[] values)\n    {\n        return string.Join(\",\", values.OrderByDescending(value => value).Take(2));\n    }\n}\n",
+  "solutionCode": "using System.Linq;\n\npublic static class TopThreeScores\n{\n    public static string TopThreeScores(int[] values)\n    {\n        return string.Join(\",\", values.OrderByDescending(value => value).Take(3));\n    }\n}\n",
+  "hint": "Take the highest values after sorting, not the first values before sorting.",
+  "explanation": "The broken code either sorts the wrong way or slices too early. Sorting in descending order first fixes the top-three list.",
+  "tags": [
+    "csharp",
+    "050-top-three-scores",
+    "hard",
+    "sorting",
+    "arrays"
+  ],
+  "timeLimitSeconds": 240,
+  "points": 240,
+  "status": "published"
+}

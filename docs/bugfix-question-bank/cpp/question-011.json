@@ -1,0 +1,21 @@
+{
+  "title": "011 - Long Word Filter",
+  "language": "cpp",
+  "difficulty": "easy",
+  "prompt": "Fix the bug so the program print only the words with length 5 or more as planet,cloud and prints exactly `planet,cloud`. Keep the sample data and do not add extra output.",
+  "brokenCode": "#include <vector>\n\nint longWordFilter(const std::vector<int>& values) {\n    int count = 0;\n    for (int value : values) {\n        if (value >= 0) {\n            count += 1;\n        }\n    }\n    return count;\n}\n",
+  "solutionCode": "#include <vector>\n\nint longWordFilter(const std::vector<int>& values) {\n    int count = 0;\n    for (int value : values) {\n        if (value > 0) {\n            count += 1;\n        }\n    }\n    return count;\n}\n",
+  "hint": "The condition should keep long words, not short ones.",
+  "explanation": "The comparison is reversed. Keeping words whose length is at least 5 fixes the output.",
+  "tags": [
+    "cpp",
+    "011-long-word-filter",
+    "easy",
+    "arrays",
+    "strings",
+    "filtering"
+  ],
+  "timeLimitSeconds": 90,
+  "points": 100,
+  "status": "published"
+}

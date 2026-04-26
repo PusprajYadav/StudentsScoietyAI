@@ -1,0 +1,80 @@
+2026-04-13 20:04:37,560 DEBUG    root            Loaded Command Group: ['gcloud', 'run']
+2026-04-13 20:04:37,803 DEBUG    root            Loaded Command Group: ['gcloud', 'run', 'deploy']
+2026-04-13 20:04:37,813 DEBUG    root            On GCE from memory cache: False
+2026-04-13 20:04:37,813 DEBUG    root            Running [gcloud.run.deploy] with arguments: [--allow-unauthenticated: "True", --env-vars-file: "{'APP_NAME': 'Student Society API', 'APP_ENV': 'production', 'DEBUG': 'false', 'LOG_LEVEL': 'INFO', 'API_PREFIX': '', 'SUPABASE_URL': 'https://kkcjbeyvmebuactcmbdi.supabase.co', 'SUPABASE_ANON_KEY': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtrY2piZXl2bWVidWFjdGNtYmRpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQ0MjkzOTUsImV4cCI6MjA5MDAwNTM5NX0.v0nNv3uB2jOlxSObKw9DjsAFAk2om1yqBBEqBy4Sbjw', 'SUPABASE_SERVICE_ROLE_KEY': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtrY2piZXl2bWVidWFjdGNtYmRpIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc3NDQyOTM5NSwiZXhwIjoyMDkwMDA1Mzk1fQ.Q0JQmoq1bJ6SGCUp0AK2EyGn0bjsgJRh0l1jtrfjyPY', 'BULK_MAILER_SECRET_KEY': 'NByJLuBPlFwGXJq3l3DuJnzSxU4UbA8AqzyNK53CbiU', 'BACKEND_BASE_URL': 'https://studentsociety-api-634993611773.asia-south1.run.app/', 'FRONTEND_APP_BASE_URL': 'https://studentsociety.in', 'CORS_ORIGINS': '*', 'META_APP_ID': '965541326028632', 'META_APP_SECRET': '7626f788f5e01302e6d7ef63c4901f52', 'META_REDIRECT_URI': 'https://studentsociety.in/app/tools/instagram-automation', 'META_GRAPH_API_VERSION': 'v25.0', 'META_WEBHOOK_VERIFY_TOKEN': 'studentsociety_pusprajjiyadav', 'META_OAUTH_SCOPES': 'instagram_basic,instagram_manage_messages,instagram_manage_comments,pages_show_list', 'INSTAGRAM_AUTOMATION_R2_PREFIX': 'automation/instagram', 'INSTAGRAM_AUTOMATION_WEBHOOK_ARCHIVE_ENABLED': 'true', 'INSTAGRAM_AUTOMATION_DEFAULT_DAILY_LIMIT_PER_SENDER': '1', 'INSTAGRAM_AUTOMATION_DEFAULT_COOLDOWN_SECONDS': '0', 'DATABASE_URL': 'postgresql+asyncpg://postgres:jbOprbGRzIpWwGb4@db.kkcjbeyvmebuactcmbdi.supabase.co:5432/postgres', 'SUPABASE_JWT_SECRET': '', 'SUPABASE_JWT_AUDIENCE': 'authenticated', 'SUPABASE_JWKS_CACHE_TTL_SECONDS': '3600', 'R2_ACCESS_KEY': '4501da5d1bcdeef4c0f833c4f48e7605', 'R2_SECRET_KEY': '6b9ef8d1e94b1bd9e19969894d9220d11da211fb09ebbe1842effe6813aa41fe', 'R2_BUCKET': 'studentsociety-media', 'R2_ENDPOINT': 'https://2372049d62681df994750eb8904cc940.r2.cloudflarestorage.com', 'R2_PUBLIC_BASE_URL': 'https://cdn.studentsociety.in', 'R2_PRESIGNED_URL_TTL_SECONDS': '900', 'REQUEST_TIMEOUT_SECONDS': '15', 'DB_POOL_SIZE': '10', 'DB_MAX_OVERFLOW': '20', 'POST_FEED_DEFAULT_LIMIT': '20', 'POST_FEED_MAX_LIMIT': '50', 'REALTIME_MESSAGE_TTL_SECONDS': '300', 'REALTIME_AUTH_TIMEOUT_SECONDS': '8', 'REALTIME_CLEANUP_INTERVAL_SECONDS': '1', 'REALTIME_MAX_PAYLOAD_BYTES': '32768', 'REALTIME_INTERNAL_SECRET': 'WG0dtf2gRvPEIMj-0cwp7D_snkW4A3Y6ifNyiMx77VYovVcM7NxdLxF1tdWTUNDG', 'REALTIME_REDIS_URL': '', 'REALTIME_CORS_ORIGINS': '*'}", --platform: "managed", --port: "8080", --region: "asia-south1", --source: "backend", SERVICE: "studentsociety-api"]
+2026-04-13 20:04:37,814 DEBUG    root            (gcloud.run.deploy) The [project] resource is not properly specified. Please specify the argument [--project] on the command line or set the property [core/project].
+Traceback (most recent call last):
+  File "/Users/pusprajyadav/Documents/google-cloud-sdk/lib/googlecloudsdk/calliope/cli.py", line 957, in Execute
+    resources = calliope_command.Run(cli=self, args=args)
+  File "/Users/pusprajyadav/Documents/google-cloud-sdk/lib/googlecloudsdk/calliope/backend.py", line 968, in Run
+    resources = command_instance.Run(args)
+  File "/Users/pusprajyadav/Documents/google-cloud-sdk/lib/surface/run/deploy.py", line 853, in Run
+    service_ref = args.CONCEPTS.service.Parse()
+  File "/Users/pusprajyadav/Documents/google-cloud-sdk/lib/googlecloudsdk/calliope/concepts/handlers.py", line 87, in Parse
+    return self.parse(self.arg_getter())
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/Users/pusprajyadav/Documents/google-cloud-sdk/lib/googlecloudsdk/command_lib/util/concepts/info_holders.py", line 394, in Parse
+    result = self.concept_spec.Parse(self.attribute_to_args_map,
+                                     self.fallthroughs_map,
+                                     parsed_args=parsed_args,
+                                     plural=self.plural,
+                                     allow_empty=self.allow_empty)
+  File "/Users/pusprajyadav/Documents/google-cloud-sdk/lib/googlecloudsdk/calliope/concepts/concepts.py", line 468, in Parse
+    return self._ParseFromValue(
+           ~~~~~~~~~~~~~~~~~~~~^
+        attribute_to_args_map, base_fallthroughs_map, parsed_args,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        allow_empty=allow_empty)
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pusprajyadav/Documents/google-cloud-sdk/lib/googlecloudsdk/calliope/concepts/concepts.py", line 549, in _ParseFromValue
+    return self.Initialize(
+           ~~~~~~~~~~~~~~~^
+        fallthroughs_map, parsed_args=parsed_args)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pusprajyadav/Documents/google-cloud-sdk/lib/googlecloudsdk/calliope/concepts/concepts.py", line 428, in Initialize
+    return self._resources.Parse(
+           ~~~~~~~~~~~~~~~~~~~~~^
+        deps_lib.Get(
+        ^^^^^^^^^^^^^
+    ...<2 lines>...
+        params=params,
+        ^^^^^^^^^^^^^^
+        api_version=self._collection_info.api_version)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pusprajyadav/Documents/google-cloud-sdk/lib/googlecloudsdk/core/resources.py", line 1214, in Parse
+    return self.ParseResourceId(collection, line, params or {},
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                api_version=api_version,
+                                ^^^^^^^^^^^^^^^^^^^^^^^^
+                                validate=validate,
+                                ^^^^^^^^^^^^^^^^^^
+                                default_resolver=default_resolver)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pusprajyadav/Documents/google-cloud-sdk/lib/googlecloudsdk/core/resources.py", line 970, in ParseResourceId
+    return parser.ParseResourceId(resource_id, kwargs, base_url, subcollection,
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                  validate=validate,
+                                  ^^^^^^^^^^^^^^^^^^
+                                  default_resolver=default_resolver)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pusprajyadav/Documents/google-cloud-sdk/lib/googlecloudsdk/core/resources.py", line 311, in ParseResourceId
+    param_values[param] = resolver() if callable(resolver) else resolver
+                          ~~~~~~~~^^
+  File "/Users/pusprajyadav/Documents/google-cloud-sdk/lib/googlecloudsdk/calliope/concepts/concepts.py", line 421, in <lambda>
+    return lambda: deps_lib.Get(name, fallthroughs_map, parsed_args)
+                   ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pusprajyadav/Documents/google-cloud-sdk/lib/googlecloudsdk/calliope/concepts/deps.py", line 353, in Get
+    return GetFromFallthroughs(
+        fallthroughs, parsed_args, attribute_name=attribute_name)
+  File "/Users/pusprajyadav/Documents/google-cloud-sdk/lib/googlecloudsdk/calliope/concepts/deps.py", line 378, in GetFromFallthroughs
+    return fallthrough.GetValue(parsed_args)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/pusprajyadav/Documents/google-cloud-sdk/lib/googlecloudsdk/calliope/concepts/deps.py", line 87, in GetValue
+    value = self._Call(parsed_args)
+  File "/Users/pusprajyadav/Documents/google-cloud-sdk/lib/googlecloudsdk/command_lib/run/resource_args.py", line 206, in _Call
+    raise exceptions.ArgumentError(
+    ...<3 lines>...
+    )
+googlecloudsdk.command_lib.run.exceptions.ArgumentError: The [project] resource is not properly specified. Please specify the argument [--project] on the command line or set the property [core/project].
+2026-04-13 20:04:37,819 ERROR    root            (gcloud.run.deploy) The [project] resource is not properly specified. Please specify the argument [--project] on the command line or set the property [core/project].
+2026-04-13 20:04:37,830 DEBUG    root            Metrics reporting process started...

@@ -1,0 +1,20 @@
+{
+  "title": "037 - Weighted Score",
+  "language": "csharp",
+  "difficulty": "medium",
+  "prompt": "Fix the bug so the program calculate the weighted score and print 85 and prints exactly `85`. Keep the sample data and do not add extra output.",
+  "brokenCode": "using System.Linq;\n\npublic static class WeightedScore\n{\n    public static int WeightedScore(int[] values)\n    {\n        return values.Sum() / values.Length - 1;\n    }\n}\n",
+  "solutionCode": "using System.Linq;\n\npublic static class WeightedScore\n{\n    public static int WeightedScore(int[] values)\n    {\n        return values.Sum() / values.Length;\n    }\n}\n",
+  "hint": "Divide by the total weight, not by the number of scores.",
+  "explanation": "The broken code uses the wrong divisor for the weighted average. Dividing by the sum of weights fixes the score.",
+  "tags": [
+    "csharp",
+    "037-weighted-score",
+    "medium",
+    "math",
+    "weighted-average"
+  ],
+  "timeLimitSeconds": 150,
+  "points": 160,
+  "status": "published"
+}

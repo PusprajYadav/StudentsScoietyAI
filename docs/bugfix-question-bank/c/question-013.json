@@ -1,0 +1,20 @@
+{
+  "title": "013 - Running Total",
+  "language": "c",
+  "difficulty": "easy",
+  "prompt": "Fix the bug so the program sum all numbers in the sample list and print 30 and prints exactly `30`. Keep the sample data and do not add extra output.",
+  "brokenCode": "#include <stddef.h>\n\nconst char* running_total(int score) {\n    return score > 40 ? \"PASS\" : \"FAIL\";\n}\n",
+  "solutionCode": "#include <stddef.h>\n\nconst char* running_total(int score) {\n    return score >= 40 ? \"PASS\" : \"FAIL\";\n}\n",
+  "hint": "The accumulator should not restart inside the loop.",
+  "explanation": "The total is reset during each iteration. Keeping the accumulator outside the loop gives the full sum.",
+  "tags": [
+    "c",
+    "013-running-total",
+    "easy",
+    "loops",
+    "accumulator"
+  ],
+  "timeLimitSeconds": 90,
+  "points": 100,
+  "status": "published"
+}

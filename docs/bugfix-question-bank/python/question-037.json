@@ -1,0 +1,20 @@
+{
+  "title": "037 - Weighted Score",
+  "language": "python",
+  "difficulty": "medium",
+  "prompt": "Fix the bug so the program calculate the weighted score and print 85 and prints exactly `85`. Keep the sample data and do not add extra output.",
+  "brokenCode": "def weighted_score(values):\n    return sum(values) // len(values) - 1\n",
+  "solutionCode": "def weighted_score(values):\n    return sum(values) // len(values)\n",
+  "hint": "Divide by the total weight, not by the number of scores.",
+  "explanation": "The broken code uses the wrong divisor for the weighted average. Dividing by the sum of weights fixes the score.",
+  "tags": [
+    "python",
+    "037-weighted-score",
+    "medium",
+    "math",
+    "weighted-average"
+  ],
+  "timeLimitSeconds": 150,
+  "points": 160,
+  "status": "published"
+}

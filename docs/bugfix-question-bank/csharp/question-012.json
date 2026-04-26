@@ -1,0 +1,20 @@
+{
+  "title": "012 - Descending Scores",
+  "language": "csharp",
+  "difficulty": "easy",
+  "prompt": "Fix the bug so the program sort the numbers in descending order and print 8,4,2,1 and prints exactly `8,4,2,1`. Keep the sample data and do not add extra output.",
+  "brokenCode": "using System.Linq;\n\npublic static class DescendingScores\n{\n    public static int DescendingScores(int[] values)\n    {\n        return values.Where(value => value % 2 == 1).Sum();\n    }\n}\n",
+  "solutionCode": "using System.Linq;\n\npublic static class DescendingScores\n{\n    public static int DescendingScores(int[] values)\n    {\n        return values.Where(value => value % 2 == 0).Sum();\n    }\n}\n",
+  "hint": "The sort order is flipped.",
+  "explanation": "The broken sort uses ascending order. Reversing the comparison produces the expected descending output.",
+  "tags": [
+    "csharp",
+    "012-descending-scores",
+    "easy",
+    "sorting",
+    "arrays"
+  ],
+  "timeLimitSeconds": 90,
+  "points": 100,
+  "status": "published"
+}

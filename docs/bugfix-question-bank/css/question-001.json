@@ -1,0 +1,20 @@
+{
+  "title": "001 - Center Items in Flex",
+  "language": "css",
+  "difficulty": "easy",
+  "prompt": "Fix the flexbox rule so items are centered on both axes.",
+  "brokenCode": ".card {\n  display: flex;\n  justify-content: center;\n  align-item: center;\n}\n",
+  "solutionCode": ".card {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n",
+  "hint": "One property name is misspelled.",
+  "explanation": "The flex alignment property is `align-items`, not `align-item`.",
+  "tags": [
+    "css",
+    "001-center-items-in-flex",
+    "easy",
+    "flexbox",
+    "alignment"
+  ],
+  "timeLimitSeconds": 90,
+  "points": 100,
+  "status": "published"
+}

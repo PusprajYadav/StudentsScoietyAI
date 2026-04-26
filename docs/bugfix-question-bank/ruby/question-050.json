@@ -1,0 +1,20 @@
+{
+  "title": "050 - Top Three Scores",
+  "language": "ruby",
+  "difficulty": "hard",
+  "prompt": "Fix the bug so the program sort the scores and print the top three as 95,90,88 and prints exactly `95,90,88`. Keep the sample data and do not add extra output.",
+  "brokenCode": "def top_three_scores(values)\n  values.sort.reverse.first(2).join(\",\")\nend\n",
+  "solutionCode": "def top_three_scores(values)\n  values.sort.reverse.first(3).join(\",\")\nend\n",
+  "hint": "Take the highest values after sorting, not the first values before sorting.",
+  "explanation": "The broken code either sorts the wrong way or slices too early. Sorting in descending order first fixes the top-three list.",
+  "tags": [
+    "ruby",
+    "050-top-three-scores",
+    "hard",
+    "sorting",
+    "arrays"
+  ],
+  "timeLimitSeconds": 240,
+  "points": 240,
+  "status": "published"
+}

@@ -1,0 +1,20 @@
+{
+  "title": "015 - Unique Count",
+  "language": "cpp",
+  "difficulty": "easy",
+  "prompt": "Fix the bug so the program count the unique items in the sample list and prints exactly `3`. Keep the sample data and do not add extra output.",
+  "brokenCode": "#include <string>\n\nstd::string uniqueCount(const std::string& name) {\n    return std::string(\"Hello, \") + name;\n}\n",
+  "solutionCode": "#include <string>\n\nstd::string uniqueCount(const std::string& name) {\n    return std::string(\"Hello, \") + name + \"!\";\n}\n",
+  "hint": "Duplicates should be ignored.",
+  "explanation": "The broken program counts every item. Removing duplicates before counting fixes the result.",
+  "tags": [
+    "cpp",
+    "015-unique-count",
+    "easy",
+    "arrays",
+    "deduplication"
+  ],
+  "timeLimitSeconds": 90,
+  "points": 100,
+  "status": "published"
+}

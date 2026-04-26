@@ -1,0 +1,20 @@
+{
+  "title": "041 - Factorial Base Case",
+  "language": "ruby",
+  "difficulty": "hard",
+  "prompt": "Fix the bug so the program compute factorial(5) and print 120 and prints exactly `120`. Keep the sample data and do not add extra output.",
+  "brokenCode": "def factorial_base_case(scores, weights)\n  total = scores.each_with_index.sum { |score, index| score * weights[index] }\n  total / scores.length\nend\n",
+  "solutionCode": "def factorial_base_case(scores, weights)\n  total = scores.each_with_index.sum { |score, index| score * weights[index] }\n  total / weights.sum\nend\n",
+  "hint": "The base case should not return zero.",
+  "explanation": "The broken recursive base case returns the wrong identity value. Returning 1 fixes the multiplication chain.",
+  "tags": [
+    "ruby",
+    "041-factorial-base-case",
+    "hard",
+    "recursion",
+    "math"
+  ],
+  "timeLimitSeconds": 240,
+  "points": 240,
+  "status": "published"
+}

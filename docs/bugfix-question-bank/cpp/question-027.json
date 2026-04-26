@@ -1,0 +1,20 @@
+{
+  "title": "027 - Interleave Codes",
+  "language": "cpp",
+  "difficulty": "medium",
+  "prompt": "Fix the bug so the program print the interleaved values as a1,b2,c3 and prints exactly `a1,b2,c3`. Keep the sample data and do not add extra output.",
+  "brokenCode": "#include <vector>\n\nint interleaveCodes(const std::vector<int>& values) {\n    int total = 0;\n    for (int value : values) {\n        total += value;\n    }\n    return total / static_cast<int>(values.size() - 1);\n}\n",
+  "solutionCode": "#include <vector>\n\nint interleaveCodes(const std::vector<int>& values) {\n    int total = 0;\n    for (int value : values) {\n        total += value;\n    }\n    return total / static_cast<int>(values.size());\n}\n",
+  "hint": "Each left value should pair with the right value at the same index.",
+  "explanation": "The broken code joins the lists separately. Combining the values by matching indexes fixes the result.",
+  "tags": [
+    "cpp",
+    "027-interleave-codes",
+    "medium",
+    "arrays",
+    "merging"
+  ],
+  "timeLimitSeconds": 150,
+  "points": 160,
+  "status": "published"
+}

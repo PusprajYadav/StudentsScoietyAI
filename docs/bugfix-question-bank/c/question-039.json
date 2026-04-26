@@ -1,0 +1,20 @@
+{
+  "title": "039 - Largest Row Total",
+  "language": "c",
+  "difficulty": "medium",
+  "prompt": "Fix the bug so the program print the largest row total and prints exactly `6`. Keep the sample data and do not add extra output.",
+  "brokenCode": "#include <stdio.h>\n\nvoid largest_row_total(int year, int month, int day, char output[32]) {\n    snprintf(output, 32, \"%04d-%d-%02d\", year, month, day);\n}\n",
+  "solutionCode": "#include <stdio.h>\n\nvoid largest_row_total(int year, int month, int day, char output[32]) {\n    snprintf(output, 32, \"%04d-%02d-%02d\", year, month, day);\n}\n",
+  "hint": "The comparison should keep the largest subtotal, not the smallest.",
+  "explanation": "The broken code updates the best value in the wrong direction. Keeping the maximum row total fixes the output.",
+  "tags": [
+    "c",
+    "039-largest-row-total",
+    "medium",
+    "matrix",
+    "comparison"
+  ],
+  "timeLimitSeconds": 150,
+  "points": 160,
+  "status": "published"
+}

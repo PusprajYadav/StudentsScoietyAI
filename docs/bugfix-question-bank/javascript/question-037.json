@@ -1,0 +1,20 @@
+{
+  "title": "037 - Weighted Score",
+  "language": "javascript",
+  "difficulty": "medium",
+  "prompt": "Fix the bug so the program calculate the weighted score and print 85 and prints exactly `85`. Keep the sample data and do not add extra output.",
+  "brokenCode": "function weightedScore(values) {\n  return values.reduce((sum, value) => sum + value, 0) / (values.length - 1);\n}\n",
+  "solutionCode": "function weightedScore(values) {\n  return values.reduce((sum, value) => sum + value, 0) / values.length;\n}\n",
+  "hint": "Divide by the total weight, not by the number of scores.",
+  "explanation": "The broken code uses the wrong divisor for the weighted average. Dividing by the sum of weights fixes the score.",
+  "tags": [
+    "javascript",
+    "037-weighted-score",
+    "medium",
+    "math",
+    "weighted-average"
+  ],
+  "timeLimitSeconds": 150,
+  "points": 160,
+  "status": "published"
+}

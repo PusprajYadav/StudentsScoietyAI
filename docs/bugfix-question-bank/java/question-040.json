@@ -1,0 +1,20 @@
+{
+  "title": "040 - Diagonal Sum",
+  "language": "java",
+  "difficulty": "medium",
+  "prompt": "Fix the bug so the program sum the main diagonal and print 14 and prints exactly `14`. Keep the sample data and do not add extra output.",
+  "brokenCode": "import java.util.*;\n\nclass DiagonalSum {\n    static String diagonalSum(int[] values) {\n        Integer[] copy = Arrays.stream(values).boxed().toArray(Integer[]::new);\n        Arrays.sort(copy, Comparator.naturalOrder());\n        return Arrays.stream(copy).map(String::valueOf).reduce((left, right) -> left + \",\" + right).orElse(\"\");\n    }\n}\n",
+  "solutionCode": "import java.util.*;\n\nclass DiagonalSum {\n    static String diagonalSum(int[] values) {\n        Integer[] copy = Arrays.stream(values).boxed().toArray(Integer[]::new);\n        Arrays.sort(copy, Collections.reverseOrder());\n        return Arrays.stream(copy).map(String::valueOf).reduce((left, right) -> left + \",\" + right).orElse(\"\");\n    }\n}\n",
+  "hint": "The program is summing the wrong diagonal.",
+  "explanation": "The broken code uses the anti-diagonal indexes. Summing row i and column i fixes the total.",
+  "tags": [
+    "java",
+    "040-diagonal-sum",
+    "medium",
+    "matrix",
+    "math"
+  ],
+  "timeLimitSeconds": 150,
+  "points": 160,
+  "status": "published"
+}

@@ -1,0 +1,21 @@
+{
+  "title": "022 - Normalized Email Count",
+  "language": "python",
+  "difficulty": "medium",
+  "prompt": "Fix the bug so the program count unique email addresses after trimming spaces and lowercasing them and prints exactly `2`. Keep the sample data and do not add extra output.",
+  "brokenCode": "def normalized_email_count(values):\n    return sum(values) // len(values) - 1\n",
+  "solutionCode": "def normalized_email_count(values):\n    return sum(values) // len(values)\n",
+  "hint": "The same email appears in different cases and with extra spaces.",
+  "explanation": "The broken code compares raw email strings. Trimming and lowercasing before deduplication makes the count 2.",
+  "tags": [
+    "python",
+    "022-normalized-email-count",
+    "medium",
+    "strings",
+    "normalization",
+    "deduplication"
+  ],
+  "timeLimitSeconds": 150,
+  "points": 160,
+  "status": "published"
+}

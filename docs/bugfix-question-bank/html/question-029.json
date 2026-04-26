@@ -1,0 +1,20 @@
+{
+  "title": "029 - HTML Repair 029",
+  "language": "html",
+  "difficulty": "medium",
+  "prompt": "Fix this HTML snippet so question 029 is valid and matches the intended structure.",
+  "brokenCode": "<section class=\"card card-029\">\n  <h2>Question 029</h2>\n  <p>Fix this sample markup\n</section>\n",
+  "solutionCode": "<section class=\"card card-029\">\n  <h2>Question 029</h2>\n  <p>Fix this sample markup</p>\n</section>\n",
+  "hint": "Check the text element and the surrounding structure carefully.",
+  "explanation": "The broken snippet leaves markup incomplete. Closing and structuring the elements correctly fixes the HTML.",
+  "tags": [
+    "html",
+    "029-html-repair-029",
+    "medium",
+    "markup",
+    "structure"
+  ],
+  "timeLimitSeconds": 150,
+  "points": 160,
+  "status": "published"
+}

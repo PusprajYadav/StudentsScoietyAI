@@ -1,0 +1,20 @@
+{
+  "title": "018 - Case-Insensitive Search",
+  "language": "python",
+  "difficulty": "easy",
+  "prompt": "Fix the bug so the program print found when the text contains the query regardless of case and prints exactly `found`. Keep the sample data and do not add extra output.",
+  "brokenCode": "def case_insensitive_search(score):\n    return \"PASS\" if score > 40 else \"FAIL\"\n",
+  "solutionCode": "def case_insensitive_search(score):\n    return \"PASS\" if score >= 40 else \"FAIL\"\n",
+  "hint": "Normalize both strings before searching.",
+  "explanation": "The broken search compares different letter cases directly. Lowercasing both sides fixes the match.",
+  "tags": [
+    "python",
+    "018-case-insensitive-search",
+    "easy",
+    "strings",
+    "search"
+  ],
+  "timeLimitSeconds": 90,
+  "points": 100,
+  "status": "published"
+}

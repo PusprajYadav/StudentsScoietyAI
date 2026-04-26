@@ -1,0 +1,20 @@
+{
+  "title": "031 - Visibility Rules",
+  "language": "cpp",
+  "difficulty": "medium",
+  "prompt": "Fix the bug so the program print visible when the viewer is the owner even if the item is private and prints exactly `visible`. Keep the sample data and do not add extra output.",
+  "brokenCode": "#include <set>\n#include <string>\n#include <vector>\n\nint visibilityRules(const std::vector<std::string>& values) {\n    return values.size();\n}\n",
+  "solutionCode": "#include <set>\n#include <string>\n#include <vector>\n\nint visibilityRules(const std::vector<std::string>& values) {\n    return std::set<std::string>(values.begin(), values.end()).size();\n}\n",
+  "hint": "Either condition should allow visibility.",
+  "explanation": "The broken condition requires both flags. Using an OR check matches the intended visibility rule.",
+  "tags": [
+    "cpp",
+    "031-visibility-rules",
+    "medium",
+    "booleans",
+    "conditions"
+  ],
+  "timeLimitSeconds": 150,
+  "points": 160,
+  "status": "published"
+}

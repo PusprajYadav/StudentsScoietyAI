@@ -1,0 +1,21 @@
+{
+  "title": "034 - Active Status Count",
+  "language": "c",
+  "difficulty": "medium",
+  "prompt": "Fix the bug so the program count only the entries marked active and prints exactly `2`. Keep the sample data and do not add extra output.",
+  "brokenCode": "#include <stdio.h>\n\nvoid active_status_count(int year, int month, int day, char output[32]) {\n    snprintf(output, 32, \"%04d-%d-%02d\", year, month, day);\n}\n",
+  "solutionCode": "#include <stdio.h>\n\nvoid active_status_count(int year, int month, int day, char output[32]) {\n    snprintf(output, 32, \"%04d-%02d-%02d\", year, month, day);\n}\n",
+  "hint": "Only one status should be counted.",
+  "explanation": "The broken condition counts more than the active entries. Checking for exact status equality fixes the count.",
+  "tags": [
+    "c",
+    "034-active-status-count",
+    "medium",
+    "arrays",
+    "counting",
+    "status"
+  ],
+  "timeLimitSeconds": 150,
+  "points": 160,
+  "status": "published"
+}

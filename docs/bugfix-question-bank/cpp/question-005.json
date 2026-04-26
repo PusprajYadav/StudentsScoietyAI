@@ -1,0 +1,20 @@
+{
+  "title": "005 - Greeting Format",
+  "language": "cpp",
+  "difficulty": "easy",
+  "prompt": "Fix the bug so the program print the greeting exactly as Hello, Asha! and prints exactly `Hello, Asha!`. Keep the sample data and do not add extra output.",
+  "brokenCode": "#include <string>\n\nstd::string greetingFormat(const std::string& name) {\n    return std::string(\"Hello, \") + name;\n}\n",
+  "solutionCode": "#include <string>\n\nstd::string greetingFormat(const std::string& name) {\n    return std::string(\"Hello, \") + name + \"!\";\n}\n",
+  "hint": "A small punctuation or spacing issue is breaking the expected text.",
+  "explanation": "The greeting needs the comma, space, and exclamation mark in the correct places to match the target output.",
+  "tags": [
+    "cpp",
+    "005-greeting-format",
+    "easy",
+    "strings",
+    "formatting"
+  ],
+  "timeLimitSeconds": 90,
+  "points": 100,
+  "status": "published"
+}

@@ -1,0 +1,20 @@
+{
+  "title": "047 - Validation Summary",
+  "language": "cpp",
+  "difficulty": "hard",
+  "prompt": "Fix the bug so the program print username,password when both fields fail validation and prints exactly `username,password`. Keep the sample data and do not add extra output.",
+  "brokenCode": "#include <sstream>\n#include <string>\n#include <vector>\n\nstd::string validationSummary(const std::vector<int>& left, const std::vector<int>& right) {\n    std::vector<int> merged;\n    size_t leftIndex = 0;\n    size_t rightIndex = 0;\n    while (leftIndex < left.size() && rightIndex < right.size()) {\n        if (left[leftIndex] >= right[rightIndex]) {\n            merged.push_back(left[leftIndex++]);\n        } else {\n            merged.push_back(right[rightIndex++]);\n        }\n    }\n    while (leftIndex < left.size()) merged.push_back(left[leftIndex++]);\n    while (rightIndex < right.size()) merged.push_back(right[rightIndex++]);\n    std::ostringstream output;\n    for (size_t index = 0; index < merged.size(); index++) {\n        if (index > 0) output << \",\";\n        output << merged[index];\n    }\n    return output.str();\n}\n",
+  "solutionCode": "#include <sstream>\n#include <string>\n#include <vector>\n\nstd::string validationSummary(const std::vector<int>& left, const std::vector<int>& right) {\n    std::vector<int> merged;\n    size_t leftIndex = 0;\n    size_t rightIndex = 0;\n    while (leftIndex < left.size() && rightIndex < right.size()) {\n        if (left[leftIndex] <= right[rightIndex]) {\n            merged.push_back(left[leftIndex++]);\n        } else {\n            merged.push_back(right[rightIndex++]);\n        }\n    }\n    while (leftIndex < left.size()) merged.push_back(left[leftIndex++]);\n    while (rightIndex < right.size()) merged.push_back(right[rightIndex++]);\n    std::ostringstream output;\n    for (size_t index = 0; index < merged.size(); index++) {\n        if (index > 0) output << \",\";\n        output << merged[index];\n    }\n    return output.str();\n}\n",
+  "hint": "Both failures should appear in the summary.",
+  "explanation": "The broken code stops after the first failing rule. Collecting every failing field fixes the summary.",
+  "tags": [
+    "cpp",
+    "047-validation-summary",
+    "hard",
+    "validation",
+    "strings"
+  ],
+  "timeLimitSeconds": 240,
+  "points": 240,
+  "status": "published"
+}

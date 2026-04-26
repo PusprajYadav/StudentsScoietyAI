@@ -1,0 +1,20 @@
+{
+  "title": "042 - CSV Column Count",
+  "language": "c",
+  "difficulty": "hard",
+  "prompt": "Fix the bug so the program count the CSV columns in the sample row and print 3 and prints exactly `3`. Keep the sample data and do not add extra output.",
+  "brokenCode": "#include <stddef.h>\n\nsize_t csv_column_count(const int left[], size_t leftLength, const int right[], size_t rightLength, int output[]) {\n    size_t leftIndex = 0;\n    size_t rightIndex = 0;\n    size_t outputIndex = 0;\n    while (leftIndex < leftLength && rightIndex < rightLength) {\n        if (left[leftIndex] >= right[rightIndex]) {\n            output[outputIndex++] = left[leftIndex++];\n        } else {\n            output[outputIndex++] = right[rightIndex++];\n        }\n    }\n    while (leftIndex < leftLength) output[outputIndex++] = left[leftIndex++];\n    while (rightIndex < rightLength) output[outputIndex++] = right[rightIndex++];\n    return outputIndex;\n}\n",
+  "solutionCode": "#include <stddef.h>\n\nsize_t csv_column_count(const int left[], size_t leftLength, const int right[], size_t rightLength, int output[]) {\n    size_t leftIndex = 0;\n    size_t rightIndex = 0;\n    size_t outputIndex = 0;\n    while (leftIndex < leftLength && rightIndex < rightLength) {\n        if (left[leftIndex] <= right[rightIndex]) {\n            output[outputIndex++] = left[leftIndex++];\n        } else {\n            output[outputIndex++] = right[rightIndex++];\n        }\n    }\n    while (leftIndex < leftLength) output[outputIndex++] = left[leftIndex++];\n    while (rightIndex < rightLength) output[outputIndex++] = right[rightIndex++];\n    return outputIndex;\n}\n",
+  "hint": "The split logic assumes the wrong separator pattern.",
+  "explanation": "The broken code splits on the wrong text, so the row is not separated correctly. Splitting on commas fixes the count.",
+  "tags": [
+    "c",
+    "042-csv-column-count",
+    "hard",
+    "strings",
+    "parsing"
+  ],
+  "timeLimitSeconds": 240,
+  "points": 240,
+  "status": "published"
+}

@@ -1,0 +1,20 @@
+{
+  "title": "035 - Error Message Priority",
+  "language": "java",
+  "difficulty": "medium",
+  "prompt": "Fix the bug so the program print the first non-empty error message and prints exactly `Name required`. Keep the sample data and do not add extra output.",
+  "brokenCode": "import java.util.*;\n\nclass ErrorMessagePriority {\n    static String errorMessagePriority(int[] values) {\n        Integer[] copy = Arrays.stream(values).boxed().toArray(Integer[]::new);\n        Arrays.sort(copy, Comparator.naturalOrder());\n        return Arrays.stream(copy).map(String::valueOf).reduce((left, right) -> left + \",\" + right).orElse(\"\");\n    }\n}\n",
+  "solutionCode": "import java.util.*;\n\nclass ErrorMessagePriority {\n    static String errorMessagePriority(int[] values) {\n        Integer[] copy = Arrays.stream(values).boxed().toArray(Integer[]::new);\n        Arrays.sort(copy, Collections.reverseOrder());\n        return Arrays.stream(copy).map(String::valueOf).reduce((left, right) -> left + \",\" + right).orElse(\"\");\n    }\n}\n",
+  "hint": "The fallback should only be used when every error message is empty.",
+  "explanation": "The broken code jumps to the fallback too early. Returning the first non-empty message fixes the priority order.",
+  "tags": [
+    "java",
+    "035-error-message-priority",
+    "medium",
+    "fallback",
+    "validation"
+  ],
+  "timeLimitSeconds": 150,
+  "points": 160,
+  "status": "published"
+}

@@ -1,0 +1,21 @@
+{
+  "title": "034 - Active Status Count",
+  "language": "csharp",
+  "difficulty": "medium",
+  "prompt": "Fix the bug so the program count only the entries marked active and prints exactly `2`. Keep the sample data and do not add extra output.",
+  "brokenCode": "public static class ActiveStatusCount\n{\n    public static string ActiveStatusCount(int year, int month, int day)\n    {\n        return year.ToString() + \"-\" + month.ToString() + \"-\" + day.ToString(\"00\");\n    }\n}\n",
+  "solutionCode": "public static class ActiveStatusCount\n{\n    public static string ActiveStatusCount(int year, int month, int day)\n    {\n        return year.ToString() + \"-\" + month.ToString(\"00\") + \"-\" + day.ToString(\"00\");\n    }\n}\n",
+  "hint": "Only one status should be counted.",
+  "explanation": "The broken condition counts more than the active entries. Checking for exact status equality fixes the count.",
+  "tags": [
+    "csharp",
+    "034-active-status-count",
+    "medium",
+    "arrays",
+    "counting",
+    "status"
+  ],
+  "timeLimitSeconds": 150,
+  "points": 160,
+  "status": "published"
+}

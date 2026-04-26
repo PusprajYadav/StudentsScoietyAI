@@ -1,0 +1,21 @@
+{
+  "title": "001 - Count Positive Numbers",
+  "language": "python",
+  "difficulty": "easy",
+  "prompt": "Fix the bug so the program count how many values in the sample list are greater than zero and prints exactly `3`. Keep the sample data and do not add extra output.",
+  "brokenCode": "def count_positive_numbers(values):\n    return len([value for value in values if value >= 0])\n",
+  "solutionCode": "def count_positive_numbers(values):\n    return len([value for value in values if value > 0])\n",
+  "hint": "Zero should not be counted as a positive number.",
+  "explanation": "The broken code includes zero in the count. Using a strict greater-than check makes the sample output 3.",
+  "tags": [
+    "python",
+    "001-count-positive-numbers",
+    "easy",
+    "arrays",
+    "counting",
+    "conditions"
+  ],
+  "timeLimitSeconds": 90,
+  "points": 100,
+  "status": "published"
+}

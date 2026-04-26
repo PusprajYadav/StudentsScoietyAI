@@ -1,0 +1,1 @@
+const o="student-society-discussion-community-feed-mode";function n(){return typeof window>"u"?"all":window.localStorage.getItem(o)==="joined-only"?"joined-only":"all"}function i(e){return typeof window<"u"&&window.localStorage.setItem(o,e),e}export{n as l,i as s};

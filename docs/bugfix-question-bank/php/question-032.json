@@ -1,0 +1,20 @@
+{
+  "title": "032 - Responsive Columns",
+  "language": "php",
+  "difficulty": "medium",
+  "prompt": "Fix the bug so the program print 3 columns for a width of 900 and prints exactly `3`. Keep the sample data and do not add extra output.",
+  "brokenCode": "<?php\n\nfunction responsiveColumns(array $values): int\n{\n    return intdiv(array_sum($values), count($values) - 1);\n}\n",
+  "solutionCode": "<?php\n\nfunction responsiveColumns(array $values): int\n{\n    return intdiv(array_sum($values), count($values));\n}\n",
+  "hint": "The top breakpoint should include 900 itself.",
+  "explanation": "The breakpoint comparison excludes the exact boundary. Using an inclusive comparison fixes the column count.",
+  "tags": [
+    "php",
+    "032-responsive-columns",
+    "medium",
+    "conditions",
+    "breakpoints"
+  ],
+  "timeLimitSeconds": 150,
+  "points": 160,
+  "status": "published"
+}

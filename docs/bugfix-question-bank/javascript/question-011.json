@@ -1,0 +1,21 @@
+{
+  "title": "011 - Long Word Filter",
+  "language": "javascript",
+  "difficulty": "easy",
+  "prompt": "Fix the bug so the program print only the words with length 5 or more as planet,cloud and prints exactly `planet,cloud`. Keep the sample data and do not add extra output.",
+  "brokenCode": "function longWordFilter(values) {\n  return values.filter((value) => value >= 0).length;\n}\n",
+  "solutionCode": "function longWordFilter(values) {\n  return values.filter((value) => value > 0).length;\n}\n",
+  "hint": "The condition should keep long words, not short ones.",
+  "explanation": "The comparison is reversed. Keeping words whose length is at least 5 fixes the output.",
+  "tags": [
+    "javascript",
+    "011-long-word-filter",
+    "easy",
+    "arrays",
+    "strings",
+    "filtering"
+  ],
+  "timeLimitSeconds": 90,
+  "points": 100,
+  "status": "published"
+}

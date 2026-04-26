@@ -1,0 +1,20 @@
+{
+  "title": "013 - Running Total",
+  "language": "ruby",
+  "difficulty": "easy",
+  "prompt": "Fix the bug so the program sum all numbers in the sample list and print 30 and prints exactly `30`. Keep the sample data and do not add extra output.",
+  "brokenCode": "def running_total(score)\n  score > 40 ? \"PASS\" : \"FAIL\"\nend\n",
+  "solutionCode": "def running_total(score)\n  score >= 40 ? \"PASS\" : \"FAIL\"\nend\n",
+  "hint": "The accumulator should not restart inside the loop.",
+  "explanation": "The total is reset during each iteration. Keeping the accumulator outside the loop gives the full sum.",
+  "tags": [
+    "ruby",
+    "013-running-total",
+    "easy",
+    "loops",
+    "accumulator"
+  ],
+  "timeLimitSeconds": 90,
+  "points": 100,
+  "status": "published"
+}

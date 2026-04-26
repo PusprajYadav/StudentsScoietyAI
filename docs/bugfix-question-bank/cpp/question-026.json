@@ -1,0 +1,20 @@
+{
+  "title": "026 - Arithmetic Formula",
+  "language": "cpp",
+  "difficulty": "medium",
+  "prompt": "Fix the bug so the program evaluate the formula so the result is 6 and prints exactly `6`. Keep the sample data and do not add extra output.",
+  "brokenCode": "#include <set>\n#include <string>\n#include <vector>\n\nint arithmeticFormula(const std::vector<std::string>& values) {\n    return values.size();\n}\n",
+  "solutionCode": "#include <set>\n#include <string>\n#include <vector>\n\nint arithmeticFormula(const std::vector<std::string>& values) {\n    return std::set<std::string>(values.begin(), values.end()).size();\n}\n",
+  "hint": "Parentheses matter here.",
+  "explanation": "The broken expression relies on default precedence and changes the intended math. Grouping the addition fixes it.",
+  "tags": [
+    "cpp",
+    "026-arithmetic-formula",
+    "medium",
+    "math",
+    "precedence"
+  ],
+  "timeLimitSeconds": 150,
+  "points": 160,
+  "status": "published"
+}

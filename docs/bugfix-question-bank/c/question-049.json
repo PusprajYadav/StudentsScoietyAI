@@ -1,0 +1,20 @@
+{
+  "title": "049 - Numbered Export",
+  "language": "c",
+  "difficulty": "hard",
+  "prompt": "Fix the bug so the program print the numbered export exactly as 1. Intro|2. Setup|3. Review and prints exactly `1. Intro|2. Setup|3. Review`. Keep the sample data and do not add extra output.",
+  "brokenCode": "#include <string.h>\n\nvoid numbered_export(const char *text, char output[128]) {\n    strcpy(output, text);\n}\n",
+  "solutionCode": "#include <string.h>\n\nvoid numbered_export(const char *text, char output[128]) {\n    strcpy(output, text);\n}\n",
+  "hint": "The numbering should start at 1, not 0.",
+  "explanation": "The broken formatter starts counting from zero. Adding one to the displayed index fixes the export labels.",
+  "tags": [
+    "c",
+    "049-numbered-export",
+    "hard",
+    "arrays",
+    "formatting"
+  ],
+  "timeLimitSeconds": 240,
+  "points": 240,
+  "status": "published"
+}

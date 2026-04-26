@@ -1,0 +1,21 @@
+{
+  "title": "002 - Sum Even Numbers",
+  "language": "java",
+  "difficulty": "easy",
+  "prompt": "Fix the bug so the program sum only the even numbers from the sample list and prints exactly `10`. Keep the sample data and do not add extra output.",
+  "brokenCode": "class SumEvenNumbers {\n    static int sumEvenNumbers(int[] values) {\n        int total = 0;\n        for (int value : values) {\n            if (value % 2 == 1) {\n                total += value;\n            }\n        }\n        return total;\n    }\n}\n",
+  "solutionCode": "class SumEvenNumbers {\n    static int sumEvenNumbers(int[] values) {\n        int total = 0;\n        for (int value : values) {\n            if (value % 2 == 0) {\n                total += value;\n            }\n        }\n        return total;\n    }\n}\n",
+  "hint": "The condition should keep even values, not odd ones.",
+  "explanation": "The bug checks the wrong remainder. Changing the condition to keep values divisible by 2 fixes the total.",
+  "tags": [
+    "java",
+    "002-sum-even-numbers",
+    "easy",
+    "arrays",
+    "loops",
+    "math"
+  ],
+  "timeLimitSeconds": 90,
+  "points": 100,
+  "status": "published"
+}

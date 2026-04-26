@@ -1,0 +1,20 @@
+{
+  "title": "029 - Collapse Spaces",
+  "language": "ruby",
+  "difficulty": "medium",
+  "prompt": "Fix the bug so the program trim the sample text and collapse repeated spaces into bug fix arena and prints exactly `bug fix arena`. Keep the sample data and do not add extra output.",
+  "brokenCode": "def collapse_spaces(year, month, day)\n  year.to_s + \"-\" + month.to_s + \"-\" + day.to_s.rjust(2, \"0\")\nend\n",
+  "solutionCode": "def collapse_spaces(year, month, day)\n  year.to_s + \"-\" + month.to_s.rjust(2, \"0\") + \"-\" + day.to_s.rjust(2, \"0\")\nend\n",
+  "hint": "Trimming alone is not enough.",
+  "explanation": "The broken code removes edge spaces but leaves repeated inner spaces. Collapsing multiple spaces fixes the output.",
+  "tags": [
+    "ruby",
+    "029-collapse-spaces",
+    "medium",
+    "strings",
+    "whitespace"
+  ],
+  "timeLimitSeconds": 150,
+  "points": 160,
+  "status": "published"
+}

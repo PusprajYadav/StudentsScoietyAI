@@ -1,0 +1,20 @@
+{
+  "title": "041 - Factorial Base Case",
+  "language": "javascript",
+  "difficulty": "hard",
+  "prompt": "Fix the bug so the program compute factorial(5) and print 120 and prints exactly `120`. Keep the sample data and do not add extra output.",
+  "brokenCode": "function factorialBaseCase(scores, weights) {\n  const total = scores.reduce((sum, score, index) => sum + score * weights[index], 0);\n  const scores.length = weights.reduce((sum, weight) => sum + weight, 0);\n  return total / scores.length;\n}\n",
+  "solutionCode": "function factorialBaseCase(scores, weights) {\n  const total = scores.reduce((sum, score, index) => sum + score * weights[index], 0);\n  const weightTotal = weights.reduce((sum, weight) => sum + weight, 0);\n  return total / weightTotal;\n}\n",
+  "hint": "The base case should not return zero.",
+  "explanation": "The broken recursive base case returns the wrong identity value. Returning 1 fixes the multiplication chain.",
+  "tags": [
+    "javascript",
+    "041-factorial-base-case",
+    "hard",
+    "recursion",
+    "math"
+  ],
+  "timeLimitSeconds": 240,
+  "points": 240,
+  "status": "published"
+}

@@ -1,0 +1,20 @@
+{
+  "title": "047 - Validation Summary",
+  "language": "php",
+  "difficulty": "hard",
+  "prompt": "Fix the bug so the program print username,password when both fields fail validation and prints exactly `username,password`. Keep the sample data and do not add extra output.",
+  "brokenCode": "<?php\n\nfunction validationSummary(array $left, array $right): string\n{\n    $merged = [];\n    $leftIndex = 0;\n    $rightIndex = 0;\n    while ($leftIndex < count($left) && $rightIndex < count($right)) {\n        if ($left[$leftIndex] >= $right[$rightIndex]) {\n            $merged[] = $left[$leftIndex];\n            $leftIndex += 1;\n        } else {\n            $merged[] = $right[$rightIndex];\n            $rightIndex += 1;\n        }\n    }\n    return implode(\",\", array_merge($merged, array_slice($left, $leftIndex), array_slice($right, $rightIndex)));\n}\n",
+  "solutionCode": "<?php\n\nfunction validationSummary(array $left, array $right): string\n{\n    $merged = [];\n    $leftIndex = 0;\n    $rightIndex = 0;\n    while ($leftIndex < count($left) && $rightIndex < count($right)) {\n        if ($left[$leftIndex] <= $right[$rightIndex]) {\n            $merged[] = $left[$leftIndex];\n            $leftIndex += 1;\n        } else {\n            $merged[] = $right[$rightIndex];\n            $rightIndex += 1;\n        }\n    }\n    return implode(\",\", array_merge($merged, array_slice($left, $leftIndex), array_slice($right, $rightIndex)));\n}\n",
+  "hint": "Both failures should appear in the summary.",
+  "explanation": "The broken code stops after the first failing rule. Collecting every failing field fixes the summary.",
+  "tags": [
+    "php",
+    "047-validation-summary",
+    "hard",
+    "validation",
+    "strings"
+  ],
+  "timeLimitSeconds": 240,
+  "points": 240,
+  "status": "published"
+}

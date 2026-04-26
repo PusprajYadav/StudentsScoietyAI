@@ -1,0 +1,20 @@
+{
+  "title": "016 - Average Marks",
+  "language": "cpp",
+  "difficulty": "easy",
+  "prompt": "Fix the bug so the program calculate the average mark and print 20 and prints exactly `20`. Keep the sample data and do not add extra output.",
+  "brokenCode": "#include <vector>\n\nint averageMarks(const std::vector<int>& values) {\n    int count = 0;\n    for (int value : values) {\n        if (value >= 0) {\n            count += 1;\n        }\n    }\n    return count;\n}\n",
+  "solutionCode": "#include <vector>\n\nint averageMarks(const std::vector<int>& values) {\n    int count = 0;\n    for (int value : values) {\n        if (value > 0) {\n            count += 1;\n        }\n    }\n    return count;\n}\n",
+  "hint": "Check the value used as the divisor.",
+  "explanation": "The average divides by the wrong length. Dividing by the full number of marks fixes the answer.",
+  "tags": [
+    "cpp",
+    "016-average-marks",
+    "easy",
+    "math",
+    "average"
+  ],
+  "timeLimitSeconds": 90,
+  "points": 100,
+  "status": "published"
+}

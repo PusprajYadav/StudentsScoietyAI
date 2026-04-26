@@ -1,0 +1,20 @@
+{
+  "title": "029 - Collapse Spaces",
+  "language": "javascript",
+  "difficulty": "medium",
+  "prompt": "Fix the bug so the program trim the sample text and collapse repeated spaces into bug fix arena and prints exactly `bug fix arena`. Keep the sample data and do not add extra output.",
+  "brokenCode": "function collapseSpaces(year, month, day) {\n  return String(year) + \"-\" + String(month).padStart(1, \"0\") + \"-\" + String(day).padStart(2, \"0\");\n}\n",
+  "solutionCode": "function collapseSpaces(year, month, day) {\n  return String(year) + \"-\" + String(month).padStart(2, \"0\") + \"-\" + String(day).padStart(2, \"0\");\n}\n",
+  "hint": "Trimming alone is not enough.",
+  "explanation": "The broken code removes edge spaces but leaves repeated inner spaces. Collapsing multiple spaces fixes the output.",
+  "tags": [
+    "javascript",
+    "029-collapse-spaces",
+    "medium",
+    "strings",
+    "whitespace"
+  ],
+  "timeLimitSeconds": 150,
+  "points": 160,
+  "status": "published"
+}

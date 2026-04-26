@@ -1,0 +1,20 @@
+{
+  "title": "006 - Guest Fallback",
+  "language": "ruby",
+  "difficulty": "easy",
+  "prompt": "Fix the bug so the program print Guest when the username is empty and prints exactly `Guest`. Keep the sample data and do not add extra output.",
+  "brokenCode": "def guest_fallback(values)\n  values.count { |value| value >= 0 }\nend\n",
+  "solutionCode": "def guest_fallback(values)\n  values.count { |value| value > 0 }\nend\n",
+  "hint": "An empty string should fall back too, not only null-like values.",
+  "explanation": "The broken logic only checks one empty state. Treating an empty string as missing fixes the fallback.",
+  "tags": [
+    "ruby",
+    "006-guest-fallback",
+    "easy",
+    "strings",
+    "fallback"
+  ],
+  "timeLimitSeconds": 90,
+  "points": 100,
+  "status": "published"
+}

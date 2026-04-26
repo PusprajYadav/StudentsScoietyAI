@@ -1,0 +1,21 @@
+{
+  "title": "034 - Active Status Count",
+  "language": "ruby",
+  "difficulty": "medium",
+  "prompt": "Fix the bug so the program count only the entries marked active and prints exactly `2`. Keep the sample data and do not add extra output.",
+  "brokenCode": "def active_status_count(year, month, day)\n  year.to_s + \"-\" + month.to_s + \"-\" + day.to_s.rjust(2, \"0\")\nend\n",
+  "solutionCode": "def active_status_count(year, month, day)\n  year.to_s + \"-\" + month.to_s.rjust(2, \"0\") + \"-\" + day.to_s.rjust(2, \"0\")\nend\n",
+  "hint": "Only one status should be counted.",
+  "explanation": "The broken condition counts more than the active entries. Checking for exact status equality fixes the count.",
+  "tags": [
+    "ruby",
+    "034-active-status-count",
+    "medium",
+    "arrays",
+    "counting",
+    "status"
+  ],
+  "timeLimitSeconds": 150,
+  "points": 160,
+  "status": "published"
+}

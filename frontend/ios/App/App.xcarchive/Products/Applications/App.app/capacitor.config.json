@@ -1,0 +1,42 @@
+{
+	"appId": "com.studentsociety.a2zworkhub",
+	"appName": "Student Society",
+	"webDir": "dist",
+	"plugins": {
+		"PushNotifications": {
+			"presentationOptions": [
+				"badge",
+				"sound",
+				"alert"
+			]
+		},
+		"LocalNotifications": {
+			"smallIcon": "ic_notification",
+			"iconColor": "#D4A017",
+			"sound": "notification.mp3"
+		},
+		"SplashScreen": {
+			"launchShowDuration": 1200,
+			"launchAutoHide": true,
+			"backgroundColor": "#FFFFFF",
+			"showSpinner": false,
+			"androidScaleType": "CENTER_CROP",
+			"splashImmersive": true
+		},
+		"StatusBar": {
+			"style": "DEFAULT",
+			"backgroundColor": "#00000000"
+		}
+	},
+	"packageClassList": [
+		"AppPlugin",
+		"FilesystemPlugin",
+		"HapticsPlugin",
+		"LocalNotificationsPlugin",
+		"PreferencesPlugin",
+		"PushNotificationsPlugin",
+		"SplashScreenPlugin",
+		"StatusBarPlugin",
+		"ToastPlugin"
+	]
+}

@@ -1,0 +1,20 @@
+{
+  "title": "021 - Matrix Corner Value",
+  "language": "csharp",
+  "difficulty": "medium",
+  "prompt": "Fix the bug so the program print the bottom-right value from the matrix and prints exactly `9`. Keep the sample data and do not add extra output.",
+  "brokenCode": "using System.Linq;\n\npublic static class MatrixCornerValue\n{\n    public static int MatrixCornerValue(string[] values)\n    {\n        return values.Count();\n    }\n}\n",
+  "solutionCode": "using System.Linq;\n\npublic static class MatrixCornerValue\n{\n    public static int MatrixCornerValue(string[] values)\n    {\n        return values.Distinct().Count();\n    }\n}\n",
+  "hint": "One of the indexes still points at the first item in the row.",
+  "explanation": "The broken matrix lookup uses the wrong column index. Reading the last column of the last row fixes it.",
+  "tags": [
+    "csharp",
+    "021-matrix-corner-value",
+    "medium",
+    "matrix",
+    "indexing"
+  ],
+  "timeLimitSeconds": 150,
+  "points": 160,
+  "status": "published"
+}

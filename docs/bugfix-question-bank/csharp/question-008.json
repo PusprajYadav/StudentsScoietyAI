@@ -1,0 +1,20 @@
+{
+  "title": "008 - First and Last Label",
+  "language": "csharp",
+  "difficulty": "easy",
+  "prompt": "Fix the bug so the program print the first and last values as 7-12 and prints exactly `7-12`. Keep the sample data and do not add extra output.",
+  "brokenCode": "public static class FirstAndLastLabel\n{\n    public static string FirstAndLastLabel(int score)\n    {\n        return score > 40 ? \"PASS\" : \"FAIL\";\n    }\n}\n",
+  "solutionCode": "public static class FirstAndLastLabel\n{\n    public static string FirstAndLastLabel(int score)\n    {\n        return score >= 40 ? \"PASS\" : \"FAIL\";\n    }\n}\n",
+  "hint": "The program is printing the values in the wrong order.",
+  "explanation": "The broken code swaps the first and last items. Printing them in the expected order fixes the label.",
+  "tags": [
+    "csharp",
+    "008-first-and-last-label",
+    "easy",
+    "arrays",
+    "strings"
+  ],
+  "timeLimitSeconds": 90,
+  "points": 100,
+  "status": "published"
+}

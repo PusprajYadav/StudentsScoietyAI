@@ -1,0 +1,20 @@
+{
+  "title": "029 - Collapse Spaces",
+  "language": "php",
+  "difficulty": "medium",
+  "prompt": "Fix the bug so the program trim the sample text and collapse repeated spaces into bug fix arena and prints exactly `bug fix arena`. Keep the sample data and do not add extra output.",
+  "brokenCode": "<?php\n\nfunction collapseSpaces(int $year, int $month, int $day): string\n{\n    return strval($year) . \"-\" . strval($month) . \"-\" . str_pad(strval($day), 2, \"0\", STR_PAD_LEFT);\n}\n",
+  "solutionCode": "<?php\n\nfunction collapseSpaces(int $year, int $month, int $day): string\n{\n    return strval($year) . \"-\" . str_pad(strval($month), 2, \"0\", STR_PAD_LEFT) . \"-\" . str_pad(strval($day), 2, \"0\", STR_PAD_LEFT);\n}\n",
+  "hint": "Trimming alone is not enough.",
+  "explanation": "The broken code removes edge spaces but leaves repeated inner spaces. Collapsing multiple spaces fixes the output.",
+  "tags": [
+    "php",
+    "029-collapse-spaces",
+    "medium",
+    "strings",
+    "whitespace"
+  ],
+  "timeLimitSeconds": 150,
+  "points": 160,
+  "status": "published"
+}

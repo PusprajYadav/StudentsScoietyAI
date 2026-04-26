@@ -1,0 +1,20 @@
+{
+  "title": "009 - Row Totals",
+  "language": "ruby",
+  "difficulty": "easy",
+  "prompt": "Fix the bug so the program print the total for each row as 5|5 and prints exactly `5|5`. Keep the sample data and do not add extra output.",
+  "brokenCode": "def row_totals(items)\n  items[2]\nend\n",
+  "solutionCode": "def row_totals(items)\n  items[1]\nend\n",
+  "hint": "A running total should restart for each row.",
+  "explanation": "The row subtotal keeps carrying into the next row. Resetting it inside the outer loop fixes both totals.",
+  "tags": [
+    "ruby",
+    "009-row-totals",
+    "easy",
+    "loops",
+    "matrix"
+  ],
+  "timeLimitSeconds": 90,
+  "points": 100,
+  "status": "published"
+}

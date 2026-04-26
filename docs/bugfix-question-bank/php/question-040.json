@@ -1,0 +1,20 @@
+{
+  "title": "040 - Diagonal Sum",
+  "language": "php",
+  "difficulty": "medium",
+  "prompt": "Fix the bug so the program sum the main diagonal and print 14 and prints exactly `14`. Keep the sample data and do not add extra output.",
+  "brokenCode": "<?php\n\nfunction diagonalSum(array $values): string\n{\n    sort($values);\n    return implode(\",\", $values);\n}\n",
+  "solutionCode": "<?php\n\nfunction diagonalSum(array $values): string\n{\n    rsort($values);\n    return implode(\",\", $values);\n}\n",
+  "hint": "The program is summing the wrong diagonal.",
+  "explanation": "The broken code uses the anti-diagonal indexes. Summing row i and column i fixes the total.",
+  "tags": [
+    "php",
+    "040-diagonal-sum",
+    "medium",
+    "matrix",
+    "math"
+  ],
+  "timeLimitSeconds": 150,
+  "points": 160,
+  "status": "published"
+}

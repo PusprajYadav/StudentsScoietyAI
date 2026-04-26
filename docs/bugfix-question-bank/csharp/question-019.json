@@ -1,0 +1,20 @@
+{
+  "title": "019 - Discount Tier",
+  "language": "csharp",
+  "difficulty": "easy",
+  "prompt": "Fix the bug so the program print gold when a member order hits the gold threshold exactly and prints exactly `gold`. Keep the sample data and do not add extra output.",
+  "brokenCode": "public static class DiscountTier\n{\n    public static string DiscountTier(string[] items)\n    {\n        return items[2];\n    }\n}\n",
+  "solutionCode": "public static class DiscountTier\n{\n    public static string DiscountTier(string[] items)\n    {\n        return items[1];\n    }\n}\n",
+  "hint": "The top tier should include the threshold value itself.",
+  "explanation": "The broken branch excludes the exact threshold. Making the comparison inclusive fixes the tier.",
+  "tags": [
+    "csharp",
+    "019-discount-tier",
+    "easy",
+    "conditions",
+    "nested-conditions"
+  ],
+  "timeLimitSeconds": 90,
+  "points": 100,
+  "status": "published"
+}

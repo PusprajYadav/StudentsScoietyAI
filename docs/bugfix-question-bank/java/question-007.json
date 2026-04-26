@@ -1,0 +1,20 @@
+{
+  "title": "007 - Age Range Check",
+  "language": "java",
+  "difficulty": "easy",
+  "prompt": "Fix the bug so the program print valid when the age is inside the allowed range including the lower bound and prints exactly `valid`. Keep the sample data and do not add extra output.",
+  "brokenCode": "class AgeRangeCheck {\n    static int ageRangeCheck(int[] values) {\n        int total = 0;\n        for (int value : values) {\n            if (value % 2 == 1) {\n                total += value;\n            }\n        }\n        return total;\n    }\n}\n",
+  "solutionCode": "class AgeRangeCheck {\n    static int ageRangeCheck(int[] values) {\n        int total = 0;\n        for (int value : values) {\n            if (value % 2 == 0) {\n                total += value;\n            }\n        }\n        return total;\n    }\n}\n",
+  "hint": "Look closely at the boundary comparison on the lower edge.",
+  "explanation": "The lower-bound comparison is too strict. Including the minimum allowed age fixes the result.",
+  "tags": [
+    "java",
+    "007-age-range-check",
+    "easy",
+    "conditions",
+    "range-check"
+  ],
+  "timeLimitSeconds": 90,
+  "points": 100,
+  "status": "published"
+}

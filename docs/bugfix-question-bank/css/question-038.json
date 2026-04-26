@@ -1,0 +1,20 @@
+{
+  "title": "038 - CSS Repair 038",
+  "language": "css",
+  "difficulty": "medium",
+  "prompt": "Fix this CSS rule so question 038 uses the correct property and value syntax.",
+  "brokenCode": ".card-038 {\n  display: flex;\n  justify-content: center;\n  align-item: center;\n  padding: 11px;\n}\n",
+  "solutionCode": ".card-038 {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  padding: 11px;\n}\n",
+  "hint": "The flex alignment property name is slightly off.",
+  "explanation": "The rule uses an invalid flexbox property name. Changing it to `align-items` fixes the CSS.",
+  "tags": [
+    "css",
+    "038-css-repair-038",
+    "medium",
+    "flexbox",
+    "alignment"
+  ],
+  "timeLimitSeconds": 150,
+  "points": 160,
+  "status": "published"
+}

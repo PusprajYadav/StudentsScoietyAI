@@ -1,0 +1,20 @@
+{
+  "title": "020 - Initials From Words",
+  "language": "c",
+  "difficulty": "easy",
+  "prompt": "Fix the bug so the program print the initials BFA from the sample words and prints exactly `BFA`. Keep the sample data and do not add extra output.",
+  "brokenCode": "#include <stdio.h>\n\nvoid initials_from_words(const char* name, char output[64]) {\n    snprintf(output, 64, \"Hello, %s\", name);\n}\n",
+  "solutionCode": "#include <stdio.h>\n\nvoid initials_from_words(const char* name, char output[64]) {\n    snprintf(output, 64, \"Hello, %s!\", name);\n}\n",
+  "hint": "Use the first character of each word, not the last.",
+  "explanation": "The broken code reads the wrong character from each word. Taking the first letter builds BFA.",
+  "tags": [
+    "c",
+    "020-initials-from-words",
+    "easy",
+    "strings",
+    "arrays"
+  ],
+  "timeLimitSeconds": 90,
+  "points": 100,
+  "status": "published"
+}

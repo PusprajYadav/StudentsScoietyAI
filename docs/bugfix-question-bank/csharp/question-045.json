@@ -1,0 +1,20 @@
+{
+  "title": "045 - Pagination Offset",
+  "language": "csharp",
+  "difficulty": "hard",
+  "prompt": "Fix the bug so the program calculate the offset for page 3 with page size 20 and print 40 and prints exactly `40`. Keep the sample data and do not add extra output.",
+  "brokenCode": "using System.Linq;\n\npublic static class PaginationOffset\n{\n    public static string PaginationOffset(int[] values)\n    {\n        return string.Join(\",\", values.OrderByDescending(value => value).Take(2));\n    }\n}\n",
+  "solutionCode": "using System.Linq;\n\npublic static class PaginationOffset\n{\n    public static string PaginationOffset(int[] values)\n    {\n        return string.Join(\",\", values.OrderByDescending(value => value).Take(3));\n    }\n}\n",
+  "hint": "The page number should be converted to a zero-based offset first.",
+  "explanation": "The broken formula multiplies the page directly. Subtracting 1 from the page before multiplying fixes the offset.",
+  "tags": [
+    "csharp",
+    "045-pagination-offset",
+    "hard",
+    "math",
+    "pagination"
+  ],
+  "timeLimitSeconds": 240,
+  "points": 240,
+  "status": "published"
+}

@@ -1,0 +1,21 @@
+{
+  "title": "002 - Sum Even Numbers",
+  "language": "c",
+  "difficulty": "easy",
+  "prompt": "Fix the bug so the program sum only the even numbers from the sample list and prints exactly `10`. Keep the sample data and do not add extra output.",
+  "brokenCode": "#include <stddef.h>\n\nint sum_even_numbers(const int values[], size_t length) {\n    int total = 0;\n    for (size_t index = 0; index < length; index++) {\n        if (values[index] % 2 == 1) {\n            total += values[index];\n        }\n    }\n    return total;\n}\n",
+  "solutionCode": "#include <stddef.h>\n\nint sum_even_numbers(const int values[], size_t length) {\n    int total = 0;\n    for (size_t index = 0; index < length; index++) {\n        if (values[index] % 2 == 0) {\n            total += values[index];\n        }\n    }\n    return total;\n}\n",
+  "hint": "The condition should keep even values, not odd ones.",
+  "explanation": "The bug checks the wrong remainder. Changing the condition to keep values divisible by 2 fixes the total.",
+  "tags": [
+    "c",
+    "002-sum-even-numbers",
+    "easy",
+    "arrays",
+    "loops",
+    "math"
+  ],
+  "timeLimitSeconds": 90,
+  "points": 100,
+  "status": "published"
+}

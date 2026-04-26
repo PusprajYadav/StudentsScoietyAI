@@ -1,0 +1,20 @@
+{
+  "title": "041 - Factorial Base Case",
+  "language": "csharp",
+  "difficulty": "hard",
+  "prompt": "Fix the bug so the program compute factorial(5) and print 120 and prints exactly `120`. Keep the sample data and do not add extra output.",
+  "brokenCode": "public static class FactorialBaseCase\n{\n    public static int FactorialBaseCase(int[] scores, int[] weights)\n    {\n        var total = 0;\n        var scores.Length = 0;\n        for (var index = 0; index < scores.Length; index++)\n        {\n            total += scores[index] * weights[index];\n            weightTotal += weights[index];\n        }\n        return total / weightTotal;\n    }\n}\n",
+  "solutionCode": "public static class FactorialBaseCase\n{\n    public static int FactorialBaseCase(int[] scores, int[] weights)\n    {\n        var total = 0;\n        var weightTotal = 0;\n        for (var index = 0; index < scores.Length; index++)\n        {\n            total += scores[index] * weights[index];\n            weightTotal += weights[index];\n        }\n        return total / weightTotal;\n    }\n}\n",
+  "hint": "The base case should not return zero.",
+  "explanation": "The broken recursive base case returns the wrong identity value. Returning 1 fixes the multiplication chain.",
+  "tags": [
+    "csharp",
+    "041-factorial-base-case",
+    "hard",
+    "recursion",
+    "math"
+  ],
+  "timeLimitSeconds": 240,
+  "points": 240,
+  "status": "published"
+}

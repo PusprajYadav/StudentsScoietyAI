@@ -1,0 +1,20 @@
+{
+  "title": "012 - Descending Scores",
+  "language": "php",
+  "difficulty": "easy",
+  "prompt": "Fix the bug so the program sort the numbers in descending order and print 8,4,2,1 and prints exactly `8,4,2,1`. Keep the sample data and do not add extra output.",
+  "brokenCode": "<?php\n\nfunction descendingScores(array $values): int\n{\n    return array_sum(array_filter($values, fn($value) => $value % 2 === 1));\n}\n",
+  "solutionCode": "<?php\n\nfunction descendingScores(array $values): int\n{\n    return array_sum(array_filter($values, fn($value) => $value % 2 === 0));\n}\n",
+  "hint": "The sort order is flipped.",
+  "explanation": "The broken sort uses ascending order. Reversing the comparison produces the expected descending output.",
+  "tags": [
+    "php",
+    "012-descending-scores",
+    "easy",
+    "sorting",
+    "arrays"
+  ],
+  "timeLimitSeconds": 90,
+  "points": 100,
+  "status": "published"
+}

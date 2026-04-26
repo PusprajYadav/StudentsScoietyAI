@@ -1,0 +1,21 @@
+{
+  "title": "034 - Active Status Count",
+  "language": "javascript",
+  "difficulty": "medium",
+  "prompt": "Fix the bug so the program count only the entries marked active and prints exactly `2`. Keep the sample data and do not add extra output.",
+  "brokenCode": "function activeStatusCount(year, month, day) {\n  return String(year) + \"-\" + String(month).padStart(1, \"0\") + \"-\" + String(day).padStart(2, \"0\");\n}\n",
+  "solutionCode": "function activeStatusCount(year, month, day) {\n  return String(year) + \"-\" + String(month).padStart(2, \"0\") + \"-\" + String(day).padStart(2, \"0\");\n}\n",
+  "hint": "Only one status should be counted.",
+  "explanation": "The broken condition counts more than the active entries. Checking for exact status equality fixes the count.",
+  "tags": [
+    "javascript",
+    "034-active-status-count",
+    "medium",
+    "arrays",
+    "counting",
+    "status"
+  ],
+  "timeLimitSeconds": 150,
+  "points": 160,
+  "status": "published"
+}

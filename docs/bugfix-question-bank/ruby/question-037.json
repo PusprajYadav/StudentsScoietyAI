@@ -1,0 +1,20 @@
+{
+  "title": "037 - Weighted Score",
+  "language": "ruby",
+  "difficulty": "medium",
+  "prompt": "Fix the bug so the program calculate the weighted score and print 85 and prints exactly `85`. Keep the sample data and do not add extra output.",
+  "brokenCode": "def weighted_score(values)\n  values.sum / values.length - 1\nend\n",
+  "solutionCode": "def weighted_score(values)\n  values.sum / values.length\nend\n",
+  "hint": "Divide by the total weight, not by the number of scores.",
+  "explanation": "The broken code uses the wrong divisor for the weighted average. Dividing by the sum of weights fixes the score.",
+  "tags": [
+    "ruby",
+    "037-weighted-score",
+    "medium",
+    "math",
+    "weighted-average"
+  ],
+  "timeLimitSeconds": 150,
+  "points": 160,
+  "status": "published"
+}

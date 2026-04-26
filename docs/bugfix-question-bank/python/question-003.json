@@ -1,0 +1,21 @@
+{
+  "title": "003 - Pass Threshold",
+  "language": "python",
+  "difficulty": "easy",
+  "prompt": "Fix the bug so the program print PASS when the score reaches the passing mark and prints exactly `PASS`. Keep the sample data and do not add extra output.",
+  "brokenCode": "def pass_threshold(score):\n    return \"PASS\" if score > 40 else \"FAIL\"\n",
+  "solutionCode": "def pass_threshold(score):\n    return \"PASS\" if score >= 40 else \"FAIL\"\n",
+  "hint": "The boundary score should still pass.",
+  "explanation": "The broken comparison excludes the exact passing score. Using an inclusive comparison fixes the branch.",
+  "tags": [
+    "python",
+    "003-pass-threshold",
+    "easy",
+    "conditions",
+    "comparison",
+    "branches"
+  ],
+  "timeLimitSeconds": 90,
+  "points": 100,
+  "status": "published"
+}

@@ -1,0 +1,20 @@
+{
+  "title": "015 - Unique Count",
+  "language": "ruby",
+  "difficulty": "easy",
+  "prompt": "Fix the bug so the program count the unique items in the sample list and prints exactly `3`. Keep the sample data and do not add extra output.",
+  "brokenCode": "def unique_count(name)\n  \"Hello, \" + name\nend\n",
+  "solutionCode": "def unique_count(name)\n  \"Hello, \" + name + \"!\"\nend\n",
+  "hint": "Duplicates should be ignored.",
+  "explanation": "The broken program counts every item. Removing duplicates before counting fixes the result.",
+  "tags": [
+    "ruby",
+    "015-unique-count",
+    "easy",
+    "arrays",
+    "deduplication"
+  ],
+  "timeLimitSeconds": 90,
+  "points": 100,
+  "status": "published"
+}

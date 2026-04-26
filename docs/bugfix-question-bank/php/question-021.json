@@ -1,0 +1,20 @@
+{
+  "title": "021 - Matrix Corner Value",
+  "language": "php",
+  "difficulty": "medium",
+  "prompt": "Fix the bug so the program print the bottom-right value from the matrix and prints exactly `9`. Keep the sample data and do not add extra output.",
+  "brokenCode": "<?php\n\nfunction matrixCornerValue(array $values): int\n{\n    return count($values);\n}\n",
+  "solutionCode": "<?php\n\nfunction matrixCornerValue(array $values): int\n{\n    return count(array_unique($values));\n}\n",
+  "hint": "One of the indexes still points at the first item in the row.",
+  "explanation": "The broken matrix lookup uses the wrong column index. Reading the last column of the last row fixes it.",
+  "tags": [
+    "php",
+    "021-matrix-corner-value",
+    "medium",
+    "matrix",
+    "indexing"
+  ],
+  "timeLimitSeconds": 150,
+  "points": 160,
+  "status": "published"
+}

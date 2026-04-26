@@ -1,0 +1,20 @@
+{
+  "title": "031 - Visibility Rules",
+  "language": "java",
+  "difficulty": "medium",
+  "prompt": "Fix the bug so the program print visible when the viewer is the owner even if the item is private and prints exactly `visible`. Keep the sample data and do not add extra output.",
+  "brokenCode": "import java.util.*;\n\nclass VisibilityRules {\n    static int visibilityRules(String[] values) {\n        return values.length;\n    }\n}\n",
+  "solutionCode": "import java.util.*;\n\nclass VisibilityRules {\n    static int visibilityRules(String[] values) {\n        return new HashSet<>(Arrays.asList(values)).size();\n    }\n}\n",
+  "hint": "Either condition should allow visibility.",
+  "explanation": "The broken condition requires both flags. Using an OR check matches the intended visibility rule.",
+  "tags": [
+    "java",
+    "031-visibility-rules",
+    "medium",
+    "booleans",
+    "conditions"
+  ],
+  "timeLimitSeconds": 150,
+  "points": 160,
+  "status": "published"
+}

@@ -1,0 +1,20 @@
+{
+  "title": "024 - Countdown Sequence",
+  "language": "cpp",
+  "difficulty": "medium",
+  "prompt": "Fix the bug so the program print the countdown as 3-2-1 and prints exactly `3-2-1`. Keep the sample data and do not add extra output.",
+  "brokenCode": "#include <string>\n\nstd::string countdownSequence(int year, int month, int day) {\n    std::string result = std::to_string(year) + \"-\";\n    result += std::to_string(month);\n    result += \"-\";\n    result += (day < 10 ? \"0\" : \"\") + std::to_string(day);\n    return result;\n}\n",
+  "solutionCode": "#include <string>\n\nstd::string countdownSequence(int year, int month, int day) {\n    std::string result = std::to_string(year) + \"-\";\n    result += (month < 10 ? \"0\" : \"\") + std::to_string(month);\n    result += \"-\";\n    result += (day < 10 ? \"0\" : \"\") + std::to_string(day);\n    return result;\n}\n",
+  "hint": "The loop stops too early or includes one extra step.",
+  "explanation": "The loop boundaries are wrong. Iterating from 3 down to 1 fixes the countdown.",
+  "tags": [
+    "cpp",
+    "024-countdown-sequence",
+    "medium",
+    "loops",
+    "ranges"
+  ],
+  "timeLimitSeconds": 150,
+  "points": 160,
+  "status": "published"
+}

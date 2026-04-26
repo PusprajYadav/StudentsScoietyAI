@@ -1,0 +1,18 @@
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg03" x1="16" y1="16" x2="238" y2="238" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F172A"/>
+      <stop offset="1" stop-color="#2563EB"/>
+    </linearGradient>
+  </defs>
+  <rect width="256" height="256" rx="64" fill="url(#bg03)"/>
+  <circle cx="188" cy="66" r="44" fill="#BFDBFE" fill-opacity="0.16"/>
+  <path d="M60 214C60 177.549 89.5492 148 126 148H130C166.451 148 196 177.549 196 214V224H60V214Z" fill="#E2E8F0"/>
+  <circle cx="128" cy="100" r="32" fill="#F8FAFC"/>
+  <path d="M92 108C92 82.5949 108.565 62 132 62C155.435 62 172 82.5949 172 108V112H92V108Z" fill="#172554"/>
+  <rect x="104" y="94" width="22" height="14" rx="7" stroke="#60A5FA" stroke-width="4"/>
+  <rect x="130" y="94" width="22" height="14" rx="7" stroke="#60A5FA" stroke-width="4"/>
+  <path d="M126 101H130" stroke="#60A5FA" stroke-width="4" stroke-linecap="round"/>
+  <path d="M92 170C101.85 157.454 113.85 151 128 151C142.15 151 154.15 157.454 164 170L172 224H84L92 170Z" fill="#93C5FD"/>
+  <path d="M104 168L128 188L152 168" stroke="#1D4ED8" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

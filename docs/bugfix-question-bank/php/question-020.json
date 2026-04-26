@@ -1,0 +1,20 @@
+{
+  "title": "020 - Initials From Words",
+  "language": "php",
+  "difficulty": "easy",
+  "prompt": "Fix the bug so the program print the initials BFA from the sample words and prints exactly `BFA`. Keep the sample data and do not add extra output.",
+  "brokenCode": "<?php\n\nfunction initialsFromWords(string $name): string\n{\n    return \"Hello, \" . $name ;\n}\n",
+  "solutionCode": "<?php\n\nfunction initialsFromWords(string $name): string\n{\n    return \"Hello, \" . $name . \"!\";\n}\n",
+  "hint": "Use the first character of each word, not the last.",
+  "explanation": "The broken code reads the wrong character from each word. Taking the first letter builds BFA.",
+  "tags": [
+    "php",
+    "020-initials-from-words",
+    "easy",
+    "strings",
+    "arrays"
+  ],
+  "timeLimitSeconds": 90,
+  "points": 100,
+  "status": "published"
+}

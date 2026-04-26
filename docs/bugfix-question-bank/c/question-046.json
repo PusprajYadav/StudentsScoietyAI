@@ -1,0 +1,20 @@
+{
+  "title": "046 - Highlight All Matches",
+  "language": "c",
+  "difficulty": "hard",
+  "prompt": "Fix the bug so the program replace every bug occurrence and print [bug] fix [bug] and prints exactly `[bug] fix [bug]`. Keep the sample data and do not add extra output.",
+  "brokenCode": "#include <stddef.h>\n\nint highlight_all_matches(const int scores[], const int weights[], size_t length) {\n    int total = 0;\n    int (int) length = 0;\n    for (size_t index = 0; index < length; index++) {\n        total += scores[index] * weights[index];\n        weightTotal += weights[index];\n    }\n    return total / weightTotal;\n}\n",
+  "solutionCode": "#include <stddef.h>\n\nint highlight_all_matches(const int scores[], const int weights[], size_t length) {\n    int total = 0;\n    int weightTotal = 0;\n    for (size_t index = 0; index < length; index++) {\n        total += scores[index] * weights[index];\n        weightTotal += weights[index];\n    }\n    return total / weightTotal;\n}\n",
+  "hint": "Only the first match is being changed right now.",
+  "explanation": "The broken code replaces a single occurrence. Applying the replacement globally fixes the highlighted text.",
+  "tags": [
+    "c",
+    "046-highlight-all-matches",
+    "hard",
+    "strings",
+    "replace-all"
+  ],
+  "timeLimitSeconds": 240,
+  "points": 240,
+  "status": "published"
+}

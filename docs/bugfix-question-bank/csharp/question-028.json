@@ -1,0 +1,20 @@
+{
+  "title": "028 - Contact Preference",
+  "language": "csharp",
+  "difficulty": "medium",
+  "prompt": "Fix the bug so the program pick the first non-empty contact option and print email and prints exactly `email`. Keep the sample data and do not add extra output.",
+  "brokenCode": "public static class ContactPreference\n{\n    public static bool ContactPreference(string text, string query)\n    {\n        return text.Contains(query.ToLower());\n    }\n}\n",
+  "solutionCode": "public static class ContactPreference\n{\n    public static bool ContactPreference(string text, string query)\n    {\n        return text.ToLower().Contains(query.ToLower());\n    }\n}\n",
+  "hint": "The final fallback should still be used if earlier options are empty.",
+  "explanation": "The broken code stops before checking the final fallback. Evaluating all options in order fixes it.",
+  "tags": [
+    "csharp",
+    "028-contact-preference",
+    "medium",
+    "fallback",
+    "conditions"
+  ],
+  "timeLimitSeconds": 150,
+  "points": 160,
+  "status": "published"
+}

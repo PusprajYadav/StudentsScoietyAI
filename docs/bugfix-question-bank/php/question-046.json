@@ -1,0 +1,20 @@
+{
+  "title": "046 - Highlight All Matches",
+  "language": "php",
+  "difficulty": "hard",
+  "prompt": "Fix the bug so the program replace every bug occurrence and print [bug] fix [bug] and prints exactly `[bug] fix [bug]`. Keep the sample data and do not add extra output.",
+  "brokenCode": "<?php\n\nfunction highlightAllMatches(array $scores, array $weights): int\n{\n    $total = 0;\n    foreach ($scores as $index => $score) {\n        $total += $score * $weights[$index];\n    }\n    return intdiv($total, count($scores));\n}\n",
+  "solutionCode": "<?php\n\nfunction highlightAllMatches(array $scores, array $weights): int\n{\n    $total = 0;\n    foreach ($scores as $index => $score) {\n        $total += $score * $weights[$index];\n    }\n    return intdiv($total, array_sum($weights));\n}\n",
+  "hint": "Only the first match is being changed right now.",
+  "explanation": "The broken code replaces a single occurrence. Applying the replacement globally fixes the highlighted text.",
+  "tags": [
+    "php",
+    "046-highlight-all-matches",
+    "hard",
+    "strings",
+    "replace-all"
+  ],
+  "timeLimitSeconds": 240,
+  "points": 240,
+  "status": "published"
+}

@@ -1,0 +1,20 @@
+{
+  "title": "017 - Safe Division",
+  "language": "php",
+  "difficulty": "easy",
+  "prompt": "Fix the bug so the program print 0 when the divisor is zero instead of crashing and prints exactly `0`. Keep the sample data and do not add extra output.",
+  "brokenCode": "<?php\n\nfunction safeDivision(array $values): int\n{\n    return array_sum(array_filter($values, fn($value) => $value % 2 === 1));\n}\n",
+  "solutionCode": "<?php\n\nfunction safeDivision(array $values): int\n{\n    return array_sum(array_filter($values, fn($value) => $value % 2 === 0));\n}\n",
+  "hint": "Guard the division before it happens.",
+  "explanation": "The broken code divides by zero. Adding the zero check first returns the safe fallback output.",
+  "tags": [
+    "php",
+    "017-safe-division",
+    "easy",
+    "math",
+    "edge-case"
+  ],
+  "timeLimitSeconds": 90,
+  "points": 100,
+  "status": "published"
+}

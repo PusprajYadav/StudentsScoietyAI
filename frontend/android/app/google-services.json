@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "634993611773",
+    "project_id": "studentsociety-15812",
+    "storage_bucket": "studentsociety-15812.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:634993611773:android:ce51b976f0aae39ff3ff94",
+        "android_client_info": {
+          "package_name": "com.studentsociety.a2zworkhub"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCEHu581TGn4cfHnKUPSfTW63JBhX_xeDE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

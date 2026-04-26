@@ -1,0 +1,20 @@
+{
+  "title": "040 - Diagonal Sum",
+  "language": "cpp",
+  "difficulty": "medium",
+  "prompt": "Fix the bug so the program sum the main diagonal and print 14 and prints exactly `14`. Keep the sample data and do not add extra output.",
+  "brokenCode": "#include <algorithm>\n#include <sstream>\n#include <string>\n#include <vector>\n\nstd::string diagonalSum(std::vector<int> values) {\n    std::sort(values.begin(), values.end(), std::less<int>());\n    std::ostringstream output;\n    for (size_t index = 0; index < values.size(); index++) {\n        if (index > 0) output << \",\";\n        output << values[index];\n    }\n    return output.str();\n}\n",
+  "solutionCode": "#include <algorithm>\n#include <sstream>\n#include <string>\n#include <vector>\n\nstd::string diagonalSum(std::vector<int> values) {\n    std::sort(values.begin(), values.end(), std::greater<int>());\n    std::ostringstream output;\n    for (size_t index = 0; index < values.size(); index++) {\n        if (index > 0) output << \",\";\n        output << values[index];\n    }\n    return output.str();\n}\n",
+  "hint": "The program is summing the wrong diagonal.",
+  "explanation": "The broken code uses the anti-diagonal indexes. Summing row i and column i fixes the total.",
+  "tags": [
+    "cpp",
+    "040-diagonal-sum",
+    "medium",
+    "matrix",
+    "math"
+  ],
+  "timeLimitSeconds": 150,
+  "points": 160,
+  "status": "published"
+}

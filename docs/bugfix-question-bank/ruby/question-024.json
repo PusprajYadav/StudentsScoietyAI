@@ -1,0 +1,20 @@
+{
+  "title": "024 - Countdown Sequence",
+  "language": "ruby",
+  "difficulty": "medium",
+  "prompt": "Fix the bug so the program print the countdown as 3-2-1 and prints exactly `3-2-1`. Keep the sample data and do not add extra output.",
+  "brokenCode": "def countdown_sequence(year, month, day)\n  year.to_s + \"-\" + month.to_s + \"-\" + day.to_s.rjust(2, \"0\")\nend\n",
+  "solutionCode": "def countdown_sequence(year, month, day)\n  year.to_s + \"-\" + month.to_s.rjust(2, \"0\") + \"-\" + day.to_s.rjust(2, \"0\")\nend\n",
+  "hint": "The loop stops too early or includes one extra step.",
+  "explanation": "The loop boundaries are wrong. Iterating from 3 down to 1 fixes the countdown.",
+  "tags": [
+    "ruby",
+    "024-countdown-sequence",
+    "medium",
+    "loops",
+    "ranges"
+  ],
+  "timeLimitSeconds": 150,
+  "points": 160,
+  "status": "published"
+}

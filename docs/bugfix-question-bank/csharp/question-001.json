@@ -1,0 +1,21 @@
+{
+  "title": "001 - Count Positive Numbers",
+  "language": "csharp",
+  "difficulty": "easy",
+  "prompt": "Fix the bug so the program count how many values in the sample list are greater than zero and prints exactly `3`. Keep the sample data and do not add extra output.",
+  "brokenCode": "using System.Linq;\n\npublic static class CountPositiveNumbers\n{\n    public static int CountPositiveNumbers(int[] values)\n    {\n        return values.Count(value => value >= 0);\n    }\n}\n",
+  "solutionCode": "using System.Linq;\n\npublic static class CountPositiveNumbers\n{\n    public static int CountPositiveNumbers(int[] values)\n    {\n        return values.Count(value => value > 0);\n    }\n}\n",
+  "hint": "Zero should not be counted as a positive number.",
+  "explanation": "The broken code includes zero in the count. Using a strict greater-than check makes the sample output 3.",
+  "tags": [
+    "csharp",
+    "001-count-positive-numbers",
+    "easy",
+    "arrays",
+    "counting",
+    "conditions"
+  ],
+  "timeLimitSeconds": 90,
+  "points": 100,
+  "status": "published"
+}

@@ -1,0 +1,21 @@
+{
+  "title": "011 - Long Word Filter",
+  "language": "csharp",
+  "difficulty": "easy",
+  "prompt": "Fix the bug so the program print only the words with length 5 or more as planet,cloud and prints exactly `planet,cloud`. Keep the sample data and do not add extra output.",
+  "brokenCode": "using System.Linq;\n\npublic static class LongWordFilter\n{\n    public static int LongWordFilter(int[] values)\n    {\n        return values.Count(value => value >= 0);\n    }\n}\n",
+  "solutionCode": "using System.Linq;\n\npublic static class LongWordFilter\n{\n    public static int LongWordFilter(int[] values)\n    {\n        return values.Count(value => value > 0);\n    }\n}\n",
+  "hint": "The condition should keep long words, not short ones.",
+  "explanation": "The comparison is reversed. Keeping words whose length is at least 5 fixes the output.",
+  "tags": [
+    "csharp",
+    "011-long-word-filter",
+    "easy",
+    "arrays",
+    "strings",
+    "filtering"
+  ],
+  "timeLimitSeconds": 90,
+  "points": 100,
+  "status": "published"
+}

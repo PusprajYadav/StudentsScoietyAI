@@ -1,0 +1,20 @@
+{
+  "title": "031 - Visibility Rules",
+  "language": "csharp",
+  "difficulty": "medium",
+  "prompt": "Fix the bug so the program print visible when the viewer is the owner even if the item is private and prints exactly `visible`. Keep the sample data and do not add extra output.",
+  "brokenCode": "using System.Linq;\n\npublic static class VisibilityRules\n{\n    public static int VisibilityRules(string[] values)\n    {\n        return values.Count();\n    }\n}\n",
+  "solutionCode": "using System.Linq;\n\npublic static class VisibilityRules\n{\n    public static int VisibilityRules(string[] values)\n    {\n        return values.Distinct().Count();\n    }\n}\n",
+  "hint": "Either condition should allow visibility.",
+  "explanation": "The broken condition requires both flags. Using an OR check matches the intended visibility rule.",
+  "tags": [
+    "csharp",
+    "031-visibility-rules",
+    "medium",
+    "booleans",
+    "conditions"
+  ],
+  "timeLimitSeconds": 150,
+  "points": 160,
+  "status": "published"
+}

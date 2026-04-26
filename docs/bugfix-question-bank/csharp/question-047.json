@@ -1,0 +1,20 @@
+{
+  "title": "047 - Validation Summary",
+  "language": "csharp",
+  "difficulty": "hard",
+  "prompt": "Fix the bug so the program print username,password when both fields fail validation and prints exactly `username,password`. Keep the sample data and do not add extra output.",
+  "brokenCode": "using System.Collections.Generic;\n\npublic static class ValidationSummary\n{\n    public static string ValidationSummary(int[] left, int[] right)\n    {\n        var merged = new List<int>();\n        var leftIndex = 0;\n        var rightIndex = 0;\n        while (leftIndex < left.Length && rightIndex < right.Length)\n        {\n            if (left[leftIndex] >= right[rightIndex])\n            {\n                merged.Add(left[leftIndex++]);\n            }\n            else\n            {\n                merged.Add(right[rightIndex++]);\n            }\n        }\n        while (leftIndex < left.Length) merged.Add(left[leftIndex++]);\n        while (rightIndex < right.Length) merged.Add(right[rightIndex++]);\n        return string.Join(\",\", merged);\n    }\n}\n",
+  "solutionCode": "using System.Collections.Generic;\n\npublic static class ValidationSummary\n{\n    public static string ValidationSummary(int[] left, int[] right)\n    {\n        var merged = new List<int>();\n        var leftIndex = 0;\n        var rightIndex = 0;\n        while (leftIndex < left.Length && rightIndex < right.Length)\n        {\n            if (left[leftIndex] <= right[rightIndex])\n            {\n                merged.Add(left[leftIndex++]);\n            }\n            else\n            {\n                merged.Add(right[rightIndex++]);\n            }\n        }\n        while (leftIndex < left.Length) merged.Add(left[leftIndex++]);\n        while (rightIndex < right.Length) merged.Add(right[rightIndex++]);\n        return string.Join(\",\", merged);\n    }\n}\n",
+  "hint": "Both failures should appear in the summary.",
+  "explanation": "The broken code stops after the first failing rule. Collecting every failing field fixes the summary.",
+  "tags": [
+    "csharp",
+    "047-validation-summary",
+    "hard",
+    "validation",
+    "strings"
+  ],
+  "timeLimitSeconds": 240,
+  "points": 240,
+  "status": "published"
+}

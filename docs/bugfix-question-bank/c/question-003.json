@@ -1,0 +1,21 @@
+{
+  "title": "003 - Pass Threshold",
+  "language": "c",
+  "difficulty": "easy",
+  "prompt": "Fix the bug so the program print PASS when the score reaches the passing mark and prints exactly `PASS`. Keep the sample data and do not add extra output.",
+  "brokenCode": "#include <stddef.h>\n\nconst char* pass_threshold(int score) {\n    return score > 40 ? \"PASS\" : \"FAIL\";\n}\n",
+  "solutionCode": "#include <stddef.h>\n\nconst char* pass_threshold(int score) {\n    return score >= 40 ? \"PASS\" : \"FAIL\";\n}\n",
+  "hint": "The boundary score should still pass.",
+  "explanation": "The broken comparison excludes the exact passing score. Using an inclusive comparison fixes the branch.",
+  "tags": [
+    "c",
+    "003-pass-threshold",
+    "easy",
+    "conditions",
+    "comparison",
+    "branches"
+  ],
+  "timeLimitSeconds": 90,
+  "points": 100,
+  "status": "published"
+}

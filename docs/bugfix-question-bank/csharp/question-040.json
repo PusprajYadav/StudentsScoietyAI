@@ -1,0 +1,20 @@
+{
+  "title": "040 - Diagonal Sum",
+  "language": "csharp",
+  "difficulty": "medium",
+  "prompt": "Fix the bug so the program sum the main diagonal and print 14 and prints exactly `14`. Keep the sample data and do not add extra output.",
+  "brokenCode": "using System.Linq;\n\npublic static class DiagonalSum\n{\n    public static string DiagonalSum(int[] values)\n    {\n        return string.Join(\",\", values.OrderBy(value => value));\n    }\n}\n",
+  "solutionCode": "using System.Linq;\n\npublic static class DiagonalSum\n{\n    public static string DiagonalSum(int[] values)\n    {\n        return string.Join(\",\", values.OrderByDescending(value => value));\n    }\n}\n",
+  "hint": "The program is summing the wrong diagonal.",
+  "explanation": "The broken code uses the anti-diagonal indexes. Summing row i and column i fixes the total.",
+  "tags": [
+    "csharp",
+    "040-diagonal-sum",
+    "medium",
+    "matrix",
+    "math"
+  ],
+  "timeLimitSeconds": 150,
+  "points": 160,
+  "status": "published"
+}

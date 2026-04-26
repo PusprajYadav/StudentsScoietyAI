@@ -1,0 +1,20 @@
+{
+  "title": "045 - Pagination Offset",
+  "language": "python",
+  "difficulty": "hard",
+  "prompt": "Fix the bug so the program calculate the offset for page 3 with page size 20 and print 40 and prints exactly `40`. Keep the sample data and do not add extra output.",
+  "brokenCode": "def pagination_offset(values):\n    return \",\".join(str(value) for value in sorted(values, reverse=True)[:2])\n",
+  "solutionCode": "def pagination_offset(values):\n    return \",\".join(str(value) for value in sorted(values, reverse=True)[:3])\n",
+  "hint": "The page number should be converted to a zero-based offset first.",
+  "explanation": "The broken formula multiplies the page directly. Subtracting 1 from the page before multiplying fixes the offset.",
+  "tags": [
+    "python",
+    "045-pagination-offset",
+    "hard",
+    "math",
+    "pagination"
+  ],
+  "timeLimitSeconds": 240,
+  "points": 240,
+  "status": "published"
+}

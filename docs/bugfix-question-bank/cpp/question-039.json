@@ -1,0 +1,20 @@
+{
+  "title": "039 - Largest Row Total",
+  "language": "cpp",
+  "difficulty": "medium",
+  "prompt": "Fix the bug so the program print the largest row total and prints exactly `6`. Keep the sample data and do not add extra output.",
+  "brokenCode": "#include <string>\n\nstd::string largestRowTotal(int year, int month, int day) {\n    std::string result = std::to_string(year) + \"-\";\n    result += std::to_string(month);\n    result += \"-\";\n    result += (day < 10 ? \"0\" : \"\") + std::to_string(day);\n    return result;\n}\n",
+  "solutionCode": "#include <string>\n\nstd::string largestRowTotal(int year, int month, int day) {\n    std::string result = std::to_string(year) + \"-\";\n    result += (month < 10 ? \"0\" : \"\") + std::to_string(month);\n    result += \"-\";\n    result += (day < 10 ? \"0\" : \"\") + std::to_string(day);\n    return result;\n}\n",
+  "hint": "The comparison should keep the largest subtotal, not the smallest.",
+  "explanation": "The broken code updates the best value in the wrong direction. Keeping the maximum row total fixes the output.",
+  "tags": [
+    "cpp",
+    "039-largest-row-total",
+    "medium",
+    "matrix",
+    "comparison"
+  ],
+  "timeLimitSeconds": 150,
+  "points": 160,
+  "status": "published"
+}

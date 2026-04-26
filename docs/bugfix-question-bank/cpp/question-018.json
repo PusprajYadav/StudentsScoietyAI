@@ -1,0 +1,20 @@
+{
+  "title": "018 - Case-Insensitive Search",
+  "language": "cpp",
+  "difficulty": "easy",
+  "prompt": "Fix the bug so the program print found when the text contains the query regardless of case and prints exactly `found`. Keep the sample data and do not add extra output.",
+  "brokenCode": "#include <string>\n\nstd::string caseInsensitiveSearch(int score) {\n    return score > 40 ? \"PASS\" : \"FAIL\";\n}\n",
+  "solutionCode": "#include <string>\n\nstd::string caseInsensitiveSearch(int score) {\n    return score >= 40 ? \"PASS\" : \"FAIL\";\n}\n",
+  "hint": "Normalize both strings before searching.",
+  "explanation": "The broken search compares different letter cases directly. Lowercasing both sides fixes the match.",
+  "tags": [
+    "cpp",
+    "018-case-insensitive-search",
+    "easy",
+    "strings",
+    "search"
+  ],
+  "timeLimitSeconds": 90,
+  "points": 100,
+  "status": "published"
+}

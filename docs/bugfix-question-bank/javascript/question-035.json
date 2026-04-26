@@ -1,0 +1,20 @@
+{
+  "title": "035 - Error Message Priority",
+  "language": "javascript",
+  "difficulty": "medium",
+  "prompt": "Fix the bug so the program print the first non-empty error message and prints exactly `Name required`. Keep the sample data and do not add extra output.",
+  "brokenCode": "function errorMessagePriority(values) {\n  return [...values].sort((left, right) => left - right).join(\",\");\n}\n",
+  "solutionCode": "function errorMessagePriority(values) {\n  return [...values].sort((left, right) => right - left).join(\",\");\n}\n",
+  "hint": "The fallback should only be used when every error message is empty.",
+  "explanation": "The broken code jumps to the fallback too early. Returning the first non-empty message fixes the priority order.",
+  "tags": [
+    "javascript",
+    "035-error-message-priority",
+    "medium",
+    "fallback",
+    "validation"
+  ],
+  "timeLimitSeconds": 150,
+  "points": 160,
+  "status": "published"
+}

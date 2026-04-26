@@ -1,0 +1,20 @@
+{
+  "title": "044 - Most Frequent Word",
+  "language": "c",
+  "difficulty": "hard",
+  "prompt": "Fix the bug so the program find the most frequent word and print bug and prints exactly `bug`. Keep the sample data and do not add extra output.",
+  "brokenCode": "#include <string.h>\n\nvoid most_frequent_word(const char *text, char output[128]) {\n    strcpy(output, text);\n}\n",
+  "solutionCode": "#include <string.h>\n\nvoid most_frequent_word(const char *text, char output[128]) {\n    strcpy(output, text);\n}\n",
+  "hint": "Do not reset the best count while you scan.",
+  "explanation": "The broken loop loses track of the highest frequency. Keeping the current best word and count fixes the answer.",
+  "tags": [
+    "c",
+    "044-most-frequent-word",
+    "hard",
+    "arrays",
+    "frequency"
+  ],
+  "timeLimitSeconds": 240,
+  "points": 240,
+  "status": "published"
+}

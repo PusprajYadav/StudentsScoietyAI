@@ -1,0 +1,41 @@
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Student Society default profile avatar</title>
+  <desc id="desc">A blue and white student avatar with graduation cap and book for profiles without a photo.</desc>
+  <defs>
+    <linearGradient id="bg" x1="22" y1="18" x2="236" y2="238" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2563EB" />
+      <stop offset="1" stop-color="#0F172A" />
+    </linearGradient>
+    <linearGradient id="accent" x1="78" y1="96" x2="180" y2="204" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF" />
+      <stop offset="1" stop-color="#E0F2FE" />
+    </linearGradient>
+    <linearGradient id="book" x1="72" y1="146" x2="184" y2="214" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#DBEAFE" />
+      <stop offset="1" stop-color="#EFF6FF" />
+    </linearGradient>
+  </defs>
+
+  <rect width="256" height="256" rx="64" fill="url(#bg)" />
+  <circle cx="194" cy="64" r="52" fill="#60A5FA" fill-opacity="0.18" />
+  <circle cx="62" cy="202" r="64" fill="#93C5FD" fill-opacity="0.14" />
+
+  <path d="M63 82L128 54L193 82L128 110L63 82Z" fill="#FFFFFF" />
+  <path d="M81 77L128 98L175 77L128 56L81 77Z" fill="#BFDBFE" />
+  <path d="M175 82V106" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" />
+  <circle cx="175" cy="110" r="5.5" fill="#FFFFFF" />
+
+  <circle cx="128" cy="118" r="28" fill="#F8FAFC" />
+  <path d="M92 198C92 178.118 108.118 162 128 162C147.882 162 164 178.118 164 198V204H92V198Z" fill="#F8FAFC" />
+  <path d="M84 106C84 95.5066 92.5066 87 103 87H153C163.493 87 172 95.5066 172 106V110C172 113.314 169.314 116 166 116H90C86.6863 116 84 113.314 84 110V106Z" fill="#DBEAFE" />
+
+  <path d="M74 144C74 133.507 82.5066 125 93 125H163C173.493 125 182 133.507 182 144V188C182 194.627 176.627 200 170 200H86C79.3726 200 74 194.627 74 188V144Z" fill="url(#book)" />
+  <path d="M128 125V200" stroke="#93C5FD" stroke-width="3" stroke-linecap="round" />
+  <path d="M90 141H120" stroke="#2563EB" stroke-width="4.5" stroke-linecap="round" />
+  <path d="M136 141H166" stroke="#2563EB" stroke-width="4.5" stroke-linecap="round" />
+  <path d="M90 156H120" stroke="#60A5FA" stroke-width="4" stroke-linecap="round" />
+  <path d="M136 156H166" stroke="#60A5FA" stroke-width="4" stroke-linecap="round" />
+
+  <rect x="44" y="210" width="168" height="20" rx="10" fill="#FFFFFF" fill-opacity="0.12" />
+  <text x="128" y="224" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" font-weight="800" letter-spacing="2.2" fill="#FFFFFF">STUDENT SOCIETY</text>
+</svg>

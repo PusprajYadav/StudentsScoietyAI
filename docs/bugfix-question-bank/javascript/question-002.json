@@ -1,0 +1,21 @@
+{
+  "title": "002 - Sum Even Numbers",
+  "language": "javascript",
+  "difficulty": "easy",
+  "prompt": "Fix the bug so the program sum only the even numbers from the sample list and prints exactly `10`. Keep the sample data and do not add extra output.",
+  "brokenCode": "function sumEvenNumbers(values) {\n  return values.filter((value) => value % 2 === 1).reduce((sum, value) => sum + value, 0);\n}\n",
+  "solutionCode": "function sumEvenNumbers(values) {\n  return values.filter((value) => value % 2 === 0).reduce((sum, value) => sum + value, 0);\n}\n",
+  "hint": "The condition should keep even values, not odd ones.",
+  "explanation": "The bug checks the wrong remainder. Changing the condition to keep values divisible by 2 fixes the total.",
+  "tags": [
+    "javascript",
+    "002-sum-even-numbers",
+    "easy",
+    "arrays",
+    "loops",
+    "math"
+  ],
+  "timeLimitSeconds": 90,
+  "points": 100,
+  "status": "published"
+}

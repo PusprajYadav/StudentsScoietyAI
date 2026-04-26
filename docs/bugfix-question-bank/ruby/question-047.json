@@ -1,0 +1,20 @@
+{
+  "title": "047 - Validation Summary",
+  "language": "ruby",
+  "difficulty": "hard",
+  "prompt": "Fix the bug so the program print username,password when both fields fail validation and prints exactly `username,password`. Keep the sample data and do not add extra output.",
+  "brokenCode": "def validation_summary(left, right)\n  merged = []\n  left_index = 0\n  right_index = 0\n  while left_index < left.length && right_index < right.length\n    if left[left_index] >= right[right_index]\n      merged << left[left_index]\n      left_index += 1\n    else\n      merged << right[right_index]\n      right_index += 1\n    end\n  end\n  merged.concat(left[left_index..] || []).concat(right[right_index..] || []).join(\",\")\nend\n",
+  "solutionCode": "def validation_summary(left, right)\n  merged = []\n  left_index = 0\n  right_index = 0\n  while left_index < left.length && right_index < right.length\n    if left[left_index] <= right[right_index]\n      merged << left[left_index]\n      left_index += 1\n    else\n      merged << right[right_index]\n      right_index += 1\n    end\n  end\n  merged.concat(left[left_index..] || []).concat(right[right_index..] || []).join(\",\")\nend\n",
+  "hint": "Both failures should appear in the summary.",
+  "explanation": "The broken code stops after the first failing rule. Collecting every failing field fixes the summary.",
+  "tags": [
+    "ruby",
+    "047-validation-summary",
+    "hard",
+    "validation",
+    "strings"
+  ],
+  "timeLimitSeconds": 240,
+  "points": 240,
+  "status": "published"
+}

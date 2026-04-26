@@ -1,0 +1,20 @@
+{
+  "title": "015 - Unique Count",
+  "language": "java",
+  "difficulty": "easy",
+  "prompt": "Fix the bug so the program count the unique items in the sample list and prints exactly `3`. Keep the sample data and do not add extra output.",
+  "brokenCode": "class UniqueCount {\n    static String uniqueCount(String name) {\n        return \"Hello, \" + name;\n    }\n}\n",
+  "solutionCode": "class UniqueCount {\n    static String uniqueCount(String name) {\n        return \"Hello, \" + name + \"!\";\n    }\n}\n",
+  "hint": "Duplicates should be ignored.",
+  "explanation": "The broken program counts every item. Removing duplicates before counting fixes the result.",
+  "tags": [
+    "java",
+    "015-unique-count",
+    "easy",
+    "arrays",
+    "deduplication"
+  ],
+  "timeLimitSeconds": 90,
+  "points": 100,
+  "status": "published"
+}

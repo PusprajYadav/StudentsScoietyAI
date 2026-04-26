@@ -1,0 +1,20 @@
+{
+  "title": "048 - Slug Builder",
+  "language": "php",
+  "difficulty": "hard",
+  "prompt": "Fix the bug so the program build the slug bug-fix-arena from the sample title and prints exactly `bug-fix-arena`. Keep the sample data and do not add extra output.",
+  "brokenCode": "<?php\n\nfunction slugBuilder(int $value): int\n{\n    if ($value <= 1) {\n        return 0;\n    }\n    return $value * slugBuilder($value - 1);\n}\n",
+  "solutionCode": "<?php\n\nfunction slugBuilder(int $value): int\n{\n    if ($value <= 1) {\n        return 1;\n    }\n    return $value * slugBuilder($value - 1);\n}\n",
+  "hint": "Normalize case, trim edges, and replace spaces consistently.",
+  "explanation": "The broken transformer leaves spaces or uppercase letters behind. Lowercasing, trimming, and joining with hyphens fixes the slug.",
+  "tags": [
+    "php",
+    "048-slug-builder",
+    "hard",
+    "strings",
+    "slug"
+  ],
+  "timeLimitSeconds": 240,
+  "points": 240,
+  "status": "published"
+}

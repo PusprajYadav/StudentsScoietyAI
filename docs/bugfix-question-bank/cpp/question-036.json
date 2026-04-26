@@ -1,0 +1,21 @@
+{
+  "title": "036 - Table Summary",
+  "language": "cpp",
+  "difficulty": "medium",
+  "prompt": "Fix the bug so the program print the summary exactly as rows=2 total=10 and prints exactly `rows=2 total=10`. Keep the sample data and do not add extra output.",
+  "brokenCode": "#include <set>\n#include <string>\n#include <vector>\n\nint tableSummary(const std::vector<std::string>& values) {\n    return values.size();\n}\n",
+  "solutionCode": "#include <set>\n#include <string>\n#include <vector>\n\nint tableSummary(const std::vector<std::string>& values) {\n    return std::set<std::string>(values.begin(), values.end()).size();\n}\n",
+  "hint": "The nested loop skips one value from each row.",
+  "explanation": "The broken inner loop stops too soon and misses data. Iterating across every cell fixes the total.",
+  "tags": [
+    "cpp",
+    "036-table-summary",
+    "medium",
+    "matrix",
+    "loops",
+    "summary"
+  ],
+  "timeLimitSeconds": 150,
+  "points": 160,
+  "status": "published"
+}

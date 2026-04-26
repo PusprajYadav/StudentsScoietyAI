@@ -1,0 +1,21 @@
+{
+  "title": "036 - Table Summary",
+  "language": "java",
+  "difficulty": "medium",
+  "prompt": "Fix the bug so the program print the summary exactly as rows=2 total=10 and prints exactly `rows=2 total=10`. Keep the sample data and do not add extra output.",
+  "brokenCode": "import java.util.*;\n\nclass TableSummary {\n    static int tableSummary(String[] values) {\n        return values.length;\n    }\n}\n",
+  "solutionCode": "import java.util.*;\n\nclass TableSummary {\n    static int tableSummary(String[] values) {\n        return new HashSet<>(Arrays.asList(values)).size();\n    }\n}\n",
+  "hint": "The nested loop skips one value from each row.",
+  "explanation": "The broken inner loop stops too soon and misses data. Iterating across every cell fixes the total.",
+  "tags": [
+    "java",
+    "036-table-summary",
+    "medium",
+    "matrix",
+    "loops",
+    "summary"
+  ],
+  "timeLimitSeconds": 150,
+  "points": 160,
+  "status": "published"
+}

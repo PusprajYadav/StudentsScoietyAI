@@ -1,0 +1,20 @@
+{
+  "title": "005 - Greeting Format",
+  "language": "c",
+  "difficulty": "easy",
+  "prompt": "Fix the bug so the program print the greeting exactly as Hello, Asha! and prints exactly `Hello, Asha!`. Keep the sample data and do not add extra output.",
+  "brokenCode": "#include <stdio.h>\n\nvoid greeting_format(const char* name, char output[64]) {\n    snprintf(output, 64, \"Hello, %s\", name);\n}\n",
+  "solutionCode": "#include <stdio.h>\n\nvoid greeting_format(const char* name, char output[64]) {\n    snprintf(output, 64, \"Hello, %s!\", name);\n}\n",
+  "hint": "A small punctuation or spacing issue is breaking the expected text.",
+  "explanation": "The greeting needs the comma, space, and exclamation mark in the correct places to match the target output.",
+  "tags": [
+    "c",
+    "005-greeting-format",
+    "easy",
+    "strings",
+    "formatting"
+  ],
+  "timeLimitSeconds": 90,
+  "points": 100,
+  "status": "published"
+}

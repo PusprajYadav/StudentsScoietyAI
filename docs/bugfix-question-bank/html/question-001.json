@@ -1,0 +1,20 @@
+{
+  "title": "001 - Close the Paragraph Tag",
+  "language": "html",
+  "difficulty": "easy",
+  "prompt": "Fix the markup so the paragraph is closed correctly. Keep the structure the same.",
+  "brokenCode": "<section class=\"card\">\n  <h1>Welcome</h1>\n  <p>Practice your bug fixes\n</section>\n",
+  "solutionCode": "<section class=\"card\">\n  <h1>Welcome</h1>\n  <p>Practice your bug fixes</p>\n</section>\n",
+  "hint": "One text element is missing its closing tag.",
+  "explanation": "The paragraph was left open, which breaks the section markup. Closing the tag fixes the structure.",
+  "tags": [
+    "html",
+    "001-close-the-paragraph-tag",
+    "easy",
+    "paragraph",
+    "closing-tag"
+  ],
+  "timeLimitSeconds": 90,
+  "points": 100,
+  "status": "published"
+}

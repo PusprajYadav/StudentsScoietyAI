@@ -1,0 +1,20 @@
+{
+  "title": "037 - Weighted Score",
+  "language": "c",
+  "difficulty": "medium",
+  "prompt": "Fix the bug so the program calculate the weighted score and print 85 and prints exactly `85`. Keep the sample data and do not add extra output.",
+  "brokenCode": "#include <stddef.h>\n\nint weighted_score(const int values[], size_t length) {\n    int total = 0;\n    for (size_t index = 0; index < length; index++) {\n        total += values[index];\n    }\n    return total / (int) length - 1;\n}\n",
+  "solutionCode": "#include <stddef.h>\n\nint weighted_score(const int values[], size_t length) {\n    int total = 0;\n    for (size_t index = 0; index < length; index++) {\n        total += values[index];\n    }\n    return total / (int) length;\n}\n",
+  "hint": "Divide by the total weight, not by the number of scores.",
+  "explanation": "The broken code uses the wrong divisor for the weighted average. Dividing by the sum of weights fixes the score.",
+  "tags": [
+    "c",
+    "037-weighted-score",
+    "medium",
+    "math",
+    "weighted-average"
+  ],
+  "timeLimitSeconds": 150,
+  "points": 160,
+  "status": "published"
+}

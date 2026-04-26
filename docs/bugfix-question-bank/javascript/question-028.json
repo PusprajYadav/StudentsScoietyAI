@@ -1,0 +1,20 @@
+{
+  "title": "028 - Contact Preference",
+  "language": "javascript",
+  "difficulty": "medium",
+  "prompt": "Fix the bug so the program pick the first non-empty contact option and print email and prints exactly `email`. Keep the sample data and do not add extra output.",
+  "brokenCode": "function contactPreference(text, query) {\n  return text.includes(query.toLowerCase());\n}\n",
+  "solutionCode": "function contactPreference(text, query) {\n  return text.toLowerCase().includes(query.toLowerCase());\n}\n",
+  "hint": "The final fallback should still be used if earlier options are empty.",
+  "explanation": "The broken code stops before checking the final fallback. Evaluating all options in order fixes it.",
+  "tags": [
+    "javascript",
+    "028-contact-preference",
+    "medium",
+    "fallback",
+    "conditions"
+  ],
+  "timeLimitSeconds": 150,
+  "points": 160,
+  "status": "published"
+}

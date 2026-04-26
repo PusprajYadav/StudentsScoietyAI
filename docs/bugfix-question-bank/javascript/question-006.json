@@ -1,0 +1,20 @@
+{
+  "title": "006 - Guest Fallback",
+  "language": "javascript",
+  "difficulty": "easy",
+  "prompt": "Fix the bug so the program print Guest when the username is empty and prints exactly `Guest`. Keep the sample data and do not add extra output.",
+  "brokenCode": "function guestFallback(values) {\n  return values.filter((value) => value >= 0).length;\n}\n",
+  "solutionCode": "function guestFallback(values) {\n  return values.filter((value) => value > 0).length;\n}\n",
+  "hint": "An empty string should fall back too, not only null-like values.",
+  "explanation": "The broken logic only checks one empty state. Treating an empty string as missing fixes the fallback.",
+  "tags": [
+    "javascript",
+    "006-guest-fallback",
+    "easy",
+    "strings",
+    "fallback"
+  ],
+  "timeLimitSeconds": 90,
+  "points": 100,
+  "status": "published"
+}

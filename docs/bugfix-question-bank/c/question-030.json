@@ -1,0 +1,20 @@
+{
+  "title": "030 - Name Initials",
+  "language": "c",
+  "difficulty": "medium",
+  "prompt": "Fix the bug so the program print the initials SS in uppercase and prints exactly `SS`. Keep the sample data and do not add extra output.",
+  "brokenCode": "#include <stddef.h>\n\nvoid name_initials(int values[], size_t length) {\n    (void) values;\n    (void) length;\n}\n",
+  "solutionCode": "#include <stddef.h>\n\nvoid name_initials(int values[], size_t length) {\n    (void) values;\n    (void) length;\n}\n",
+  "hint": "Use uppercase letters after taking the initials.",
+  "explanation": "The broken code builds lowercase initials. Converting the result to uppercase fixes the output.",
+  "tags": [
+    "c",
+    "030-name-initials",
+    "medium",
+    "strings",
+    "case-conversion"
+  ],
+  "timeLimitSeconds": 150,
+  "points": 160,
+  "status": "published"
+}

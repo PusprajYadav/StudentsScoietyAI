@@ -1,0 +1,20 @@
+{
+  "title": "028 - Contact Preference",
+  "language": "cpp",
+  "difficulty": "medium",
+  "prompt": "Fix the bug so the program pick the first non-empty contact option and print email and prints exactly `email`. Keep the sample data and do not add extra output.",
+  "brokenCode": "#include <algorithm>\n#include <string>\n\nbool contactPreference(std::string text, std::string query) {\n        std::transform(query.begin(), query.end(), query.begin(), ::tolower);\n    return text.find(query) != std::string::npos;\n}\n",
+  "solutionCode": "#include <algorithm>\n#include <string>\n\nbool contactPreference(std::string text, std::string query) {\n    std::transform(text.begin(), text.end(), text.begin(), ::tolower);\n    std::transform(query.begin(), query.end(), query.begin(), ::tolower);\n    return text.find(query) != std::string::npos;\n}\n",
+  "hint": "The final fallback should still be used if earlier options are empty.",
+  "explanation": "The broken code stops before checking the final fallback. Evaluating all options in order fixes it.",
+  "tags": [
+    "cpp",
+    "028-contact-preference",
+    "medium",
+    "fallback",
+    "conditions"
+  ],
+  "timeLimitSeconds": 150,
+  "points": 160,
+  "status": "published"
+}

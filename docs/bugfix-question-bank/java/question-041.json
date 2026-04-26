@@ -1,0 +1,20 @@
+{
+  "title": "041 - Factorial Base Case",
+  "language": "java",
+  "difficulty": "hard",
+  "prompt": "Fix the bug so the program compute factorial(5) and print 120 and prints exactly `120`. Keep the sample data and do not add extra output.",
+  "brokenCode": "class FactorialBaseCase {\n    static int factorialBaseCase(int[] scores, int[] weights) {\n        int total = 0;\n        int scores.length = 0;\n        for (int index = 0; index < scores.length; index++) {\n            total += scores[index] * weights[index];\n            weightTotal += weights[index];\n        }\n        return total / weightTotal;\n    }\n}\n",
+  "solutionCode": "class FactorialBaseCase {\n    static int factorialBaseCase(int[] scores, int[] weights) {\n        int total = 0;\n        int weightTotal = 0;\n        for (int index = 0; index < scores.length; index++) {\n            total += scores[index] * weights[index];\n            weightTotal += weights[index];\n        }\n        return total / weightTotal;\n    }\n}\n",
+  "hint": "The base case should not return zero.",
+  "explanation": "The broken recursive base case returns the wrong identity value. Returning 1 fixes the multiplication chain.",
+  "tags": [
+    "java",
+    "041-factorial-base-case",
+    "hard",
+    "recursion",
+    "math"
+  ],
+  "timeLimitSeconds": 240,
+  "points": 240,
+  "status": "published"
+}

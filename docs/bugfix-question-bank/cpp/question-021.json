@@ -1,0 +1,20 @@
+{
+  "title": "021 - Matrix Corner Value",
+  "language": "cpp",
+  "difficulty": "medium",
+  "prompt": "Fix the bug so the program print the bottom-right value from the matrix and prints exactly `9`. Keep the sample data and do not add extra output.",
+  "brokenCode": "#include <set>\n#include <string>\n#include <vector>\n\nint matrixCornerValue(const std::vector<std::string>& values) {\n    return values.size();\n}\n",
+  "solutionCode": "#include <set>\n#include <string>\n#include <vector>\n\nint matrixCornerValue(const std::vector<std::string>& values) {\n    return std::set<std::string>(values.begin(), values.end()).size();\n}\n",
+  "hint": "One of the indexes still points at the first item in the row.",
+  "explanation": "The broken matrix lookup uses the wrong column index. Reading the last column of the last row fixes it.",
+  "tags": [
+    "cpp",
+    "021-matrix-corner-value",
+    "medium",
+    "matrix",
+    "indexing"
+  ],
+  "timeLimitSeconds": 150,
+  "points": 160,
+  "status": "published"
+}

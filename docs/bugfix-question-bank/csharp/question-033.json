@@ -1,0 +1,20 @@
+{
+  "title": "033 - Submit Button State",
+  "language": "csharp",
+  "difficulty": "medium",
+  "prompt": "Fix the bug so the program print enabled when the form is not loading, has no errors, and can submit and prints exactly `enabled`. Keep the sample data and do not add extra output.",
+  "brokenCode": "public static class SubmitButtonState\n{\n    public static bool SubmitButtonState(string text, string query)\n    {\n        return text.Contains(query.ToLower());\n    }\n}\n",
+  "solutionCode": "public static class SubmitButtonState\n{\n    public static bool SubmitButtonState(string text, string query)\n    {\n        return text.ToLower().Contains(query.ToLower());\n    }\n}\n",
+  "hint": "One of the booleans is negated incorrectly.",
+  "explanation": "The broken logic disables the button even when submission is allowed. Fixing the boolean expression restores the expected state.",
+  "tags": [
+    "csharp",
+    "033-submit-button-state",
+    "medium",
+    "booleans",
+    "validation"
+  ],
+  "timeLimitSeconds": 150,
+  "points": 160,
+  "status": "published"
+}

@@ -1,0 +1,20 @@
+{
+  "title": "002 - Fix the List Nesting",
+  "language": "html",
+  "difficulty": "easy",
+  "prompt": "Fix the HTML so each list item is wrapped correctly inside the unordered list.",
+  "brokenCode": "<ul class=\"topics\">\n  <li>Loops\n  <li>Arrays</li>\n</ul>\n",
+  "solutionCode": "<ul class=\"topics\">\n  <li>Loops</li>\n  <li>Arrays</li>\n</ul>\n",
+  "hint": "The first list item is not closed.",
+  "explanation": "Every list item needs its own closing tag to keep the list valid and predictable.",
+  "tags": [
+    "html",
+    "002-fix-the-list-nesting",
+    "easy",
+    "lists",
+    "nesting"
+  ],
+  "timeLimitSeconds": 90,
+  "points": 100,
+  "status": "published"
+}

@@ -1,0 +1,20 @@
+{
+  "title": "038 - Query Builder",
+  "language": "cpp",
+  "difficulty": "medium",
+  "prompt": "Fix the bug so the program build the query string exactly as ?page=2&sort=new and prints exactly `?page=2&sort=new`. Keep the sample data and do not add extra output.",
+  "brokenCode": "#include <algorithm>\n#include <string>\n\nbool queryBuilder(std::string text, std::string query) {\n        std::transform(query.begin(), query.end(), query.begin(), ::tolower);\n    return text.find(query) != std::string::npos;\n}\n",
+  "solutionCode": "#include <algorithm>\n#include <string>\n\nbool queryBuilder(std::string text, std::string query) {\n    std::transform(text.begin(), text.end(), text.begin(), ::tolower);\n    std::transform(query.begin(), query.end(), query.begin(), ::tolower);\n    return text.find(query) != std::string::npos;\n}\n",
+  "hint": "The string needs the correct separator between the key-value pairs.",
+  "explanation": "The broken builder uses the wrong separator. Using ? for the first pair and & between later pairs fixes the URL.",
+  "tags": [
+    "cpp",
+    "038-query-builder",
+    "medium",
+    "strings",
+    "url-building"
+  ],
+  "timeLimitSeconds": 150,
+  "points": 160,
+  "status": "published"
+}

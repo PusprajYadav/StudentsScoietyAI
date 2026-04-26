@@ -1,0 +1,20 @@
+{
+  "title": "047 - Validation Summary",
+  "language": "javascript",
+  "difficulty": "hard",
+  "prompt": "Fix the bug so the program print username,password when both fields fail validation and prints exactly `username,password`. Keep the sample data and do not add extra output.",
+  "brokenCode": "function validationSummary(left, right) {\n  const merged = [];\n  let leftIndex = 0;\n  let rightIndex = 0;\n  while (leftIndex < left.length && rightIndex < right.length) {\n    if (left[leftIndex] >= right[rightIndex]) {\n      merged.push(left[leftIndex]);\n      leftIndex += 1;\n    } else {\n      merged.push(right[rightIndex]);\n      rightIndex += 1;\n    }\n  }\n  return merged.concat(left.slice(leftIndex), right.slice(rightIndex)).join(\",\");\n}\n",
+  "solutionCode": "function validationSummary(left, right) {\n  const merged = [];\n  let leftIndex = 0;\n  let rightIndex = 0;\n  while (leftIndex < left.length && rightIndex < right.length) {\n    if (left[leftIndex] <= right[rightIndex]) {\n      merged.push(left[leftIndex]);\n      leftIndex += 1;\n    } else {\n      merged.push(right[rightIndex]);\n      rightIndex += 1;\n    }\n  }\n  return merged.concat(left.slice(leftIndex), right.slice(rightIndex)).join(\",\");\n}\n",
+  "hint": "Both failures should appear in the summary.",
+  "explanation": "The broken code stops after the first failing rule. Collecting every failing field fixes the summary.",
+  "tags": [
+    "javascript",
+    "047-validation-summary",
+    "hard",
+    "validation",
+    "strings"
+  ],
+  "timeLimitSeconds": 240,
+  "points": 240,
+  "status": "published"
+}

@@ -1,0 +1,20 @@
+{
+  "title": "047 - Validation Summary",
+  "language": "c",
+  "difficulty": "hard",
+  "prompt": "Fix the bug so the program print username,password when both fields fail validation and prints exactly `username,password`. Keep the sample data and do not add extra output.",
+  "brokenCode": "#include <stddef.h>\n\nsize_t validation_summary(const int left[], size_t leftLength, const int right[], size_t rightLength, int output[]) {\n    size_t leftIndex = 0;\n    size_t rightIndex = 0;\n    size_t outputIndex = 0;\n    while (leftIndex < leftLength && rightIndex < rightLength) {\n        if (left[leftIndex] >= right[rightIndex]) {\n            output[outputIndex++] = left[leftIndex++];\n        } else {\n            output[outputIndex++] = right[rightIndex++];\n        }\n    }\n    while (leftIndex < leftLength) output[outputIndex++] = left[leftIndex++];\n    while (rightIndex < rightLength) output[outputIndex++] = right[rightIndex++];\n    return outputIndex;\n}\n",
+  "solutionCode": "#include <stddef.h>\n\nsize_t validation_summary(const int left[], size_t leftLength, const int right[], size_t rightLength, int output[]) {\n    size_t leftIndex = 0;\n    size_t rightIndex = 0;\n    size_t outputIndex = 0;\n    while (leftIndex < leftLength && rightIndex < rightLength) {\n        if (left[leftIndex] <= right[rightIndex]) {\n            output[outputIndex++] = left[leftIndex++];\n        } else {\n            output[outputIndex++] = right[rightIndex++];\n        }\n    }\n    while (leftIndex < leftLength) output[outputIndex++] = left[leftIndex++];\n    while (rightIndex < rightLength) output[outputIndex++] = right[rightIndex++];\n    return outputIndex;\n}\n",
+  "hint": "Both failures should appear in the summary.",
+  "explanation": "The broken code stops after the first failing rule. Collecting every failing field fixes the summary.",
+  "tags": [
+    "c",
+    "047-validation-summary",
+    "hard",
+    "validation",
+    "strings"
+  ],
+  "timeLimitSeconds": 240,
+  "points": 240,
+  "status": "published"
+}

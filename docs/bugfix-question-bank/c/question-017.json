@@ -1,0 +1,20 @@
+{
+  "title": "017 - Safe Division",
+  "language": "c",
+  "difficulty": "easy",
+  "prompt": "Fix the bug so the program print 0 when the divisor is zero instead of crashing and prints exactly `0`. Keep the sample data and do not add extra output.",
+  "brokenCode": "#include <stddef.h>\n\nint safe_division(const int values[], size_t length) {\n    int total = 0;\n    for (size_t index = 0; index < length; index++) {\n        if (values[index] % 2 == 1) {\n            total += values[index];\n        }\n    }\n    return total;\n}\n",
+  "solutionCode": "#include <stddef.h>\n\nint safe_division(const int values[], size_t length) {\n    int total = 0;\n    for (size_t index = 0; index < length; index++) {\n        if (values[index] % 2 == 0) {\n            total += values[index];\n        }\n    }\n    return total;\n}\n",
+  "hint": "Guard the division before it happens.",
+  "explanation": "The broken code divides by zero. Adding the zero check first returns the safe fallback output.",
+  "tags": [
+    "c",
+    "017-safe-division",
+    "easy",
+    "math",
+    "edge-case"
+  ],
+  "timeLimitSeconds": 90,
+  "points": 100,
+  "status": "published"
+}

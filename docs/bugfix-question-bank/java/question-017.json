@@ -1,0 +1,20 @@
+{
+  "title": "017 - Safe Division",
+  "language": "java",
+  "difficulty": "easy",
+  "prompt": "Fix the bug so the program print 0 when the divisor is zero instead of crashing and prints exactly `0`. Keep the sample data and do not add extra output.",
+  "brokenCode": "class SafeDivision {\n    static int safeDivision(int[] values) {\n        int total = 0;\n        for (int value : values) {\n            if (value % 2 == 1) {\n                total += value;\n            }\n        }\n        return total;\n    }\n}\n",
+  "solutionCode": "class SafeDivision {\n    static int safeDivision(int[] values) {\n        int total = 0;\n        for (int value : values) {\n            if (value % 2 == 0) {\n                total += value;\n            }\n        }\n        return total;\n    }\n}\n",
+  "hint": "Guard the division before it happens.",
+  "explanation": "The broken code divides by zero. Adding the zero check first returns the safe fallback output.",
+  "tags": [
+    "java",
+    "017-safe-division",
+    "easy",
+    "math",
+    "edge-case"
+  ],
+  "timeLimitSeconds": 90,
+  "points": 100,
+  "status": "published"
+}

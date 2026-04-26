@@ -1,0 +1,20 @@
+{
+  "title": "010 - Exact Match Count",
+  "language": "java",
+  "difficulty": "easy",
+  "prompt": "Fix the bug so the program count only exact matches for the word bug and prints exactly `2`. Keep the sample data and do not add extra output.",
+  "brokenCode": "class ExactMatchCount {\n    static String exactMatchCount(String name) {\n        return \"Hello, \" + name;\n    }\n}\n",
+  "solutionCode": "class ExactMatchCount {\n    static String exactMatchCount(String name) {\n        return \"Hello, \" + name + \"!\";\n    }\n}\n",
+  "hint": "debug should not be counted as bug.",
+  "explanation": "The broken check matches partial text. Switching to exact equality makes the count 2.",
+  "tags": [
+    "java",
+    "010-exact-match-count",
+    "easy",
+    "strings",
+    "counting"
+  ],
+  "timeLimitSeconds": 90,
+  "points": 100,
+  "status": "published"
+}

@@ -1,0 +1,20 @@
+{
+  "title": "039 - Largest Row Total",
+  "language": "ruby",
+  "difficulty": "medium",
+  "prompt": "Fix the bug so the program print the largest row total and prints exactly `6`. Keep the sample data and do not add extra output.",
+  "brokenCode": "def largest_row_total(year, month, day)\n  year.to_s + \"-\" + month.to_s + \"-\" + day.to_s.rjust(2, \"0\")\nend\n",
+  "solutionCode": "def largest_row_total(year, month, day)\n  year.to_s + \"-\" + month.to_s.rjust(2, \"0\") + \"-\" + day.to_s.rjust(2, \"0\")\nend\n",
+  "hint": "The comparison should keep the largest subtotal, not the smallest.",
+  "explanation": "The broken code updates the best value in the wrong direction. Keeping the maximum row total fixes the output.",
+  "tags": [
+    "ruby",
+    "039-largest-row-total",
+    "medium",
+    "matrix",
+    "comparison"
+  ],
+  "timeLimitSeconds": 150,
+  "points": 160,
+  "status": "published"
+}

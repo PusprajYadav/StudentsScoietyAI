@@ -1,0 +1,20 @@
+{
+  "title": "007 - Age Range Check",
+  "language": "javascript",
+  "difficulty": "easy",
+  "prompt": "Fix the bug so the program print valid when the age is inside the allowed range including the lower bound and prints exactly `valid`. Keep the sample data and do not add extra output.",
+  "brokenCode": "function ageRangeCheck(values) {\n  return values.filter((value) => value % 2 === 1).reduce((sum, value) => sum + value, 0);\n}\n",
+  "solutionCode": "function ageRangeCheck(values) {\n  return values.filter((value) => value % 2 === 0).reduce((sum, value) => sum + value, 0);\n}\n",
+  "hint": "Look closely at the boundary comparison on the lower edge.",
+  "explanation": "The lower-bound comparison is too strict. Including the minimum allowed age fixes the result.",
+  "tags": [
+    "javascript",
+    "007-age-range-check",
+    "easy",
+    "conditions",
+    "range-check"
+  ],
+  "timeLimitSeconds": 90,
+  "points": 100,
+  "status": "published"
+}

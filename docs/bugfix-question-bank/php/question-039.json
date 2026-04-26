@@ -1,0 +1,20 @@
+{
+  "title": "039 - Largest Row Total",
+  "language": "php",
+  "difficulty": "medium",
+  "prompt": "Fix the bug so the program print the largest row total and prints exactly `6`. Keep the sample data and do not add extra output.",
+  "brokenCode": "<?php\n\nfunction largestRowTotal(int $year, int $month, int $day): string\n{\n    return strval($year) . \"-\" . strval($month) . \"-\" . str_pad(strval($day), 2, \"0\", STR_PAD_LEFT);\n}\n",
+  "solutionCode": "<?php\n\nfunction largestRowTotal(int $year, int $month, int $day): string\n{\n    return strval($year) . \"-\" . str_pad(strval($month), 2, \"0\", STR_PAD_LEFT) . \"-\" . str_pad(strval($day), 2, \"0\", STR_PAD_LEFT);\n}\n",
+  "hint": "The comparison should keep the largest subtotal, not the smallest.",
+  "explanation": "The broken code updates the best value in the wrong direction. Keeping the maximum row total fixes the output.",
+  "tags": [
+    "php",
+    "039-largest-row-total",
+    "medium",
+    "matrix",
+    "comparison"
+  ],
+  "timeLimitSeconds": 150,
+  "points": 160,
+  "status": "published"
+}

@@ -1,0 +1,20 @@
+{
+  "title": "038 - Query Builder",
+  "language": "javascript",
+  "difficulty": "medium",
+  "prompt": "Fix the bug so the program build the query string exactly as ?page=2&sort=new and prints exactly `?page=2&sort=new`. Keep the sample data and do not add extra output.",
+  "brokenCode": "function queryBuilder(text, query) {\n  return text.includes(query.toLowerCase());\n}\n",
+  "solutionCode": "function queryBuilder(text, query) {\n  return text.toLowerCase().includes(query.toLowerCase());\n}\n",
+  "hint": "The string needs the correct separator between the key-value pairs.",
+  "explanation": "The broken builder uses the wrong separator. Using ? for the first pair and & between later pairs fixes the URL.",
+  "tags": [
+    "javascript",
+    "038-query-builder",
+    "medium",
+    "strings",
+    "url-building"
+  ],
+  "timeLimitSeconds": 150,
+  "points": 160,
+  "status": "published"
+}

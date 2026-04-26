@@ -1,0 +1,20 @@
+{
+  "title": "031 - Visibility Rules",
+  "language": "javascript",
+  "difficulty": "medium",
+  "prompt": "Fix the bug so the program print visible when the viewer is the owner even if the item is private and prints exactly `visible`. Keep the sample data and do not add extra output.",
+  "brokenCode": "function visibilityRules(values) {\n  return values.length;\n}\n",
+  "solutionCode": "function visibilityRules(values) {\n  return new Set(values).size;\n}\n",
+  "hint": "Either condition should allow visibility.",
+  "explanation": "The broken condition requires both flags. Using an OR check matches the intended visibility rule.",
+  "tags": [
+    "javascript",
+    "031-visibility-rules",
+    "medium",
+    "booleans",
+    "conditions"
+  ],
+  "timeLimitSeconds": 150,
+  "points": 160,
+  "status": "published"
+}

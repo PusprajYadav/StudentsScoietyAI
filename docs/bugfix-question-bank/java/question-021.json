@@ -1,0 +1,20 @@
+{
+  "title": "021 - Matrix Corner Value",
+  "language": "java",
+  "difficulty": "medium",
+  "prompt": "Fix the bug so the program print the bottom-right value from the matrix and prints exactly `9`. Keep the sample data and do not add extra output.",
+  "brokenCode": "import java.util.*;\n\nclass MatrixCornerValue {\n    static int matrixCornerValue(String[] values) {\n        return values.length;\n    }\n}\n",
+  "solutionCode": "import java.util.*;\n\nclass MatrixCornerValue {\n    static int matrixCornerValue(String[] values) {\n        return new HashSet<>(Arrays.asList(values)).size();\n    }\n}\n",
+  "hint": "One of the indexes still points at the first item in the row.",
+  "explanation": "The broken matrix lookup uses the wrong column index. Reading the last column of the last row fixes it.",
+  "tags": [
+    "java",
+    "021-matrix-corner-value",
+    "medium",
+    "matrix",
+    "indexing"
+  ],
+  "timeLimitSeconds": 150,
+  "points": 160,
+  "status": "published"
+}

@@ -1,0 +1,20 @@
+{
+  "title": "023 - Format Date",
+  "language": "ruby",
+  "difficulty": "medium",
+  "prompt": "Fix the bug so the program format the sample date as 2026-04-01 and prints exactly `2026-04-01`. Keep the sample data and do not add extra output.",
+  "brokenCode": "def format_date(text, query)\n  include?(query.downcase)\nend\n",
+  "solutionCode": "def format_date(text, query)\n  text.downcase.include?(query.downcase)\nend\n",
+  "hint": "The month and day need zero padding.",
+  "explanation": "The broken formatter leaves single-digit month and day values unpadded. Padding both fields fixes the date string.",
+  "tags": [
+    "ruby",
+    "023-format-date",
+    "medium",
+    "strings",
+    "date-formatting"
+  ],
+  "timeLimitSeconds": 150,
+  "points": 160,
+  "status": "published"
+}

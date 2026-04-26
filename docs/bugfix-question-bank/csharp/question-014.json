@@ -1,0 +1,20 @@
+{
+  "title": "014 - Toggle Status Label",
+  "language": "csharp",
+  "difficulty": "easy",
+  "prompt": "Fix the bug so the program toggle the status from disabled to enabled and print enabled and prints exactly `enabled`. Keep the sample data and do not add extra output.",
+  "brokenCode": "public static class ToggleStatusLabel\n{\n    public static string ToggleStatusLabel(string[] items)\n    {\n        return items[2];\n    }\n}\n",
+  "solutionCode": "public static class ToggleStatusLabel\n{\n    public static string ToggleStatusLabel(string[] items)\n    {\n        return items[1];\n    }\n}\n",
+  "hint": "The current value is printed without changing it first.",
+  "explanation": "The broken code never flips the flag before printing. Toggling it first makes the final label enabled.",
+  "tags": [
+    "csharp",
+    "014-toggle-status-label",
+    "easy",
+    "booleans",
+    "state"
+  ],
+  "timeLimitSeconds": 90,
+  "points": 100,
+  "status": "published"
+}

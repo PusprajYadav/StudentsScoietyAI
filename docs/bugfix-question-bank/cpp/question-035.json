@@ -1,0 +1,20 @@
+{
+  "title": "035 - Error Message Priority",
+  "language": "cpp",
+  "difficulty": "medium",
+  "prompt": "Fix the bug so the program print the first non-empty error message and prints exactly `Name required`. Keep the sample data and do not add extra output.",
+  "brokenCode": "#include <algorithm>\n#include <sstream>\n#include <string>\n#include <vector>\n\nstd::string errorMessagePriority(std::vector<int> values) {\n    std::sort(values.begin(), values.end(), std::less<int>());\n    std::ostringstream output;\n    for (size_t index = 0; index < values.size(); index++) {\n        if (index > 0) output << \",\";\n        output << values[index];\n    }\n    return output.str();\n}\n",
+  "solutionCode": "#include <algorithm>\n#include <sstream>\n#include <string>\n#include <vector>\n\nstd::string errorMessagePriority(std::vector<int> values) {\n    std::sort(values.begin(), values.end(), std::greater<int>());\n    std::ostringstream output;\n    for (size_t index = 0; index < values.size(); index++) {\n        if (index > 0) output << \",\";\n        output << values[index];\n    }\n    return output.str();\n}\n",
+  "hint": "The fallback should only be used when every error message is empty.",
+  "explanation": "The broken code jumps to the fallback too early. Returning the first non-empty message fixes the priority order.",
+  "tags": [
+    "cpp",
+    "035-error-message-priority",
+    "medium",
+    "fallback",
+    "validation"
+  ],
+  "timeLimitSeconds": 150,
+  "points": 160,
+  "status": "published"
+}

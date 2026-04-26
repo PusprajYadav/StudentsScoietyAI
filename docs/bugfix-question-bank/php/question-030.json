@@ -1,0 +1,20 @@
+{
+  "title": "030 - Name Initials",
+  "language": "php",
+  "difficulty": "medium",
+  "prompt": "Fix the bug so the program print the initials SS in uppercase and prints exactly `SS`. Keep the sample data and do not add extra output.",
+  "brokenCode": "<?php\n\nfunction nameInitials(array $values): string\n{\n    sort($values);\n    return implode(\",\", $values);\n}\n",
+  "solutionCode": "<?php\n\nfunction nameInitials(array $values): string\n{\n    rsort($values);\n    return implode(\",\", $values);\n}\n",
+  "hint": "Use uppercase letters after taking the initials.",
+  "explanation": "The broken code builds lowercase initials. Converting the result to uppercase fixes the output.",
+  "tags": [
+    "php",
+    "030-name-initials",
+    "medium",
+    "strings",
+    "case-conversion"
+  ],
+  "timeLimitSeconds": 150,
+  "points": 160,
+  "status": "published"
+}

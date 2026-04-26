@@ -1,0 +1,20 @@
+{
+  "title": "030 - Name Initials",
+  "language": "python",
+  "difficulty": "medium",
+  "prompt": "Fix the bug so the program print the initials SS in uppercase and prints exactly `SS`. Keep the sample data and do not add extra output.",
+  "brokenCode": "def name_initials(values):\n    return \",\".join(str(value) for value in sorted(values, reverse=False))\n",
+  "solutionCode": "def name_initials(values):\n    return \",\".join(str(value) for value in sorted(values, reverse=True))\n",
+  "hint": "Use uppercase letters after taking the initials.",
+  "explanation": "The broken code builds lowercase initials. Converting the result to uppercase fixes the output.",
+  "tags": [
+    "python",
+    "030-name-initials",
+    "medium",
+    "strings",
+    "case-conversion"
+  ],
+  "timeLimitSeconds": 150,
+  "points": 160,
+  "status": "published"
+}

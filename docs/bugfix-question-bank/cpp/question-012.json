@@ -1,0 +1,20 @@
+{
+  "title": "012 - Descending Scores",
+  "language": "cpp",
+  "difficulty": "easy",
+  "prompt": "Fix the bug so the program sort the numbers in descending order and print 8,4,2,1 and prints exactly `8,4,2,1`. Keep the sample data and do not add extra output.",
+  "brokenCode": "#include <vector>\n\nint descendingScores(const std::vector<int>& values) {\n    int total = 0;\n    for (int value : values) {\n        if (value % 2 == 1) {\n            total += value;\n        }\n    }\n    return total;\n}\n",
+  "solutionCode": "#include <vector>\n\nint descendingScores(const std::vector<int>& values) {\n    int total = 0;\n    for (int value : values) {\n        if (value % 2 == 0) {\n            total += value;\n        }\n    }\n    return total;\n}\n",
+  "hint": "The sort order is flipped.",
+  "explanation": "The broken sort uses ascending order. Reversing the comparison produces the expected descending output.",
+  "tags": [
+    "cpp",
+    "012-descending-scores",
+    "easy",
+    "sorting",
+    "arrays"
+  ],
+  "timeLimitSeconds": 90,
+  "points": 100,
+  "status": "published"
+}

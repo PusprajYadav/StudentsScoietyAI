@@ -1,0 +1,20 @@
+{
+  "title": "039 - Largest Row Total",
+  "language": "csharp",
+  "difficulty": "medium",
+  "prompt": "Fix the bug so the program print the largest row total and prints exactly `6`. Keep the sample data and do not add extra output.",
+  "brokenCode": "public static class LargestRowTotal\n{\n    public static string LargestRowTotal(int year, int month, int day)\n    {\n        return year.ToString() + \"-\" + month.ToString() + \"-\" + day.ToString(\"00\");\n    }\n}\n",
+  "solutionCode": "public static class LargestRowTotal\n{\n    public static string LargestRowTotal(int year, int month, int day)\n    {\n        return year.ToString() + \"-\" + month.ToString(\"00\") + \"-\" + day.ToString(\"00\");\n    }\n}\n",
+  "hint": "The comparison should keep the largest subtotal, not the smallest.",
+  "explanation": "The broken code updates the best value in the wrong direction. Keeping the maximum row total fixes the output.",
+  "tags": [
+    "csharp",
+    "039-largest-row-total",
+    "medium",
+    "matrix",
+    "comparison"
+  ],
+  "timeLimitSeconds": 150,
+  "points": 160,
+  "status": "published"
+}

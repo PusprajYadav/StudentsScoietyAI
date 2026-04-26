@@ -1,0 +1,20 @@
+{
+  "title": "045 - Pagination Offset",
+  "language": "java",
+  "difficulty": "hard",
+  "prompt": "Fix the bug so the program calculate the offset for page 3 with page size 20 and print 40 and prints exactly `40`. Keep the sample data and do not add extra output.",
+  "brokenCode": "import java.util.*;\n\nclass PaginationOffset {\n    static String paginationOffset(int[] values) {\n        Integer[] copy = Arrays.stream(values).boxed().toArray(Integer[]::new);\n        Arrays.sort(copy, Collections.reverseOrder());\n        return Arrays.stream(copy).limit(2).map(String::valueOf).reduce((a, b) -> a + \",\" + b).orElse(\"\");\n    }\n}\n",
+  "solutionCode": "import java.util.*;\n\nclass PaginationOffset {\n    static String paginationOffset(int[] values) {\n        Integer[] copy = Arrays.stream(values).boxed().toArray(Integer[]::new);\n        Arrays.sort(copy, Collections.reverseOrder());\n        return Arrays.stream(copy).limit(3).map(String::valueOf).reduce((a, b) -> a + \",\" + b).orElse(\"\");\n    }\n}\n",
+  "hint": "The page number should be converted to a zero-based offset first.",
+  "explanation": "The broken formula multiplies the page directly. Subtracting 1 from the page before multiplying fixes the offset.",
+  "tags": [
+    "java",
+    "045-pagination-offset",
+    "hard",
+    "math",
+    "pagination"
+  ],
+  "timeLimitSeconds": 240,
+  "points": 240,
+  "status": "published"
+}

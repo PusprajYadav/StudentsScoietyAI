@@ -1,0 +1,20 @@
+{
+  "title": "012 - Descending Scores",
+  "language": "c",
+  "difficulty": "easy",
+  "prompt": "Fix the bug so the program sort the numbers in descending order and print 8,4,2,1 and prints exactly `8,4,2,1`. Keep the sample data and do not add extra output.",
+  "brokenCode": "#include <stddef.h>\n\nint descending_scores(const int values[], size_t length) {\n    int total = 0;\n    for (size_t index = 0; index < length; index++) {\n        if (values[index] % 2 == 1) {\n            total += values[index];\n        }\n    }\n    return total;\n}\n",
+  "solutionCode": "#include <stddef.h>\n\nint descending_scores(const int values[], size_t length) {\n    int total = 0;\n    for (size_t index = 0; index < length; index++) {\n        if (values[index] % 2 == 0) {\n            total += values[index];\n        }\n    }\n    return total;\n}\n",
+  "hint": "The sort order is flipped.",
+  "explanation": "The broken sort uses ascending order. Reversing the comparison produces the expected descending output.",
+  "tags": [
+    "c",
+    "012-descending-scores",
+    "easy",
+    "sorting",
+    "arrays"
+  ],
+  "timeLimitSeconds": 90,
+  "points": 100,
+  "status": "published"
+}

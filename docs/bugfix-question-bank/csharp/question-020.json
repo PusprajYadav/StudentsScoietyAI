@@ -1,0 +1,20 @@
+{
+  "title": "020 - Initials From Words",
+  "language": "csharp",
+  "difficulty": "easy",
+  "prompt": "Fix the bug so the program print the initials BFA from the sample words and prints exactly `BFA`. Keep the sample data and do not add extra output.",
+  "brokenCode": "public static class InitialsFromWords\n{\n    public static string InitialsFromWords(string name)\n    {\n        return \"Hello, \" + name;\n    }\n}\n",
+  "solutionCode": "public static class InitialsFromWords\n{\n    public static string InitialsFromWords(string name)\n    {\n        return \"Hello, \" + name + \"!\";\n    }\n}\n",
+  "hint": "Use the first character of each word, not the last.",
+  "explanation": "The broken code reads the wrong character from each word. Taking the first letter builds BFA.",
+  "tags": [
+    "csharp",
+    "020-initials-from-words",
+    "easy",
+    "strings",
+    "arrays"
+  ],
+  "timeLimitSeconds": 90,
+  "points": 100,
+  "status": "published"
+}

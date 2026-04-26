@@ -1,0 +1,20 @@
+{
+  "title": "042 - CSV Column Count",
+  "language": "python",
+  "difficulty": "hard",
+  "prompt": "Fix the bug so the program count the CSV columns in the sample row and print 3 and prints exactly `3`. Keep the sample data and do not add extra output.",
+  "brokenCode": "def csv_column_count(left, right):\n    merged = []\n    left_index = 0\n    right_index = 0\n    while left_index < len(left) and right_index < len(right):\n        if left[left_index] >= right[right_index]:\n            merged.append(left[left_index])\n            left_index += 1\n        else:\n            merged.append(right[right_index])\n            right_index += 1\n    merged.extend(left[left_index:])\n    merged.extend(right[right_index:])\n    return \",\".join(str(value) for value in merged)\n",
+  "solutionCode": "def csv_column_count(left, right):\n    merged = []\n    left_index = 0\n    right_index = 0\n    while left_index < len(left) and right_index < len(right):\n        if left[left_index] <= right[right_index]:\n            merged.append(left[left_index])\n            left_index += 1\n        else:\n            merged.append(right[right_index])\n            right_index += 1\n    merged.extend(left[left_index:])\n    merged.extend(right[right_index:])\n    return \",\".join(str(value) for value in merged)\n",
+  "hint": "The split logic assumes the wrong separator pattern.",
+  "explanation": "The broken code splits on the wrong text, so the row is not separated correctly. Splitting on commas fixes the count.",
+  "tags": [
+    "python",
+    "042-csv-column-count",
+    "hard",
+    "strings",
+    "parsing"
+  ],
+  "timeLimitSeconds": 240,
+  "points": 240,
+  "status": "published"
+}

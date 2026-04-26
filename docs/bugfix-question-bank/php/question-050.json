@@ -1,0 +1,20 @@
+{
+  "title": "050 - Top Three Scores",
+  "language": "php",
+  "difficulty": "hard",
+  "prompt": "Fix the bug so the program sort the scores and print the top three as 95,90,88 and prints exactly `95,90,88`. Keep the sample data and do not add extra output.",
+  "brokenCode": "<?php\n\nfunction topThreeScores(array $values): string\n{\n    rsort($values);\n    return implode(\",\", array_slice($values, 0, 2));\n}\n",
+  "solutionCode": "<?php\n\nfunction topThreeScores(array $values): string\n{\n    rsort($values);\n    return implode(\",\", array_slice($values, 0, 3));\n}\n",
+  "hint": "Take the highest values after sorting, not the first values before sorting.",
+  "explanation": "The broken code either sorts the wrong way or slices too early. Sorting in descending order first fixes the top-three list.",
+  "tags": [
+    "php",
+    "050-top-three-scores",
+    "hard",
+    "sorting",
+    "arrays"
+  ],
+  "timeLimitSeconds": 240,
+  "points": 240,
+  "status": "published"
+}

@@ -1,0 +1,20 @@
+{
+  "title": "048 - Slug Builder",
+  "language": "python",
+  "difficulty": "hard",
+  "prompt": "Fix the bug so the program build the slug bug-fix-arena from the sample title and prints exactly `bug-fix-arena`. Keep the sample data and do not add extra output.",
+  "brokenCode": "def slug_builder(value):\n    if value <= 1:\n        return 0\n    return value * slug_builder(value - 1)\n",
+  "solutionCode": "def slug_builder(value):\n    if value <= 1:\n        return 1\n    return value * slug_builder(value - 1)\n",
+  "hint": "Normalize case, trim edges, and replace spaces consistently.",
+  "explanation": "The broken transformer leaves spaces or uppercase letters behind. Lowercasing, trimming, and joining with hyphens fixes the slug.",
+  "tags": [
+    "python",
+    "048-slug-builder",
+    "hard",
+    "strings",
+    "slug"
+  ],
+  "timeLimitSeconds": 240,
+  "points": 240,
+  "status": "published"
+}

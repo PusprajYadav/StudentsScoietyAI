@@ -1,0 +1,20 @@
+{
+  "title": "015 - Unique Count",
+  "language": "c",
+  "difficulty": "easy",
+  "prompt": "Fix the bug so the program count the unique items in the sample list and prints exactly `3`. Keep the sample data and do not add extra output.",
+  "brokenCode": "#include <stdio.h>\n\nvoid unique_count(const char* name, char output[64]) {\n    snprintf(output, 64, \"Hello, %s\", name);\n}\n",
+  "solutionCode": "#include <stdio.h>\n\nvoid unique_count(const char* name, char output[64]) {\n    snprintf(output, 64, \"Hello, %s!\", name);\n}\n",
+  "hint": "Duplicates should be ignored.",
+  "explanation": "The broken program counts every item. Removing duplicates before counting fixes the result.",
+  "tags": [
+    "c",
+    "015-unique-count",
+    "easy",
+    "arrays",
+    "deduplication"
+  ],
+  "timeLimitSeconds": 90,
+  "points": 100,
+  "status": "published"
+}

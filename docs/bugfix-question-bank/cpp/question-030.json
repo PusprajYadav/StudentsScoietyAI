@@ -1,0 +1,20 @@
+{
+  "title": "030 - Name Initials",
+  "language": "cpp",
+  "difficulty": "medium",
+  "prompt": "Fix the bug so the program print the initials SS in uppercase and prints exactly `SS`. Keep the sample data and do not add extra output.",
+  "brokenCode": "#include <algorithm>\n#include <sstream>\n#include <string>\n#include <vector>\n\nstd::string nameInitials(std::vector<int> values) {\n    std::sort(values.begin(), values.end(), std::less<int>());\n    std::ostringstream output;\n    for (size_t index = 0; index < values.size(); index++) {\n        if (index > 0) output << \",\";\n        output << values[index];\n    }\n    return output.str();\n}\n",
+  "solutionCode": "#include <algorithm>\n#include <sstream>\n#include <string>\n#include <vector>\n\nstd::string nameInitials(std::vector<int> values) {\n    std::sort(values.begin(), values.end(), std::greater<int>());\n    std::ostringstream output;\n    for (size_t index = 0; index < values.size(); index++) {\n        if (index > 0) output << \",\";\n        output << values[index];\n    }\n    return output.str();\n}\n",
+  "hint": "Use uppercase letters after taking the initials.",
+  "explanation": "The broken code builds lowercase initials. Converting the result to uppercase fixes the output.",
+  "tags": [
+    "cpp",
+    "030-name-initials",
+    "medium",
+    "strings",
+    "case-conversion"
+  ],
+  "timeLimitSeconds": 150,
+  "points": 160,
+  "status": "published"
+}

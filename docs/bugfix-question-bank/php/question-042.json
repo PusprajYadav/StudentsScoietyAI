@@ -1,0 +1,20 @@
+{
+  "title": "042 - CSV Column Count",
+  "language": "php",
+  "difficulty": "hard",
+  "prompt": "Fix the bug so the program count the CSV columns in the sample row and print 3 and prints exactly `3`. Keep the sample data and do not add extra output.",
+  "brokenCode": "<?php\n\nfunction csvColumnCount(array $left, array $right): string\n{\n    $merged = [];\n    $leftIndex = 0;\n    $rightIndex = 0;\n    while ($leftIndex < count($left) && $rightIndex < count($right)) {\n        if ($left[$leftIndex] >= $right[$rightIndex]) {\n            $merged[] = $left[$leftIndex];\n            $leftIndex += 1;\n        } else {\n            $merged[] = $right[$rightIndex];\n            $rightIndex += 1;\n        }\n    }\n    return implode(\",\", array_merge($merged, array_slice($left, $leftIndex), array_slice($right, $rightIndex)));\n}\n",
+  "solutionCode": "<?php\n\nfunction csvColumnCount(array $left, array $right): string\n{\n    $merged = [];\n    $leftIndex = 0;\n    $rightIndex = 0;\n    while ($leftIndex < count($left) && $rightIndex < count($right)) {\n        if ($left[$leftIndex] <= $right[$rightIndex]) {\n            $merged[] = $left[$leftIndex];\n            $leftIndex += 1;\n        } else {\n            $merged[] = $right[$rightIndex];\n            $rightIndex += 1;\n        }\n    }\n    return implode(\",\", array_merge($merged, array_slice($left, $leftIndex), array_slice($right, $rightIndex)));\n}\n",
+  "hint": "The split logic assumes the wrong separator pattern.",
+  "explanation": "The broken code splits on the wrong text, so the row is not separated correctly. Splitting on commas fixes the count.",
+  "tags": [
+    "php",
+    "042-csv-column-count",
+    "hard",
+    "strings",
+    "parsing"
+  ],
+  "timeLimitSeconds": 240,
+  "points": 240,
+  "status": "published"
+}

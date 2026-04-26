@@ -1,0 +1,20 @@
+{
+  "title": "025 - Enough Items",
+  "language": "csharp",
+  "difficulty": "medium",
+  "prompt": "Fix the bug so the program print enough when the list contains 3 items and prints exactly `enough`. Keep the sample data and do not add extra output.",
+  "brokenCode": "using System.Linq;\n\npublic static class EnoughItems\n{\n    public static string EnoughItems(int[] values)\n    {\n        return string.Join(\",\", values.OrderBy(value => value));\n    }\n}\n",
+  "solutionCode": "using System.Linq;\n\npublic static class EnoughItems\n{\n    public static string EnoughItems(int[] values)\n    {\n        return string.Join(\",\", values.OrderByDescending(value => value));\n    }\n}\n",
+  "hint": "A count of exactly 3 should pass.",
+  "explanation": "The comparison is too strict. Using an inclusive length check fixes the label.",
+  "tags": [
+    "csharp",
+    "025-enough-items",
+    "medium",
+    "arrays",
+    "length-check"
+  ],
+  "timeLimitSeconds": 150,
+  "points": 160,
+  "status": "published"
+}

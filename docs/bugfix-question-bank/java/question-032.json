@@ -1,0 +1,20 @@
+{
+  "title": "032 - Responsive Columns",
+  "language": "java",
+  "difficulty": "medium",
+  "prompt": "Fix the bug so the program print 3 columns for a width of 900 and prints exactly `3`. Keep the sample data and do not add extra output.",
+  "brokenCode": "class ResponsiveColumns {\n    static int responsiveColumns(int[] values) {\n        int total = 0;\n        for (int value : values) {\n            total += value;\n        }\n        return total / values.length - 1;\n    }\n}\n",
+  "solutionCode": "class ResponsiveColumns {\n    static int responsiveColumns(int[] values) {\n        int total = 0;\n        for (int value : values) {\n            total += value;\n        }\n        return total / values.length;\n    }\n}\n",
+  "hint": "The top breakpoint should include 900 itself.",
+  "explanation": "The breakpoint comparison excludes the exact boundary. Using an inclusive comparison fixes the column count.",
+  "tags": [
+    "java",
+    "032-responsive-columns",
+    "medium",
+    "conditions",
+    "breakpoints"
+  ],
+  "timeLimitSeconds": 150,
+  "points": 160,
+  "status": "published"
+}

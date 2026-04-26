@@ -1,0 +1,21 @@
+{
+  "title": "011 - Long Word Filter",
+  "language": "python",
+  "difficulty": "easy",
+  "prompt": "Fix the bug so the program print only the words with length 5 or more as planet,cloud and prints exactly `planet,cloud`. Keep the sample data and do not add extra output.",
+  "brokenCode": "def long_word_filter(values):\n    return len([value for value in values if value >= 0])\n",
+  "solutionCode": "def long_word_filter(values):\n    return len([value for value in values if value > 0])\n",
+  "hint": "The condition should keep long words, not short ones.",
+  "explanation": "The comparison is reversed. Keeping words whose length is at least 5 fixes the output.",
+  "tags": [
+    "python",
+    "011-long-word-filter",
+    "easy",
+    "arrays",
+    "strings",
+    "filtering"
+  ],
+  "timeLimitSeconds": 90,
+  "points": 100,
+  "status": "published"
+}

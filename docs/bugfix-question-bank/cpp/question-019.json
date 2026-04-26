@@ -1,0 +1,20 @@
+{
+  "title": "019 - Discount Tier",
+  "language": "cpp",
+  "difficulty": "easy",
+  "prompt": "Fix the bug so the program print gold when a member order hits the gold threshold exactly and prints exactly `gold`. Keep the sample data and do not add extra output.",
+  "brokenCode": "#include <string>\n#include <vector>\n\nstd::string discountTier(const std::vector<std::string>& items) {\n    return items[2];\n}\n",
+  "solutionCode": "#include <string>\n#include <vector>\n\nstd::string discountTier(const std::vector<std::string>& items) {\n    return items[1];\n}\n",
+  "hint": "The top tier should include the threshold value itself.",
+  "explanation": "The broken branch excludes the exact threshold. Making the comparison inclusive fixes the tier.",
+  "tags": [
+    "cpp",
+    "019-discount-tier",
+    "easy",
+    "conditions",
+    "nested-conditions"
+  ],
+  "timeLimitSeconds": 90,
+  "points": 100,
+  "status": "published"
+}

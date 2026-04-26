@@ -1,0 +1,20 @@
+{
+  "title": "049 - Numbered Export",
+  "language": "cpp",
+  "difficulty": "hard",
+  "prompt": "Fix the bug so the program print the numbered export exactly as 1. Intro|2. Setup|3. Review and prints exactly `1. Intro|2. Setup|3. Review`. Keep the sample data and do not add extra output.",
+  "brokenCode": "#include <string>\n\nstd::string numberedExport(std::string text) {\n    size_t index = 0;\n    if ((index = text.find(\"bug\", index)) != std::string::npos) {\n        text.replace(index, 3, \"[bug]\");\n        index += 5;\n    }\n    return text;\n}\n",
+  "solutionCode": "#include <string>\n\nstd::string numberedExport(std::string text) {\n    size_t index = 0;\n    while ((index = text.find(\"bug\", index)) != std::string::npos) {\n        text.replace(index, 3, \"[bug]\");\n        index += 5;\n    }\n    return text;\n}\n",
+  "hint": "The numbering should start at 1, not 0.",
+  "explanation": "The broken formatter starts counting from zero. Adding one to the displayed index fixes the export labels.",
+  "tags": [
+    "cpp",
+    "049-numbered-export",
+    "hard",
+    "arrays",
+    "formatting"
+  ],
+  "timeLimitSeconds": 240,
+  "points": 240,
+  "status": "published"
+}

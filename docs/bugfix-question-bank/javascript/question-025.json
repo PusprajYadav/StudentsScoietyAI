@@ -1,0 +1,20 @@
+{
+  "title": "025 - Enough Items",
+  "language": "javascript",
+  "difficulty": "medium",
+  "prompt": "Fix the bug so the program print enough when the list contains 3 items and prints exactly `enough`. Keep the sample data and do not add extra output.",
+  "brokenCode": "function enoughItems(values) {\n  return [...values].sort((left, right) => left - right).join(\",\");\n}\n",
+  "solutionCode": "function enoughItems(values) {\n  return [...values].sort((left, right) => right - left).join(\",\");\n}\n",
+  "hint": "A count of exactly 3 should pass.",
+  "explanation": "The comparison is too strict. Using an inclusive length check fixes the label.",
+  "tags": [
+    "javascript",
+    "025-enough-items",
+    "medium",
+    "arrays",
+    "length-check"
+  ],
+  "timeLimitSeconds": 150,
+  "points": 160,
+  "status": "published"
+}

@@ -1,0 +1,20 @@
+{
+  "title": "007 - Age Range Check",
+  "language": "c",
+  "difficulty": "easy",
+  "prompt": "Fix the bug so the program print valid when the age is inside the allowed range including the lower bound and prints exactly `valid`. Keep the sample data and do not add extra output.",
+  "brokenCode": "#include <stddef.h>\n\nint age_range_check(const int values[], size_t length) {\n    int total = 0;\n    for (size_t index = 0; index < length; index++) {\n        if (values[index] % 2 == 1) {\n            total += values[index];\n        }\n    }\n    return total;\n}\n",
+  "solutionCode": "#include <stddef.h>\n\nint age_range_check(const int values[], size_t length) {\n    int total = 0;\n    for (size_t index = 0; index < length; index++) {\n        if (values[index] % 2 == 0) {\n            total += values[index];\n        }\n    }\n    return total;\n}\n",
+  "hint": "Look closely at the boundary comparison on the lower edge.",
+  "explanation": "The lower-bound comparison is too strict. Including the minimum allowed age fixes the result.",
+  "tags": [
+    "c",
+    "007-age-range-check",
+    "easy",
+    "conditions",
+    "range-check"
+  ],
+  "timeLimitSeconds": 90,
+  "points": 100,
+  "status": "published"
+}

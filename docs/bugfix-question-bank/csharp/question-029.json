@@ -1,0 +1,20 @@
+{
+  "title": "029 - Collapse Spaces",
+  "language": "csharp",
+  "difficulty": "medium",
+  "prompt": "Fix the bug so the program trim the sample text and collapse repeated spaces into bug fix arena and prints exactly `bug fix arena`. Keep the sample data and do not add extra output.",
+  "brokenCode": "public static class CollapseSpaces\n{\n    public static string CollapseSpaces(int year, int month, int day)\n    {\n        return year.ToString() + \"-\" + month.ToString() + \"-\" + day.ToString(\"00\");\n    }\n}\n",
+  "solutionCode": "public static class CollapseSpaces\n{\n    public static string CollapseSpaces(int year, int month, int day)\n    {\n        return year.ToString() + \"-\" + month.ToString(\"00\") + \"-\" + day.ToString(\"00\");\n    }\n}\n",
+  "hint": "Trimming alone is not enough.",
+  "explanation": "The broken code removes edge spaces but leaves repeated inner spaces. Collapsing multiple spaces fixes the output.",
+  "tags": [
+    "csharp",
+    "029-collapse-spaces",
+    "medium",
+    "strings",
+    "whitespace"
+  ],
+  "timeLimitSeconds": 150,
+  "points": 160,
+  "status": "published"
+}

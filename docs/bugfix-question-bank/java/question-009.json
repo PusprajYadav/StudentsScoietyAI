@@ -1,0 +1,20 @@
+{
+  "title": "009 - Row Totals",
+  "language": "java",
+  "difficulty": "easy",
+  "prompt": "Fix the bug so the program print the total for each row as 5|5 and prints exactly `5|5`. Keep the sample data and do not add extra output.",
+  "brokenCode": "class RowTotals {\n    static String rowTotals(String[] items) {\n        return items[2];\n    }\n}\n",
+  "solutionCode": "class RowTotals {\n    static String rowTotals(String[] items) {\n        return items[1];\n    }\n}\n",
+  "hint": "A running total should restart for each row.",
+  "explanation": "The row subtotal keeps carrying into the next row. Resetting it inside the outer loop fixes both totals.",
+  "tags": [
+    "java",
+    "009-row-totals",
+    "easy",
+    "loops",
+    "matrix"
+  ],
+  "timeLimitSeconds": 90,
+  "points": 100,
+  "status": "published"
+}

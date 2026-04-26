@@ -1,0 +1,20 @@
+{
+  "title": "029 - Collapse Spaces",
+  "language": "cpp",
+  "difficulty": "medium",
+  "prompt": "Fix the bug so the program trim the sample text and collapse repeated spaces into bug fix arena and prints exactly `bug fix arena`. Keep the sample data and do not add extra output.",
+  "brokenCode": "#include <string>\n\nstd::string collapseSpaces(int year, int month, int day) {\n    std::string result = std::to_string(year) + \"-\";\n    result += std::to_string(month);\n    result += \"-\";\n    result += (day < 10 ? \"0\" : \"\") + std::to_string(day);\n    return result;\n}\n",
+  "solutionCode": "#include <string>\n\nstd::string collapseSpaces(int year, int month, int day) {\n    std::string result = std::to_string(year) + \"-\";\n    result += (month < 10 ? \"0\" : \"\") + std::to_string(month);\n    result += \"-\";\n    result += (day < 10 ? \"0\" : \"\") + std::to_string(day);\n    return result;\n}\n",
+  "hint": "Trimming alone is not enough.",
+  "explanation": "The broken code removes edge spaces but leaves repeated inner spaces. Collapsing multiple spaces fixes the output.",
+  "tags": [
+    "cpp",
+    "029-collapse-spaces",
+    "medium",
+    "strings",
+    "whitespace"
+  ],
+  "timeLimitSeconds": 150,
+  "points": 160,
+  "status": "published"
+}

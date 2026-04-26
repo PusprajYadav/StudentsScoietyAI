@@ -1,0 +1,20 @@
+{
+  "title": "019 - Discount Tier",
+  "language": "python",
+  "difficulty": "easy",
+  "prompt": "Fix the bug so the program print gold when a member order hits the gold threshold exactly and prints exactly `gold`. Keep the sample data and do not add extra output.",
+  "brokenCode": "def discount_tier(items):\n    return items[2]\n",
+  "solutionCode": "def discount_tier(items):\n    return items[1]\n",
+  "hint": "The top tier should include the threshold value itself.",
+  "explanation": "The broken branch excludes the exact threshold. Making the comparison inclusive fixes the tier.",
+  "tags": [
+    "python",
+    "019-discount-tier",
+    "easy",
+    "conditions",
+    "nested-conditions"
+  ],
+  "timeLimitSeconds": 90,
+  "points": 100,
+  "status": "published"
+}

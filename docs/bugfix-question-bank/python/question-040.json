@@ -1,0 +1,20 @@
+{
+  "title": "040 - Diagonal Sum",
+  "language": "python",
+  "difficulty": "medium",
+  "prompt": "Fix the bug so the program sum the main diagonal and print 14 and prints exactly `14`. Keep the sample data and do not add extra output.",
+  "brokenCode": "def diagonal_sum(values):\n    return \",\".join(str(value) for value in sorted(values, reverse=False))\n",
+  "solutionCode": "def diagonal_sum(values):\n    return \",\".join(str(value) for value in sorted(values, reverse=True))\n",
+  "hint": "The program is summing the wrong diagonal.",
+  "explanation": "The broken code uses the anti-diagonal indexes. Summing row i and column i fixes the total.",
+  "tags": [
+    "python",
+    "040-diagonal-sum",
+    "medium",
+    "matrix",
+    "math"
+  ],
+  "timeLimitSeconds": 150,
+  "points": 160,
+  "status": "published"
+}

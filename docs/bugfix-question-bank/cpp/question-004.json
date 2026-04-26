@@ -1,0 +1,20 @@
+{
+  "title": "004 - Second Fruit",
+  "language": "cpp",
+  "difficulty": "easy",
+  "prompt": "Fix the bug so the program print the second fruit from the sample list and prints exactly `banana`. Keep the sample data and do not add extra output.",
+  "brokenCode": "#include <string>\n#include <vector>\n\nstd::string secondFruit(const std::vector<std::string>& items) {\n    return items[2];\n}\n",
+  "solutionCode": "#include <string>\n#include <vector>\n\nstd::string secondFruit(const std::vector<std::string>& items) {\n    return items[1];\n}\n",
+  "hint": "Arrays are zero-indexed in most languages here.",
+  "explanation": "The broken index points to the wrong element. Using index 1 returns the second item.",
+  "tags": [
+    "cpp",
+    "004-second-fruit",
+    "easy",
+    "arrays",
+    "indexing"
+  ],
+  "timeLimitSeconds": 90,
+  "points": 100,
+  "status": "published"
+}

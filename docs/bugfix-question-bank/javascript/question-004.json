@@ -1,0 +1,20 @@
+{
+  "title": "004 - Second Fruit",
+  "language": "javascript",
+  "difficulty": "easy",
+  "prompt": "Fix the bug so the program print the second fruit from the sample list and prints exactly `banana`. Keep the sample data and do not add extra output.",
+  "brokenCode": "function secondFruit(items) {\n  return items[2];\n}\n",
+  "solutionCode": "function secondFruit(items) {\n  return items[1];\n}\n",
+  "hint": "Arrays are zero-indexed in most languages here.",
+  "explanation": "The broken index points to the wrong element. Using index 1 returns the second item.",
+  "tags": [
+    "javascript",
+    "004-second-fruit",
+    "easy",
+    "arrays",
+    "indexing"
+  ],
+  "timeLimitSeconds": 90,
+  "points": 100,
+  "status": "published"
+}

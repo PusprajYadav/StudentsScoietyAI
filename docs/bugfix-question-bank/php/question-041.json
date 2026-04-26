@@ -1,0 +1,20 @@
+{
+  "title": "041 - Factorial Base Case",
+  "language": "php",
+  "difficulty": "hard",
+  "prompt": "Fix the bug so the program compute factorial(5) and print 120 and prints exactly `120`. Keep the sample data and do not add extra output.",
+  "brokenCode": "<?php\n\nfunction factorialBaseCase(array $scores, array $weights): int\n{\n    $total = 0;\n    foreach ($scores as $index => $score) {\n        $total += $score * $weights[$index];\n    }\n    return intdiv($total, count($scores));\n}\n",
+  "solutionCode": "<?php\n\nfunction factorialBaseCase(array $scores, array $weights): int\n{\n    $total = 0;\n    foreach ($scores as $index => $score) {\n        $total += $score * $weights[$index];\n    }\n    return intdiv($total, array_sum($weights));\n}\n",
+  "hint": "The base case should not return zero.",
+  "explanation": "The broken recursive base case returns the wrong identity value. Returning 1 fixes the multiplication chain.",
+  "tags": [
+    "php",
+    "041-factorial-base-case",
+    "hard",
+    "recursion",
+    "math"
+  ],
+  "timeLimitSeconds": 240,
+  "points": 240,
+  "status": "published"
+}

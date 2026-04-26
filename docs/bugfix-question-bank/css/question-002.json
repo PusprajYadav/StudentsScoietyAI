@@ -1,0 +1,20 @@
+{
+  "title": "002 - Add Missing Unit",
+  "language": "css",
+  "difficulty": "easy",
+  "prompt": "Fix the spacing rule so the browser can apply the padding value.",
+  "brokenCode": ".panel {\n  padding: 16;\n  border-radius: 12px;\n}\n",
+  "solutionCode": ".panel {\n  padding: 16px;\n  border-radius: 12px;\n}\n",
+  "hint": "The numeric padding value needs a unit.",
+  "explanation": "Length values like padding require a unit such as `px` in this rule.",
+  "tags": [
+    "css",
+    "002-add-missing-unit",
+    "easy",
+    "spacing",
+    "units"
+  ],
+  "timeLimitSeconds": 90,
+  "points": 100,
+  "status": "published"
+}

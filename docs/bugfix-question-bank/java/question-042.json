@@ -1,0 +1,20 @@
+{
+  "title": "042 - CSV Column Count",
+  "language": "java",
+  "difficulty": "hard",
+  "prompt": "Fix the bug so the program count the CSV columns in the sample row and print 3 and prints exactly `3`. Keep the sample data and do not add extra output.",
+  "brokenCode": "import java.util.*;\n\nclass CsvColumnCount {\n    static String csvColumnCount(int[] left, int[] right) {\n        List<Integer> merged = new ArrayList<>();\n        int leftIndex = 0;\n        int rightIndex = 0;\n        while (leftIndex < left.length && rightIndex < right.length) {\n            if (left[leftIndex] >= right[rightIndex]) {\n                merged.add(left[leftIndex++]);\n            } else {\n                merged.add(right[rightIndex++]);\n            }\n        }\n        while (leftIndex < left.length) merged.add(left[leftIndex++]);\n        while (rightIndex < right.length) merged.add(right[rightIndex++]);\n        return merged.stream().map(String::valueOf).reduce((a, b) -> a + \",\" + b).orElse(\"\");\n    }\n}\n",
+  "solutionCode": "import java.util.*;\n\nclass CsvColumnCount {\n    static String csvColumnCount(int[] left, int[] right) {\n        List<Integer> merged = new ArrayList<>();\n        int leftIndex = 0;\n        int rightIndex = 0;\n        while (leftIndex < left.length && rightIndex < right.length) {\n            if (left[leftIndex] <= right[rightIndex]) {\n                merged.add(left[leftIndex++]);\n            } else {\n                merged.add(right[rightIndex++]);\n            }\n        }\n        while (leftIndex < left.length) merged.add(left[leftIndex++]);\n        while (rightIndex < right.length) merged.add(right[rightIndex++]);\n        return merged.stream().map(String::valueOf).reduce((a, b) -> a + \",\" + b).orElse(\"\");\n    }\n}\n",
+  "hint": "The split logic assumes the wrong separator pattern.",
+  "explanation": "The broken code splits on the wrong text, so the row is not separated correctly. Splitting on commas fixes the count.",
+  "tags": [
+    "java",
+    "042-csv-column-count",
+    "hard",
+    "strings",
+    "parsing"
+  ],
+  "timeLimitSeconds": 240,
+  "points": 240,
+  "status": "published"
+}

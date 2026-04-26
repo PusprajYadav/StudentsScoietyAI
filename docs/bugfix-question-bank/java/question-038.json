@@ -1,0 +1,20 @@
+{
+  "title": "038 - Query Builder",
+  "language": "java",
+  "difficulty": "medium",
+  "prompt": "Fix the bug so the program build the query string exactly as ?page=2&sort=new and prints exactly `?page=2&sort=new`. Keep the sample data and do not add extra output.",
+  "brokenCode": "class QueryBuilder {\n    static boolean queryBuilder(String text, String query) {\n        return text.contains(query.toLowerCase());\n    }\n}\n",
+  "solutionCode": "class QueryBuilder {\n    static boolean queryBuilder(String text, String query) {\n        return text.toLowerCase().contains(query.toLowerCase());\n    }\n}\n",
+  "hint": "The string needs the correct separator between the key-value pairs.",
+  "explanation": "The broken builder uses the wrong separator. Using ? for the first pair and & between later pairs fixes the URL.",
+  "tags": [
+    "java",
+    "038-query-builder",
+    "medium",
+    "strings",
+    "url-building"
+  ],
+  "timeLimitSeconds": 150,
+  "points": 160,
+  "status": "published"
+}

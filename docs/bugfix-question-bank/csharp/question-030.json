@@ -1,0 +1,20 @@
+{
+  "title": "030 - Name Initials",
+  "language": "csharp",
+  "difficulty": "medium",
+  "prompt": "Fix the bug so the program print the initials SS in uppercase and prints exactly `SS`. Keep the sample data and do not add extra output.",
+  "brokenCode": "using System.Linq;\n\npublic static class NameInitials\n{\n    public static string NameInitials(int[] values)\n    {\n        return string.Join(\",\", values.OrderBy(value => value));\n    }\n}\n",
+  "solutionCode": "using System.Linq;\n\npublic static class NameInitials\n{\n    public static string NameInitials(int[] values)\n    {\n        return string.Join(\",\", values.OrderByDescending(value => value));\n    }\n}\n",
+  "hint": "Use uppercase letters after taking the initials.",
+  "explanation": "The broken code builds lowercase initials. Converting the result to uppercase fixes the output.",
+  "tags": [
+    "csharp",
+    "030-name-initials",
+    "medium",
+    "strings",
+    "case-conversion"
+  ],
+  "timeLimitSeconds": 150,
+  "points": 160,
+  "status": "published"
+}

@@ -1,0 +1,21 @@
+{
+  "title": "034 - Active Status Count",
+  "language": "cpp",
+  "difficulty": "medium",
+  "prompt": "Fix the bug so the program count only the entries marked active and prints exactly `2`. Keep the sample data and do not add extra output.",
+  "brokenCode": "#include <string>\n\nstd::string activeStatusCount(int year, int month, int day) {\n    std::string result = std::to_string(year) + \"-\";\n    result += std::to_string(month);\n    result += \"-\";\n    result += (day < 10 ? \"0\" : \"\") + std::to_string(day);\n    return result;\n}\n",
+  "solutionCode": "#include <string>\n\nstd::string activeStatusCount(int year, int month, int day) {\n    std::string result = std::to_string(year) + \"-\";\n    result += (month < 10 ? \"0\" : \"\") + std::to_string(month);\n    result += \"-\";\n    result += (day < 10 ? \"0\" : \"\") + std::to_string(day);\n    return result;\n}\n",
+  "hint": "Only one status should be counted.",
+  "explanation": "The broken condition counts more than the active entries. Checking for exact status equality fixes the count.",
+  "tags": [
+    "cpp",
+    "034-active-status-count",
+    "medium",
+    "arrays",
+    "counting",
+    "status"
+  ],
+  "timeLimitSeconds": 150,
+  "points": 160,
+  "status": "published"
+}

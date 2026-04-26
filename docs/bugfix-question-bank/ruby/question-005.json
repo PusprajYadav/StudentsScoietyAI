@@ -1,0 +1,20 @@
+{
+  "title": "005 - Greeting Format",
+  "language": "ruby",
+  "difficulty": "easy",
+  "prompt": "Fix the bug so the program print the greeting exactly as Hello, Asha! and prints exactly `Hello, Asha!`. Keep the sample data and do not add extra output.",
+  "brokenCode": "def greeting_format(name)\n  \"Hello, \" + name\nend\n",
+  "solutionCode": "def greeting_format(name)\n  \"Hello, \" + name + \"!\"\nend\n",
+  "hint": "A small punctuation or spacing issue is breaking the expected text.",
+  "explanation": "The greeting needs the comma, space, and exclamation mark in the correct places to match the target output.",
+  "tags": [
+    "ruby",
+    "005-greeting-format",
+    "easy",
+    "strings",
+    "formatting"
+  ],
+  "timeLimitSeconds": 90,
+  "points": 100,
+  "status": "published"
+}

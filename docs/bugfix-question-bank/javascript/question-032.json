@@ -1,0 +1,20 @@
+{
+  "title": "032 - Responsive Columns",
+  "language": "javascript",
+  "difficulty": "medium",
+  "prompt": "Fix the bug so the program print 3 columns for a width of 900 and prints exactly `3`. Keep the sample data and do not add extra output.",
+  "brokenCode": "function responsiveColumns(values) {\n  return values.reduce((sum, value) => sum + value, 0) / (values.length - 1);\n}\n",
+  "solutionCode": "function responsiveColumns(values) {\n  return values.reduce((sum, value) => sum + value, 0) / values.length;\n}\n",
+  "hint": "The top breakpoint should include 900 itself.",
+  "explanation": "The breakpoint comparison excludes the exact boundary. Using an inclusive comparison fixes the column count.",
+  "tags": [
+    "javascript",
+    "032-responsive-columns",
+    "medium",
+    "conditions",
+    "breakpoints"
+  ],
+  "timeLimitSeconds": 150,
+  "points": 160,
+  "status": "published"
+}

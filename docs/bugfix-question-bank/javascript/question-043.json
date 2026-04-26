@@ -1,0 +1,20 @@
+{
+  "title": "043 - Merge Sorted Lists",
+  "language": "javascript",
+  "difficulty": "hard",
+  "prompt": "Fix the bug so the program merge the two sorted lists and print 1,2,3,4,7,8 and prints exactly `1,2,3,4,7,8`. Keep the sample data and do not add extra output.",
+  "brokenCode": "function mergeSortedLists(value) {\n  if (value <= 1) {\n    return 0;\n  }\n  return value * mergeSortedLists(value - 1);\n}\n",
+  "solutionCode": "function mergeSortedLists(value) {\n  if (value <= 1) {\n    return 1;\n  }\n  return value * mergeSortedLists(value - 1);\n}\n",
+  "hint": "Take the smaller front value first during the merge.",
+  "explanation": "The broken merge chooses the wrong side during comparison. Picking the smaller current value fixes the merged order.",
+  "tags": [
+    "javascript",
+    "043-merge-sorted-lists",
+    "hard",
+    "arrays",
+    "merge"
+  ],
+  "timeLimitSeconds": 240,
+  "points": 240,
+  "status": "published"
+}
